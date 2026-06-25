@@ -1,7 +1,6 @@
 const fs = require('fs');
 const https = require('https');
 const path = require('path');
-const { processHtml } = require('./generate.js');
 const { stripDuplicateFooterSec2 } = require('./strip-duplicate-footer-sec-2.js');
 const { ResourceConverter } = require('./resource-converter.js');
 const { getSitePaths } = require('./site-paths');
@@ -327,11 +326,6 @@ async function fetchHtml(urlPath) {
   return fetch(fullUrl);
 }
 
-async function convertAndCleanHtml(html, pageUrl) {
-  const converted = await resourceConverter.convertHtml(html, pageUrl);
-  return processHtml(converted);
-}
-
 async function writeShell() {
   if (SHELL_MODE === 'semantic-header-footer') {
     console.log(`Fetching shell from ${BASE_URL}/${SHELL_URL_PATH} ...`);
@@ -344,8 +338,8 @@ async function writeShell() {
     }
 
     fs.mkdirSync(SHARED_DIR, { recursive: true });
-    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await convertAndCleanHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
-    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await convertAndCleanHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await resourceConverter.convertHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await resourceConverter.convertHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
     fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(convertedHtml));
 
     console.log(`  shared/header.html (${shell.header.length} chars)`);
@@ -367,8 +361,8 @@ async function writeShell() {
   }
 
   fs.mkdirSync(SHARED_DIR, { recursive: true });
-  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await convertAndCleanHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
-  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await convertAndCleanHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await resourceConverter.convertHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await resourceConverter.convertHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
 
   console.log(`  shared/header.html (${parts.header.length} chars)`);
   console.log(`  shared/footer.html (${parts.footer.length} chars)`);
@@ -395,7 +389,7 @@ async function processPage(urlPath, shellCache) {
   const fileName = fileParts.pop() + '.html';
   const dirPath = path.join(BASE, ...fileParts);
   const filePath = path.join(dirPath, fileName);
-  const output = await convertAndCleanHtml(convertedHtml, fullUrl);
+  const output = convertedHtml;
 
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(filePath, output);
