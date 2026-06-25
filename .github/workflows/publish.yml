@@ -44,53 +44,9 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Point App Service at the latest image tag
-        env:
-          PUBLISH_PROFILE_XML: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          IMAGE: ${{ env.ACR_LOGIN_SERVER }}/${{ env.ACR_IMAGE_NAME }}:latest
-        run: |
-          python3 - <<'PY'
-          import base64
-          import json
-          import os
-          import sys
-          import urllib.request
-          import xml.etree.ElementTree as ET
-
-          xml = os.environ.get("PUBLISH_PROFILE_XML", "").strip().lstrip("\ufeff")
-          if not xml:
-              raise SystemExit("AZURE_WEBAPP_PUBLISH_PROFILE is empty")
-          root = ET.fromstring(xml)
-          profile = None
-          for node in root.findall(".//publishProfile"):
-            if node.attrib.get("publishMethod") == "ZipDeploy":
-              profile = node
-              break
-
-          if profile is None:
-            raise SystemExit("ZipDeploy publish profile not found")
-
-          publish_url = profile.attrib["publishUrl"].replace(":443", "")
-          user = profile.attrib["userName"]
-          pwd = profile.attrib["userPWD"]
-          auth = base64.b64encode(f"{user}:{pwd}".encode("utf-8")).decode("ascii")
-
-          settings = {
-              "DOCKER_CUSTOM_IMAGE_NAME": f"DOCKER|{os.environ['IMAGE']}",
-              "DOCKER_ENABLE_CI": "false",
-          }
-
-          req = urllib.request.Request(
-              f"https://{publish_url}/api/settings",
-              data=json.dumps(settings).encode("utf-8"),
-              method="POST",
-              headers={
-                  "Authorization": f"Basic {auth}",
-                  "Content-Type": "application/json",
-              },
-          )
-
-          with urllib.request.urlopen(req, timeout=60) as resp:
-              print(resp.status)
-              print(resp.read().decode("utf-8"))
-          PY
+      - name: Deploy image to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEB_APP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ env.ACR_LOGIN_SERVER }}/${{ env.ACR_IMAGE_NAME }}:${{ github.sha }}
