@@ -225,7 +225,7 @@ const SEARCH_CLIENT_JS = `(() => {
   }
 
   function findSearchText(source) {
-    const root = source?.closest?.('form') || document;
+    const root = source?.closest?.('.sfsearchBox') || source?.closest?.('form') || document;
     const input = root.querySelector('.sfsearchTxt, input[type="search"], input[name*="search" i]');
     return input ? input.value.trim() : '';
   }

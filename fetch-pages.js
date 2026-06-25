@@ -18,6 +18,7 @@ const resourceConverter = new ResourceConverter(SITE);
 const urls = fs.readFileSync(path.join(SITE.dataDir, 'cleanedurls.txt'), 'utf8')
   .split('\n').map(l => l.trim()).filter(l => l);
 const SEARCH_CLIENT_SCRIPT = '<script src="/api/search/client.js"></script>';
+const SEARCH_WIDGET_ID_RE = /^cph(?:Fa)?Search_/i;
 
 function fetch(url) {
   return new Promise((resolve, reject) => {
@@ -254,6 +255,62 @@ function injectSearchClient(html) {
   return `${html}\n${SEARCH_CLIENT_SCRIPT}\n`;
 }
 
+function escapeAttr(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function buildStaticSearchWidget(widgetId) {
+  const safeId = escapeAttr(widgetId);
+  const inputId = `${safeId}_searchTextBox`;
+  const buttonId = `${safeId}_searchButton`;
+  const mainId = `${safeId}_main`;
+
+  return [
+    `<fieldset id="${mainId}" class="sfsearchBox static-search-box" data-static-search-box="true">`,
+    `    <input name="${escapeAttr(SITE.search.queryParam || 'searchQuery')}" type="text" id="${inputId}" class="sfsearchTxt" autocomplete="off" />`,
+    `    <input type="button" value="Search" id="${buttonId}" class="sfsearchSubmit" />`,
+    '</fieldset>',
+  ].join('\n');
+}
+
+function replaceSearchWidgetDivs(html) {
+  let result = '';
+  let cursor = 0;
+  const openDivRe = /<div\b[^>]*\bid\s*=\s*(["'])(cph(?:Fa)?Search_[^"']+)\1[^>]*>/gi;
+  let match;
+
+  while ((match = openDivRe.exec(html)) !== null) {
+    const widgetId = match[2];
+    if (!SEARCH_WIDGET_ID_RE.test(widgetId)) continue;
+
+    const end = findDivEnd(html, match.index, match[0].length);
+    if (end === -1) continue;
+
+    result += html.slice(cursor, match.index);
+    result += `${match[0]}\n${buildStaticSearchWidget(widgetId)}\n</div>`;
+    cursor = end;
+    openDivRe.lastIndex = end;
+  }
+
+  return result + html.slice(cursor);
+}
+
+function stripSitefinitySearchInitializers(html) {
+  return html.replace(
+    /\s*\$create\(Telerik\.Sitefinity\.Services\.Search\.Web\.UI\.Public\.SearchBox,[\s\S]*?\$get\(["']cph(?:Fa)?Search_[^"']+["']\)\);\s*/g,
+    '\n'
+  );
+}
+
+function normalizeStaticSearch(html) {
+  if (!SITE.search) return html;
+  return stripSitefinitySearchInitializers(replaceSearchWidgetDivs(html));
+}
+
 function extractParts(rawHtml, shellHeadInner = null, shellHeaderInner = null) {
   const { masked, blocks } = maskScriptsAndStyles(rawHtml);
 
@@ -349,8 +406,10 @@ async function writeShell() {
     }
 
     fs.mkdirSync(SHARED_DIR, { recursive: true });
-    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await resourceConverter.convertHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
-    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await resourceConverter.convertHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+    const headerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`));
+    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), headerHtml + '\n');
+    const footerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`));
+    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), footerHtml + '\n');
     fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(convertedHtml));
 
     console.log(`  shared/header.html (${shell.header.length} chars)`);
@@ -372,8 +431,10 @@ async function writeShell() {
   }
 
   fs.mkdirSync(SHARED_DIR, { recursive: true });
-  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await resourceConverter.convertHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
-  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await resourceConverter.convertHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+  const headerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`));
+  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), headerHtml + '\n');
+  const footerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`));
+  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), footerHtml + '\n');
 
   console.log(`  shared/header.html (${parts.header.length} chars)`);
   console.log(`  shared/footer.html (${parts.footer.length} chars)`);
@@ -400,7 +461,7 @@ async function processPage(urlPath, shellCache) {
   const fileName = fileParts.pop() + '.html';
   const dirPath = path.join(BASE, ...fileParts);
   const filePath = path.join(dirPath, fileName);
-  const output = injectSearchClient(convertedHtml);
+  const output = injectSearchClient(normalizeStaticSearch(convertedHtml));
 
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(filePath, output);
