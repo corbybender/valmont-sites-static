@@ -10,6 +10,7 @@
     "cmt-poles.local",
     "staticstage.cmt-poles.com"
   ],
+  "preserveLegacyShell": true,
   "shellMode": "semantic-header-footer",
   "publicDir": "public",
   "formsConfig": "forms.config.json"

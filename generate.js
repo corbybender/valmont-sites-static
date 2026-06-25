@@ -5,6 +5,7 @@ const { getSitePaths } = require('./site-paths');
 const SITE = getSitePaths();
 const BASE = SITE.publicDir;
 const WEBASSETS_BASE = 'https://webassets.valmont.com/';
+const PRESERVE_LEGACY_SHELL = !!SITE.preserveLegacyShell;
 
 function fixAssetPaths(html) {
   return html.replace(
@@ -15,6 +16,11 @@ function fixAssetPaths(html) {
 
 function cleanCmsFluff(html) {
   let result = html;
+
+  if (PRESERVE_LEGACY_SHELL) {
+    result = result.replace(/\$\.noConflict\s*\(\s*\)\s*;?/g, '');
+    return result.replace(/\n{3,}/g, '\n\n');
+  }
 
   result = result.replace(
     /<link\b[^>]*\bhref=["'][^"']*(?:\.axd|Telerik\.Web\.UI|\/Sitefinity\/)[^"']*["'][^>]*>/gi,
