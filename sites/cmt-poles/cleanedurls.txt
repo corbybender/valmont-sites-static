@@ -20,5 +20,6 @@ marathon/square
 products/distribution-poles
 products/specialty-and-custom
 resources
+search/search-results
 the-cmt-difference
 the-cmt-difference/cmt-light-pole-brochure
