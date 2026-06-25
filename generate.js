@@ -15,21 +15,7 @@ function fixAssetPaths(html) {
 }
 
 function stripSitefinityScripts(html) {
-  let result = html;
-
-  result = result.replace(
-    /<script\b[^>]*\bsrc=["'][^"']*(?:\/ScriptResource\.axd|\/WebResource\.axd|MicrosoftAjax(?:WebForms)?\.js|WebForms\.js)[^"']*["'][^>]*>\s*<\/script>/gi,
-    ''
-  );
-
-  result = result.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (match) => {
-    if (/(?:Sys\.Application|Sys\.WebForms|PageRequestManager|WebForm_PostBackOptions|\$create\s*\(\s*Telerik|Telerik\.|Sitefinity|RSSM_init|\$get\s*\(\s*['"]ctl|__doPostBack|var\s+theForm|document\.write\('<script)/i.test(match)) {
-      return '';
-    }
-    return match;
-  });
-
-  return result;
+  return html;
 }
 
 function rewriteRadMenuHrefs(html) {

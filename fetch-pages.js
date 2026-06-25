@@ -3,6 +3,7 @@ const https = require('https');
 const path = require('path');
 const { processHtml } = require('./generate.js');
 const { stripDuplicateFooterSec2 } = require('./strip-duplicate-footer-sec-2.js');
+const { ResourceConverter } = require('./resource-converter.js');
 const { getSitePaths } = require('./site-paths');
 
 const SITE = getSitePaths();
@@ -14,6 +15,7 @@ const SHELL_MODE = SITE.shellMode || 'legacy-div';
 const SHELL_HEAD_CACHE = path.join(SITE.dataDir, '.shell-head-inner.html');
 const SHELL_HEADER_INNER_CACHE = path.join(SITE.dataDir, '.shell-header-inner.html');
 const HEADER_DIV_TAG = '<div class="header" id="header">';
+const resourceConverter = new ResourceConverter(SITE);
 const urls = fs.readFileSync(path.join(SITE.dataDir, 'cleanedurls.txt'), 'utf8')
   .split('\n').map(l => l.trim()).filter(l => l);
 
@@ -325,32 +327,39 @@ async function fetchHtml(urlPath) {
   return fetch(fullUrl);
 }
 
+async function convertAndCleanHtml(html, pageUrl) {
+  const converted = await resourceConverter.convertHtml(html, pageUrl);
+  return processHtml(converted);
+}
+
 async function writeShell() {
   if (SHELL_MODE === 'semantic-header-footer') {
     console.log(`Fetching shell from ${BASE_URL}/${SHELL_URL_PATH} ...`);
     const html = await fetchHtml(SHELL_URL_PATH);
-    const shell = extractSemanticShell(html);
+    const convertedHtml = await resourceConverter.convertHtml(html, `${BASE_URL}/${SHELL_URL_PATH}`);
+    const shell = extractSemanticShell(convertedHtml);
     if (!shell) {
       console.log('  No reusable shell detected; falling back to full-page copies.');
       return null;
     }
 
     fs.mkdirSync(SHARED_DIR, { recursive: true });
-    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), processHtml(normalizeCmtHeader(shell.header)) + '\n');
-    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), processHtml(shell.footer) + '\n');
-    fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(html));
+    fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await convertAndCleanHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+    fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await convertAndCleanHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+    fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(convertedHtml));
 
     console.log(`  shared/header.html (${shell.header.length} chars)`);
     console.log(`  shared/footer.html (${shell.footer.length} chars)`);
 
-    return { semantic: true, headInner: extractHeadInner(html) };
+    return { semantic: true, headInner: extractHeadInner(convertedHtml) };
   }
 
   console.log(`Fetching shell from ${BASE_URL}/${SHELL_URL_PATH} ...`);
   const html = await fetchHtml(SHELL_URL_PATH);
-  const { masked, blocks } = maskScriptsAndStyles(html);
-  const shellCache = saveShellCache(html, masked, blocks);
-  const parts = extractParts(html, shellCache.headInner, shellCache.headerInner);
+  const convertedHtml = await resourceConverter.convertHtml(html, `${BASE_URL}/${SHELL_URL_PATH}`);
+  const { masked, blocks } = maskScriptsAndStyles(convertedHtml);
+  const shellCache = saveShellCache(convertedHtml, masked, blocks);
+  const parts = extractParts(convertedHtml, shellCache.headInner, shellCache.headerInner);
 
   if (!parts) {
     console.log('  No reusable shell detected; falling back to full-page copies.');
@@ -358,8 +367,8 @@ async function writeShell() {
   }
 
   fs.mkdirSync(SHARED_DIR, { recursive: true });
-  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), processHtml(parts.header) + '\n');
-  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), processHtml(parts.footer) + '\n');
+  fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), await convertAndCleanHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
+  fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), await convertAndCleanHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`) + '\n');
 
   console.log(`  shared/header.html (${parts.header.length} chars)`);
   console.log(`  shared/footer.html (${parts.footer.length} chars)`);
@@ -381,18 +390,19 @@ async function processPage(urlPath, shellCache) {
     return;
   }
 
+  const convertedHtml = await resourceConverter.convertHtml(html, fullUrl);
   const fileParts = urlPath.split('/');
   const fileName = fileParts.pop() + '.html';
   const dirPath = path.join(BASE, ...fileParts);
   const filePath = path.join(dirPath, fileName);
 
   if (SHELL_MODE === 'semantic-header-footer') {
-    const parts = extractSemanticShell(html);
-    const pageHeadInner = extractHeadInner(html);
+    const parts = extractSemanticShell(convertedHtml);
+    const pageHeadInner = extractHeadInner(convertedHtml);
     const pageHeadExtras = diffHeadExtras(pageHeadInner, shellCache?.headInner || '');
     const output = parts
-      ? buildSemanticPageOutput({ ...parts, pageHeadExtras })
-      : processHtml(html);
+      ? await convertAndCleanHtml(buildSemanticPageOutput({ ...parts, pageHeadExtras }), fullUrl)
+      : await convertAndCleanHtml(convertedHtml, fullUrl);
     fs.mkdirSync(dirPath, { recursive: true });
     fs.writeFileSync(filePath, output);
 
@@ -407,9 +417,9 @@ async function processPage(urlPath, shellCache) {
   }
 
   const parts = shellCache?.headInner || shellCache?.headerInner
-    ? extractParts(html, shellCache.headInner, shellCache.headerInner)
+    ? extractParts(convertedHtml, shellCache.headInner, shellCache.headerInner)
     : null;
-  const output = parts ? buildPageOutput(urlPath, parts) : processHtml(html);
+  const output = parts ? await convertAndCleanHtml(buildPageOutput(urlPath, parts), fullUrl) : await convertAndCleanHtml(convertedHtml, fullUrl);
 
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(filePath, output);
