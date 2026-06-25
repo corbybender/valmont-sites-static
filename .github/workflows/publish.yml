@@ -12,7 +12,6 @@ permissions:
 env:
   ACR_LOGIN_SERVER: cwsstagestaticsitesacr.azurecr.io
   ACR_IMAGE_NAME: valmont-tubing
-  AZURE_WEB_APP_NAME: valmont-cws-stage-staticsites
 
 jobs:
   build-and-push:
@@ -39,14 +38,3 @@ jobs:
             ${{ env.ACR_LOGIN_SERVER }}/${{ env.ACR_IMAGE_NAME }}:${{ github.sha }}
             ${{ env.ACR_LOGIN_SERVER }}/cmt-poles:latest
             ${{ env.ACR_LOGIN_SERVER }}/cmt-poles:${{ github.sha }}
-
-  deploy-production:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy image to Azure Web App
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEB_APP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ env.ACR_LOGIN_SERVER }}/${{ env.ACR_IMAGE_NAME }}:${{ github.sha }}
