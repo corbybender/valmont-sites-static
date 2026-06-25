@@ -48,6 +48,15 @@ function slugifyName(value) {
     .slice(0, 40) || 'resource';
 }
 
+function decodeHtmlEntities(value) {
+  return String(value || '')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>');
+}
+
 class ResourceConverter {
   constructor(site) {
     this.site = site;
@@ -61,7 +70,7 @@ class ResourceConverter {
 
   resolveUrl(rawUrl, pageUrl) {
     try {
-      return new URL(rawUrl, pageUrl || this.baseUrl).toString();
+      return new URL(decodeHtmlEntities(rawUrl), pageUrl || this.baseUrl).toString();
     } catch {
       return null;
     }
@@ -88,6 +97,16 @@ class ResourceConverter {
     return `/converted/${stem}-${hash}.${ext}`;
   }
 
+  isUsableConvertedFile(absolutePath) {
+    if (!fs.existsSync(absolutePath)) return false;
+
+    const stats = fs.statSync(absolutePath);
+    if (stats.size === 0) return false;
+
+    const preview = fs.readFileSync(absolutePath, 'utf8').trimStart();
+    return !preview.startsWith('/* Failed to convert ');
+  }
+
   async ensureWritten(url, tagName) {
     if (this.cache.has(url)) {
       return this.cache.get(url);
@@ -101,7 +120,7 @@ class ResourceConverter {
       const relativePath = this.targetPathFor(url, tagName);
       const absolutePath = path.join(this.site.publicDir, relativePath.replace(/^\//, '').replace(/\//g, path.sep));
 
-      if (!fs.existsSync(absolutePath)) {
+      if (!this.isUsableConvertedFile(absolutePath)) {
         try {
           const body = await fetchUrl(url);
           fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
