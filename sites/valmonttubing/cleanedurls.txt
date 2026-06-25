@@ -1,6 +1,8 @@
 home
+search
 products-and-solutions
 products-and-solutions/welded-steel-tubing
+products-and-solutions/welded-steel-tubing/finishes-and-chemistries/4130-tubing
 products-and-solutions/welded-steel-tubing/tubing-solutions
 products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch
 products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-05-inch-round-erw-steel-tubing

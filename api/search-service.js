@@ -6,6 +6,7 @@ const SEARCH_INDEXES_PATH = path.join(ROOT, 'search-indexes.txt');
 const DEFAULT_API_VERSION = '2024-07-01';
 const GUID_RE = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/ig;
 const routeMapCache = new Map();
+const titleMapCache = new Map();
 
 function parsePositiveInt(value, defaultValue, maxValue) {
   const parsed = Number.parseInt(value, 10);
@@ -154,6 +155,72 @@ function buildGuidRouteMap(site) {
   return map;
 }
 
+function stripTitleSuffix(value, site) {
+  let result = String(value || '').trim();
+  const suffixes = [
+    site.siteName,
+    site.siteName?.replace(/\s+/g, ''),
+    site.slug,
+  ].filter(Boolean);
+
+  for (const suffix of suffixes) {
+    result = result.replace(new RegExp(`\\s*[-|:]\\s*${escapeRegExp(suffix)}\\s*$`, 'i'), '');
+  }
+
+  return result.trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function normalizeTitle(value, site) {
+  return stripTitleSuffix(value, site)
+    .toLowerCase()
+    .replace(/&amp;/g, '&')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function extractTitleCandidates(html) {
+  const candidates = [];
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  if (titleMatch) candidates.push(titleMatch[1]);
+
+  const ogTitleMatch = html.match(/<meta\b[^>]*\bproperty\s*=\s*["']og:title["'][^>]*\bcontent\s*=\s*["']([^"']+)["'][^>]*>/i)
+    || html.match(/<meta\b[^>]*\bcontent\s*=\s*["']([^"']+)["'][^>]*\bproperty\s*=\s*["']og:title["'][^>]*>/i);
+  if (ogTitleMatch) candidates.push(ogTitleMatch[1]);
+
+  const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+  if (h1Match) candidates.push(h1Match[1].replace(/<[^>]+>/g, ' '));
+
+  return candidates;
+}
+
+function addTitleMapping(map, site, title, route) {
+  const normalizedTitle = normalizeTitle(title, site);
+  if (!normalizedTitle || !route || map.has(normalizedTitle)) return;
+  map.set(normalizedTitle, route);
+}
+
+function buildTitleRouteMap(site) {
+  const cacheKey = `${site.slug}:${site.publicDir}`;
+  const cached = titleMapCache.get(cacheKey);
+  if (cached) return cached;
+
+  const map = new Map();
+  for (const file of walkHtmlFiles(site.publicDir)) {
+    const html = fs.readFileSync(file, 'utf8');
+    const route = routeForHtmlFile(site, file);
+    for (const title of extractTitleCandidates(html)) {
+      addTitleMapping(map, site, title, route);
+    }
+  }
+
+  titleMapCache.set(cacheKey, map);
+  return map;
+}
+
 function findMatchingBracket(text, openIndex) {
   let depth = 0;
   let inString = false;
@@ -251,6 +318,9 @@ function resolveResultUrl(doc, config, site) {
       if (route) return route;
     }
   }
+
+  const titleRoute = buildTitleRouteMap(site).get(normalizeTitle(firstField(doc, config.titleFields), site));
+  if (titleRoute) return titleRoute;
 
   return '#';
 }

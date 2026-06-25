@@ -408,7 +408,7 @@ async function writeShell() {
     fs.mkdirSync(SHARED_DIR, { recursive: true });
     const headerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(normalizeCmtHeader(shell.header), `${BASE_URL}/${SHELL_URL_PATH}`));
     fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), headerHtml + '\n');
-    const footerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`));
+    const footerHtml = injectSearchClient(normalizeStaticSearch(await resourceConverter.convertHtml(shell.footer, `${BASE_URL}/${SHELL_URL_PATH}`)));
     fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), footerHtml + '\n');
     fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(convertedHtml));
 
@@ -433,7 +433,7 @@ async function writeShell() {
   fs.mkdirSync(SHARED_DIR, { recursive: true });
   const headerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(parts.header, `${BASE_URL}/${SHELL_URL_PATH}`));
   fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), headerHtml + '\n');
-  const footerHtml = normalizeStaticSearch(await resourceConverter.convertHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`));
+  const footerHtml = injectSearchClient(normalizeStaticSearch(await resourceConverter.convertHtml(parts.footer, `${BASE_URL}/${SHELL_URL_PATH}`)));
   fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), footerHtml + '\n');
 
   console.log(`  shared/header.html (${parts.header.length} chars)`);

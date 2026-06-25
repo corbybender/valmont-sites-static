@@ -14,5 +14,15 @@
     "staticstage.valmonttubing.com"
   ],
   "publicDir": "public",
+  "search": {
+    "index": "valmont-tubing-2019-prod",
+    "resultsPath": "/search",
+    "queryParam": "searchQuery",
+    "pageSize": 10,
+    "titleFields": ["Title"],
+    "urlFields": ["Link"],
+    "contentFields": ["Summary"],
+    "guidFields": ["OriginalItemId", "Id", "IdentityField", "Link"]
+  },
   "formsConfig": "forms.config.json"
 }
