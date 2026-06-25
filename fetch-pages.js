@@ -395,43 +395,11 @@ async function processPage(urlPath, shellCache) {
   const fileName = fileParts.pop() + '.html';
   const dirPath = path.join(BASE, ...fileParts);
   const filePath = path.join(dirPath, fileName);
-
-  if (SHELL_MODE === 'semantic-header-footer') {
-    const parts = extractSemanticShell(convertedHtml);
-    const pageHeadInner = extractHeadInner(convertedHtml);
-    const pageHeadExtras = diffHeadExtras(pageHeadInner, shellCache?.headInner || '');
-    const output = parts
-      ? await convertAndCleanHtml(buildSemanticPageOutput({ ...parts, pageHeadExtras }), fullUrl)
-      : await convertAndCleanHtml(convertedHtml, fullUrl);
-    fs.mkdirSync(dirPath, { recursive: true });
-    fs.writeFileSync(filePath, output);
-
-    if (parts) {
-      const extras = pageHeadExtras.trim().length;
-      const tail = parts.pageTail.trim().length;
-      console.log(`  Written: ${filePath} (semantic shell, body ${parts.body.length}, head+${extras}, tail+${tail} chars)`);
-    } else {
-      console.log(`  Written: ${filePath} (full page copy)`);
-    }
-    return;
-  }
-
-  const parts = shellCache?.headInner || shellCache?.headerInner
-    ? extractParts(convertedHtml, shellCache.headInner, shellCache.headerInner)
-    : null;
-  const output = parts ? await convertAndCleanHtml(buildPageOutput(urlPath, parts), fullUrl) : await convertAndCleanHtml(convertedHtml, fullUrl);
+  const output = await convertAndCleanHtml(convertedHtml, fullUrl);
 
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(filePath, output);
-
-  if (parts) {
-    const headExtras = parts.pageHeadExtras.length;
-    const headerExtras = parts.pageHeaderExtras.length;
-    const tail = parts.pageTail.length;
-    console.log(`  Written: ${filePath} (body ${parts.body.length}, head+${headExtras}, header+${headerExtras}, tail+${tail} chars)`);
-  } else {
-    console.log(`  Written: ${filePath} (full page copy)`);
-  }
+  console.log(`  Written: ${filePath} (full page copy)`);
 }
 
 async function main() {
