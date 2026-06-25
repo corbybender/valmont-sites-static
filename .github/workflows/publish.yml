@@ -12,9 +12,7 @@ permissions:
 env:
   ACR_LOGIN_SERVER: cwsstagestaticsitesacr.azurecr.io
   ACR_IMAGE_NAME: valmont-tubing
-  AZURE_RESOURCE_GROUP: CWS-Stage-StaticSites
   AZURE_WEB_APP_NAME: valmont-cws-stage-staticsites
-  AZURE_STAGING_SLOT: staging
 
 jobs:
   build-and-push:
@@ -42,95 +40,13 @@ jobs:
             ${{ env.ACR_LOGIN_SERVER }}/cmt-poles:latest
             ${{ env.ACR_LOGIN_SERVER }}/cmt-poles:${{ github.sha }}
 
-  deploy-staging-and-swap:
+  deploy-production:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Azure login
-        uses: azure/login@v2
+      - name: Deploy image to Azure Web App
+        uses: azure/webapps-deploy@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Check App Service plan
-        id: plan
-        uses: azure/cli@v2
-        with:
-          inlineScript: |
-            set -e
-            server_farm_id=$(az webapp show \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}" \
-              --query serverFarmId -o tsv)
-            plan_name=$(echo "$server_farm_id" | awk -F/ '{print $NF}')
-            sku_tier=$(az appservice plan show \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "$plan_name" \
-              --query sku.tier -o tsv)
-
-            echo "plan_name=$plan_name" >> "$GITHUB_OUTPUT"
-            echo "sku_tier=$sku_tier" >> "$GITHUB_OUTPUT"
-
-      - name: Create slot if missing
-        if: steps.plan.outputs.sku_tier != 'Basic'
-        uses: azure/cli@v2
-        with:
-          inlineScript: |
-            set -e
-            slot_exists=$(az webapp deployment slot list \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}" \
-              --query "[?name=='${AZURE_STAGING_SLOT}'] | length(@)" \
-              -o tsv)
-
-            if [ "${slot_exists}" = "0" ]; then
-              az webapp deployment slot create \
-                --resource-group "${AZURE_RESOURCE_GROUP}" \
-                --name "${AZURE_WEB_APP_NAME}" \
-                --slot "${AZURE_STAGING_SLOT}" \
-                --configuration-source "${AZURE_WEB_APP_NAME}"
-            fi
-
-      - name: Point staging slot at new image
-        if: steps.plan.outputs.sku_tier != 'Basic'
-        uses: azure/cli@v2
-        with:
-          inlineScript: |
-            set -e
-            az webapp config container set \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}" \
-              --slot "${AZURE_STAGING_SLOT}" \
-              --container-registry-url "https://${ACR_LOGIN_SERVER}" \
-              --container-registry-user "${{ secrets.ACR_USERNAME }}" \
-              --container-registry-password "${{ secrets.ACR_PASSWORD }}" \
-              --container-image-name "${ACR_IMAGE_NAME}:${GITHUB_SHA}"
-
-      - name: Swap staging into production
-        if: steps.plan.outputs.sku_tier != 'Basic'
-        uses: azure/cli@v2
-        with:
-          inlineScript: |
-            set -e
-            az webapp deployment slot swap \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}" \
-              --slot "${AZURE_STAGING_SLOT}" \
-              --target-slot production
-
-      - name: Deploy directly to production on Basic plans
-        if: steps.plan.outputs.sku_tier == 'Basic'
-        uses: azure/cli@v2
-        with:
-          inlineScript: |
-            set -e
-            echo "App Service plan is Basic; deployment slots are unavailable. Deploying directly to production."
-            az webapp config container set \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}" \
-              --container-registry-url "https://${ACR_LOGIN_SERVER}" \
-              --container-registry-user "${{ secrets.ACR_USERNAME }}" \
-              --container-registry-password "${{ secrets.ACR_PASSWORD }}" \
-              --container-image-name "${ACR_IMAGE_NAME}:${GITHUB_SHA}"
-            az webapp restart \
-              --resource-group "${AZURE_RESOURCE_GROUP}" \
-              --name "${AZURE_WEB_APP_NAME}"
+          app-name: ${{ env.AZURE_WEB_APP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ env.ACR_LOGIN_SERVER }}/${{ env.ACR_IMAGE_NAME }}:${{ github.sha }}
