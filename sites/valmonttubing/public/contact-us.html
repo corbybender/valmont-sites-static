@@ -1,0 +1,1380 @@
+<!--#include virtual="/shared/header.html" -->
+<script type="text/javascript">/* Matomo Analytics Start */
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.valmont.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+/* Matomo Analytics End */
+</script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript">$(document).ready(function(){
+
+    var a = $(".badges ul.nav li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".badges ul.nav li").css("width", c+"%");
+	
+	$(".nav-container > .nav-content:first-child").show();
+	
+	$("ul.nav > li:first-child").addClass("active");
+	
+    $(".badges ul.nav > li").click(function(){
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-content-" + y;
+        //alert(z);
+		$(".nav-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+});</script>
+<script type="text/javascript">$(document).ready(function () {
+
+        $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+        });
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+   
+
+
+      /*  $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });</script>
+
+<style type="text/css" media="all">ul.nav-header li:first-child {
+    width: 15%;
+}
+
+
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/*
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+.nav-content{
+display:block;
+}
+ */
+
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+/**/
+
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+#fourcolumnscontainer, #threecolumnscontainer, #twocolumnscontainer, #twocolumnswithformcontainer, #onecolumncontainer, #utilityblockproductdetaillist, #utilitydescriptionpower{
+display:none;
+}
+
+
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+
+
+/*Breadcrumb styles*/
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: transparent !important;
+}
+/*End Breadcrumb styles*/
+
+
+/* START Tabs and Tab-Content Styles
+.badges { width: 80%; margin: 50px auto; }
+.nav-container {float: left; width: 100%; text-align: center; padding: 100px 0; background-color: #404040; color: #fff; text-transform: uppercase; font-size: 26px; font-family: arial;}
+.nav-content {display: none;}
+ul.nav { float: left; width: 100%; padding: 0; margin: 0; list-style: none; }
+ul.nav li{ float: left; border-left: 1px solid #ccc; background-color: #eeeeee;text-align: center;padding: 8px 0;margin: 0 0 10px 0; font-family: arial; font-size: 14px; color: #606060;}
+ul.nav > li:first-child { border: 0; }
+.nav-list.active { background-color: #b0b0b0; color: #fff; }
+
+END Tabs and Tab-Content Styles */
+
+
+.fa6{
+color:#005d83;
+}</style>
+<style type="text/css" media="all">.slide-carousel.utility.investors .slide-content {
+  top: 37%;
+
+}</style>
+<style type="text/css" media="all">/*------------------------------------------------------------*/
+.val-display-h1 {
+	font-size: 3rem;
+}
+.val-display-h2 {
+	font-size: 2.25rem;
+}
+.val-display-h3 {
+	font-size: 1.75rem;
+}
+.val-display-h4 {
+	font-size: 1.125rem;
+}
+
+/* Mobile devices (desktops, 420px and smaller) */
+@media (min-width: 0px) and (max-width: 420px) {
+	.val-display-h1 {
+		font-size: 2rem;
+	}
+	.val-display-h2 {
+		font-size: 1.625rem;
+	}
+}
+
+/* Small devices (desktops, 768px and smaller) */
+@media (min-width: 420px) and (max-width: 768px) {
+	.val-display-h1 {
+		font-size: 2rem;
+	}
+	.val-display-h2 {
+		font-size: 1.625rem;
+	}
+        .slide-carousel.utility.investors .slide-content.contact-us-main {
+          position: absolute;
+          z-index: 111;
+          left: 0;
+          top: 12%;
+          text-align: center;
+        }
+}
+
+/* Medium devices (desktops, 992px and smaller) */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.val-display-h1 {
+		font-size: 2rem;
+	}
+        .slide-carousel.utility.investors .slide-content.contact-us-main {
+          position: absolute;
+          z-index: 111;
+          left: 0;
+          top: 25%;
+          margin: 0 33%;
+          text-align: center;
+        }
+}
+
+/* Extra large devices (large desktops, 1024px and smaller) */
+@media (min-width: 1024px) {
+	.val-display-h1 {
+		font-size: 3rem;
+	}
+        .slide-carousel.utility.investors .slide-content.contact-us-main {
+          position: absolute;
+          z-index: 111;
+          left: 0;
+          top: 20%;
+          margin: 0 33%;
+          text-align: center;
+        }
+}
+
+/* Extra large devices (large desktops, 1200px and smaller) */
+@media (min-width: 1200px) {
+  .val-display-h1 {
+          font-size: 3.75rem;
+  }
+  .slide-carousel.utility.investors .slide-content.contact-us-main {
+    position: absolute;
+    z-index: 111;
+    left: 0;
+    top: 32%;
+    width: 34%;
+    margin: 0 33%;
+    text-align: center;
+  }
+}
+
+
+.hero-flex-container {
+  padding: 10px;
+  display: flex;
+  flex: 1 100%;
+  align-items: center;
+}
+.hero-flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  height: calc(100vh - 200px);
+  min-height: 400px;
+  max-height: 500px;
+  overflow: hidden;
+  background-image: linear-gradient(to right top, #141414, #1f1f1f, #2b2b2b, #373737, #434343);
+  background-image: webkit-linear-gradient(to top, #051937, #0f345b, #155381, #1474a8, #0097cf);
+  background: -moz-linear-gradient(to top, #051937, #0f345b, #155381, #1474a8, #0097cf);
+  background: -o-linear-gradient(to top, #051937, #0f345b, #155381, #1474a8, #0097cf);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-flex-container {
+    min-height: 350px;
+    max-height: 440px;
+    height: calc(100vh - 220px);
+  }
+}
+@media (max-width: 768px) and (min-width: 0px) {
+  .hero-flex-container {
+    min-height: 350px;
+    max-height: 440px;
+    height: calc(100vh - 280px);
+  }
+}
+.hero-flex-content {
+  z-index: 7777;
+}
+
+
+
+.investor-contact input[type='text'] {
+    float: left;
+    width: 100%;
+    padding: 2% 0;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #919191;
+    border: 0;
+    border-bottom: 1px solid #919191;
+}
+.investor-contact textarea {
+    float: left;
+    width: 98%;
+    height: 150px;
+    color: #4b4b4b;
+    font-size: 14px;
+    font-family: roboto;
+    padding: 1%;
+    font-weight: 300;
+}
+.valmontformSubmit button{
+    display: inline-block;
+    color: #fff;
+    width: 22%;
+    float: none;
+    margin: 0.625rem 0 4rem 0;
+    padding: 1.5rem 2rem;
+    border: 2px solid #005d83;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background-color: #005d83;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.3s ease, opacity 0.1s ease;
+}
+label{
+display:none;
+}
+
+
+.valmontformSubmit button:hover {
+
+    background-color: #003448;
+    color:#fff;
+    border: 2px solid #003448;
+    transition: color 0.3s ease, opacity 0.1s ease;
+   
+}
+
+.investor-contact input[type="email"] {
+	float: left;
+	width: 100%;
+	padding: 2% 0;
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	color: #919191;
+	border: 0;
+	border-bottom: 1px solid #919191;
+}</style>
+<style type="text/css" media="all">.hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 180px);
+  min-height: 420px;
+  max-height: 500px;
+  overflow: hidden;  
+}
+.hero {
+  background: url(http://az276019.vo.msecnd.net/valmontstaging/images/librariesprovider91/contact-us/banner/1800x600_contact3.jpg?sfvrsn=0) no-repeat center center !important;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+.mobile-hero {
+  display: none;
+}  
+.content {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  flex-flow: column wrap;
+  max-width: 80%;
+  z-index: 7777;
+}
+.loaded {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.sfContentBlock h1 {
+  margin-bottom: 2px;
+  font-weight: normal;
+}
+.hero-headline {
+  font-size: 2.25rem;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.222;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.hero-text {
+  font-size: 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.444;
+  margin-bottom: 20px;
+  color: #fff;
+}
+/* Mobile devices (desktops, 420px and smaller) */
+@media (min-width: 0px) and (max-width: 420px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero {
+    display: none;
+  }  
+  .content {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 85%;
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 2rem;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.222;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 0.9375rem;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.444;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+/* Small devices (desktops, 768px and smaller) */
+@media (min-width: 420px) and (max-width: 768px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero {
+    display: none;
+  } 
+  .content {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 80%;
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 2.625rem;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.222;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.444;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+  
+  
+/* Medium devices (desktops, 992px and smaller) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero {
+    display: none;
+  }
+  .content {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 70%;
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 3rem;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.222;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.444;
+    margin-bottom: 28px;
+    color: #fff;
+  }
+}
+  
+/* Large devices (large desktops, 1025px and smaller) */
+@media (min-width: 1025px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 270px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero { display: none; }  
+  .content {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 80%;
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 2.5rem;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and smaller) */
+@media (min-width: 1200px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 270px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero { display: none; }  
+  .content {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 80%;  
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 2.9375rem;
+    font-size: 47px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    line-height: 1.222;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+}
+
+/* Extra Extra large devices (large desktops, 1600px and smaller) */
+@media (min-width: 1600px) {
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 270px);
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;  
+  }
+  .mobile-hero { display: none; }  
+  .content {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column wrap;
+    max-width: 80%;  
+    z-index: 7777;
+  }
+  .loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  .sfContentBlock h1 {
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+  .hero-headline {
+    font-size: 3.5rem;
+    font-size: 56px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.222;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .hero-text {
+    font-size: 1.25rem;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 34px;
+    color: #fff;
+  }
+}
+</style>
+<style type="text/css" media="all">/* Contact Us Styles */
+
+.google-map-contactus {
+    float: left;
+    width: 88%;
+    background-color: #0076A8;
+    padding: 0 6%;
+}
+
+.google-map-contactus h4 {
+     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff !important;
+    font-size: 3em;
+    text-align: center; 
+}
+
+.slide-carousel.utility.investors .slide-content p {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin: 20px 0;
+  font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn.btn--out-blue {
+    background: transparent !important;
+    color: #005d83 !important;
+    border: 2px solid #005d83 !important;
+}
+
+.btn.btn--out-blue:hover {
+  background: #005d83 !important;
+  border: 2px solid #005d83 !important;
+  color: #fff !important;
+}
+
+.utilityblock.contact {
+    background-color: #f5f6f7;
+    /* background-image: url(images/utility_contact_bg.png); */
+    background-image: none !important;
+    background-position: 70px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 100%;
+}
+
+.utilityblock.contact .utilityblock-content {
+    float: left;
+    width: 90%;
+    margin: 3% 5%;
+}
+
+.utilityblock.contact .utilityblock-content .utilityblock-inner-text {
+    float: left;
+    width: 82%;
+}
+
+.utilityblock.contact .utilityblock-content .utilityblock-inner-text h4 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+    color: #006298 !important;
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+
+.utilityblock.contact .utilityblock-content .utilityblock-inner-text p {
+    color: #5e605e;
+    font-size: 15px;
+    margin: 3px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#phoneblockcoverarea2 {
+ display: none; 
+}
+
+.sf-fieldWrp label{
+  
+color: black;
+    font-weight: 500; 
+}
+.sf-fieldWrp input[type="text"]{
+ width:100%; 
+ height: 25px;
+ font-size: 16px;
+ margin-bottom: 15px;
+}
+
+.sf-fieldWrp{
+  font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  text-align:left;
+}
+
+[data-sf-role="form-container"] {
+  padding-top:20px;
+}
+
+.inner-contact-phone-block h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #0076A8;
+    font-size: 3em;
+    text-align: left;
+}
+.utilityblock-heading h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #0076A8 !important;
+    font-size: 3em;
+    text-align: left;
+}
+
+.investblock, .utilityblock.products {
+    background-color: #fff !important;
+}
+
+.utilityblock-heading {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bar {
+ display: none; 
+}
+
+/* Form Styles */
+
+.hs-form {
+clear: both !important;
+  max-width: 700px !important;
+  margin: 0 auto;
+}
+
+.hs-form .hs-form-field > label {
+font-family: 'Roboto', sans-serif !important;
+    top: 0.25rem !important;
+    pointer-events: none;
+    padding-left: 0.125rem !important;
+    z-index: 1;
+    color: #58595b !important;
+    font-size: 1.125rem !important;
+    font-weight: 300 !important;
+    -webkit-transition: all 0.28s ease;
+    transition: all 0.28s ease;
+}
+
+.hs-field-desc {
+   font-family: 'Roboto', sans-serif !important;
+  font-weight: 300 !important;
+  color: #58595b !important;
+}
+
+.hs-form input[type="text"], .hs-form input[type="email"], .hs-form input[type="tel"] {
+      display: block;
+    background: none;
+    margin-top: 15px;
+    padding: .5rem 0.125rem 0.0275rem;
+    font-size: 1em;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1;
+    width: 100%;
+    color: #58595b;
+    -webkit-transition: all 0.28s ease;
+    transition: all 0.28s ease;
+    box-shadow: none !important;
+text-shadow: none !important;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hs-input .invalid .error {
+    display: block;
+    background: none;
+    margin-top: 15px;
+    padding: .5rem 0.125rem 0.0275rem;
+    font-size: 1.125rem;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1;
+    width: 100%;
+    color: transparent;
+    -webkit-transition: all 0.28s ease;
+    transition: all 0.28s ease;
+box-shadow: none !important;
+  text-shadow: none !important;
+    border-bottom: 1px solid #BE6A14;
+  border-radius: 0px !important;
+}
+
+
+fieldset.form-columns-1 {
+max-width: 650px !important;
+  width: 100%;
+}
+
+fieldset.form-columns-2 {max-width: 650px !important;}
+
+
+body .hs-button.primary,
+body input[type="submit"],
+body input[type="button"] {
+    border: 2px solid #0076A8;
+    color: #fff !important;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 0.875rem;
+    min-width: 120px;
+    text-align: center;
+    padding: 1.25rem 1.75rem;
+    background: #0076A8;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 0.875rem;
+    text-decoration: none;
+    margin: 10px 0px;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  border-radius: 0px;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body .hs-button.primary:hover,
+body input[type="submit"]:hover,
+body input[type="button"]:hover {
+ border: 2px solid #0076A8 !important;
+    color: #0076A8 !important;
+background: none;
+  transition: .25s ease;
+  box-shadow: none !important;
+}
+
+body .hs-button.primary:focus,
+body input[type="submit"]:focus,
+body input[type="button"]:focus {
+
+border: 2px solid #0076A8 !important;
+    color: #0076A8 !important;
+background: none;
+  transition: .25s ease;
+  box-shadow: none !important;
+}
+
+
+.hs-form .hs-error-msgs label{
+color: #BE6A14;
+}
+
+.hs-form fieldset.form-columns-1 textarea.hs-input {
+    padding: 1.375rem 1.5rem;
+    font-size: 1.125rem;
+    border: 1px solid #ccc;
+    line-height: 1.5rem;
+    width: 100% !important;
+    margin-top: 0.875rem;
+    box-shadow: none !important;
+  border-radius: 0px !important;
+  max-width: 650px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: #58595b;
+}
+
+.hs-form input[type="text"]:focus,.hs-form input[type="email"]:focus, 
+.hs-form input[type="tel"]:focus {
+ border-bottom: 1px solid #0076A8;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.hs-form fieldset.form-columns-1 textarea.hs-input:focus {
+ border: 1px solid #0076A8;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+
+.hs-form fieldset.form-columns-1 .hs-input {
+ width: 100% !important;
+  max-width: 650px;
+}
+
+.faqs {
+ background: #f5f6f7;
+  color: #fff !important;
+  margin-bottom: 35px;
+      padding: 2% 6% 2% 6%;
+    float: left;
+    width: 88%;
+}
+
+.find-dealer {
+   background: #0076A8;
+    padding: 2% 6% 2% 6%;
+    float: left;
+    width: 88%;
+}
+
+.faqs p {
+ text-align: left;
+  clear: both;
+  float: none;
+}
+
+.faqs p.question {
+ font-size: 1.5em; 
+  margin: 30px 0px 5px 0px;
+  text-indent: -3em;
+  padding-left: 3em;
+}
+
+.faqs p.question span {
+ padding: 10px;
+  background: #005587;
+  color: #fff !important;
+  font-weight: 500 !important;
+  margin-right: 5px;
+}
+
+.btn--out-blue {
+    background: #fff !important;
+    color: #0076A8 !important;
+    border: 2px solid #fff !important;
+}
+
+.btn--out-blue:hover {
+ background: #0076A8 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  transition: .25s ease;
+}</style>
+<style type="text/css" media="all">.RadTreeView {
+color:white;
+}</style>
+<div class='sfContentBlock'><p style="text-align:right;"><a target="_blank" href="https://webassets.valmont.com/valmontstaging/docs/librariesprovider103/default-document-library/weight-per-ft-tubing-05-2026.pdf" data-skip-sfref="true">Tubing Size Sheet</a></p>
+<p>&nbsp;</p>
+
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+
+		<div class="slide-carousel utility investors center" id="slidecarousel">
+            
+<div class='sfContentBlock'><img src="https://webassets.valmont.com/valmontstaging/images/librariesprovider103/default-album/val-bnr-tubing-contactus.jpg?sfvrsn=854d8539_1">
+<div class="slide-content">
+<h1>Contact Us</h1>
+</div>
+
+</div>
+		</div>
+        
+        <div class="utilityblock products investor-annual">
+			<div class="utilityblock-heading investor-contact-block">
+                
+
+				
+				<div class="feature-tab-option contact-us-block">			
+                    
+
+				</div>
+				
+			</div>
+			<div class="investor-contact" style="display: block;" id="investorcontactarea">
+                
+<div class='sfContentBlock'><div class="f5 fw3 lh-copy coolgrey-70 pb-3 pt-5">
+Whether you have questions, need more information, are requesting a quote, or have any other inquiries, our team is here to help. Contact us through the options below or complete our contact form, and a sales representative will respond promptly. We look forward to connecting with you.
+</div>
+
+</div><div class='sfContentBlock'><div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+<div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+<strong>Phone</strong>: +1 800.825.6668 Ext. 6911 • <strong>Fax</strong>: 402.359.4481 • Email: <a href="mailto:tubing@valmont.com">tubing@valmont.com </a> • <strong>Mail</strong>: P.O. Box 358 Valley, NE 68064-0358
+</div>
+</div>
+
+</div><div class='sfContentBlock'><div style="clear: both"></div>
+<div class="f2 fw3 tc coolgrey-80 mb-4 tracked-tight pt-5">Contact Form</div>
+
+</div>
+<form id="contact-form" class="contact-form" action="/api/send-form" method="post" role="form">
+<input type="hidden" name="formId" value="contact-us" />
+<input type="hidden" name="redirect" value="/contact-us?thanks=1" />
+
+<div id="contact-form-thanks" class="f5 fw3 lh-copy coolgrey-70 pb-3" hidden>
+Thank you. Your message has been sent and a sales representative will respond promptly.
+</div>
+
+<div class="valmontformName sf-fieldWrp">
+    <label for="contact-first-name">First Name *</label>
+    <input id="contact-first-name" type="text" name="firstName" placeholder="First Name *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformLastName sf-fieldWrp">
+    <label for="contact-last-name">Last Name *</label>
+    <input id="contact-last-name" type="text" name="lastName" placeholder="Last Name *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformEmail sf-fieldWrp">
+    <label for="contact-email">Email *</label>
+    <input id="contact-email" type="email" name="email" placeholder="Email *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformCompany sf-fieldWrp">
+    <label for="contact-company">Company *</label>
+    <input id="contact-company" type="text" name="company" placeholder="Company *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformCity sf-fieldWrp">
+    <label for="contact-city">City *</label>
+    <input id="contact-city" type="text" name="city" placeholder="City *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformState sf-fieldWrp">
+    <label for="contact-state">State *</label>
+    <input id="contact-state" type="text" name="state" placeholder="State *" maxlength="255" required />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformPhone sf-fieldWrp">
+    <label for="contact-phone">Phone</label>
+    <input id="contact-phone" type="tel" name="phone" placeholder="Phone" maxlength="255" />
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformQuestions sf-fieldWrp">
+    <label for="contact-comments">Comments</label>
+    <textarea id="contact-comments" name="comments" placeholder="Comments"></textarea>
+    <p role="alert" aria-live="assertive"></p>
+</div>
+
+<div class="valmontformSubmit sf-fieldWrp">
+    <button type="submit">Submit</button>
+</div>
+</form>
+<script type="text/javascript">
+(function () {
+  if (new URLSearchParams(window.location.search).get('thanks') === '1') {
+    var thanks = document.getElementById('contact-form-thanks');
+    if (thanks) thanks.hidden = false;
+  }
+})();
+</script>
+<div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_50">
+        <div id="cphContactUsFormArea_C012_Col00" class="sf_colsIn sf_2cols_1in_50">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_50">
+        <div id="cphContactUsFormArea_C012_Col01" class="sf_colsIn sf_2cols_2in_50">            
+        </div>
+    </div>
+</div>	
+			</div>
+		</div>
+
+        <div class="contact-phone-block" id="mainphoneblockcontentarea">
+			<div class="contact-phone-block-cover" id="phoneblockcoverarea1">
+				<div class="inner-contact-phone-block" id="area1block1">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area1block2">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area1block3">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area1block4">
+                    
+
+				</div>	
+
+				<div class="inner-contact-phone-block" id="area1block5">
+                    
+
+				</div>	
+
+			</div>
+
+			<div class="contact-phone-block-cover" id="phoneblockcoverarea2">
+			
+				<div class="inner-contact-phone-block" id="area2block1">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area2block2">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area2block3">
+                    
+
+				</div>
+
+				<div class="inner-contact-phone-block" id="area2block4">
+                    
+
+				</div>	
+
+				<div class="inner-contact-phone-block" id="area2block5">
+                    
+
+				</div>	
+
+			</div>
+
+			
+		</div>
+
+        <div class="contactus-faq" id="faqcontentarea" style="display: none;">
+            
+
+            
+
+
+			
+		</div>
+
+        <div class="google-map-contactus">
+            
+<div class='sfContentBlock'><style>.trustarc-banner-close img {
+        width: 14px !important;
+    }
+    .trustarc-client-logo img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+</style>
+<div id="consent-banner"></div><div id="teconsent"><script type="text/javascript" async="async" src="https://consent.trustarc.com/v2/notice/r8qrjn"></script></div>
+
+</div>
+    	</div>
+			
+
+	</div>	
+	
+<script>
+(function () {             
+  var ll = new LazyLoad({
+        elements_selector: ".lazy"
+   });
+})();
+    </script>
+	<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+   
+<script type="text/javascript">_trxid = "valmont";
+webTraxs();
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    </script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script>
+
+<!--#include virtual="/shared/footer.html" -->

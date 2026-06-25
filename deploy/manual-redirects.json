@@ -1,0 +1,17 @@
+{
+  "overrides": {
+    "valmont-tubing/brands/steel-tubing/tubing-solutions": "products-and-solutions/welded-steel-tubing/tubing-solutions"
+  },
+  "additional": [
+    {
+      "from": "valmont-tubing/contact-us",
+      "to": "contact-us",
+      "note": "404 on live site; legacy link in glossary pages"
+    },
+    {
+      "from": "valmont-tubing/product-catalogs/steel-tubing",
+      "to": "product-catalogs/welded-steel-tubing",
+      "note": "404 on live site; legacy link in glossary pages"
+    }
+  ]
+}

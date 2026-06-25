@@ -1,0 +1,615 @@
+<!--#include virtual="/shared/header.html" -->
+<script src="https://www.w3schools.com/lib/w3data.js"></script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript" src="https://ux.valmont.com/global-styles/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://ux.valmont.com/global-styles/js/global.js"></script>
+<script type="text/javascript">$(document).ready(function(){
+
+    var a = $(".badges ul.nav li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".badges ul.nav li").css("width", c+"%");
+	
+	$(".nav-container > .nav-content:first-child").show();
+	
+	$("ul.nav > li:first-child").addClass("active");
+	
+    $(".badges ul.nav > li").click(function(){
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-content-" + y;
+        //alert(z);
+		$(".nav-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+});</script>
+<script type="text/javascript"> $(document).ready(function () {
+
+        $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+        });
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+   
+
+       
+      /*  $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });</script>
+
+<style type="text/css" media="all">
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/* 
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+*/
+
+#utilityblocksupportinnerMoreThan3lBadges{
+ display:none; 
+}
+.nav-content{
+display:block;
+}
+
+
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+/**/
+
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+#fourcolumnscontainer, #threecolumnscontainer, #twocolumnscontainer, #twocolumnswithformcontainer, #onecolumncontainer, #utilityblockproductdetaillist, #utilitydescriptionpower{
+display:none;
+}
+
+
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+
+
+/*Breadcrumb styles*/
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: transparent !important;
+}
+/*End Breadcrumb styles*/
+
+
+/* START Tabs and Tab-Content Styles
+.badges { width: 80%; margin: 50px auto; }
+.nav-container {float: left; width: 100%; text-align: center; padding: 100px 0; background-color: #404040; color: #fff; text-transform: uppercase; font-size: 26px; font-family: arial;}
+.nav-content {display: none;}
+ul.nav { float: left; width: 100%; padding: 0; margin: 0; list-style: none; }
+ul.nav li{ float: left; border-left: 1px solid #ccc; background-color: #eeeeee;text-align: center;padding: 8px 0;margin: 0 0 10px 0; font-family: arial; font-size: 14px; color: #606060;}
+ul.nav > li:first-child { border: 0; }
+.nav-list.active { background-color: #b0b0b0; color: #fff; }
+
+END Tabs and Tab-Content Styles */
+
+
+.fa6{
+color:#005d83;
+}
+
+.badges .nav-container .nav-content .feature-content-inner-text ul {
+    list-style: disc!important;
+    clear: both;
+    padding-top: 2%!important;
+}
+.badges ul.nav{
+ display: none; 
+}
+
+.badges .nav-container ul{
+    list-style: disc!important;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-left: 20px !important;
+  
+}
+
+.table_scroll {
+  overflow-x: auto;
+  width: 100%;
+  padding-top: 2%;
+}
+.table_scroll table {
+  margin-bottom: 0px;
+}</style>
+<style type="text/css" media="all">.feature-content-inner-image table{
+    table-layout: fixed;
+    width:100%;
+    }
+
+.feature-content-inner-image table, 
+.feature-content-inner-image th, 
+.feature-content-inner-image td {
+    border-collapse: collapse;
+    }
+.feature-content-inner-image table td {
+    padding: 10px;
+}</style>
+<style type="text/css" media="all">.utilityblock.contact .utilityblock-content .utilityblock-inner-button {
+    float: none;
+    width: 30% !important;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.utilityblock-inner-text div{
+ text-align: center; 
+}
+
+@media only screen and (max-width: 699px) and (min-width: 0px) {
+.utilityblock.contact .utilityblock-content .utilityblock-inner-button {
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 50em){
+  .utilityblock.contact .utilityblock-content .utilityblock-inner-button {
+  justify-content: center !important;
+  width: 100% !important;
+  }
+  
+}</style>
+<style type="text/css" media="all">.RadTreeView {
+color:white;
+}
+#utilityblocksupport{
+ display:none; 
+}</style>
+<link href="https://ux.valmont.com/global-styles/scss/Partials/val-structures2018.min.css" type="text/css" rel="stylesheet" media="all" />
+<style type="text/css" media="all">/*ul.nav-header li:first-child {
+    width: 15%;
+}*/</style>
+<div class='sfContentBlock'><p style="text-align:right;"><a target="_blank" href="https://webassets.valmont.com/valmontstaging/docs/librariesprovider103/default-document-library/weight-per-ft-tubing-05-2026.pdf" data-skip-sfref="true">Tubing Size Sheet</a></p>
+<p>&nbsp;</p>
+
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+
+		<div class="slide-carousel utility" id="slidecarousel">
+            
+<div class='sfContentBlock'><img alt="" src="/valmont2017/images/blue_banner.jpg">
+<div class="slide-content">
+<h1>12.375 Inch Round SAW Steel Tubing
+</h1>
+<p>&nbsp;</p>
+</div>
+
+</div>
+		</div>
+
+		<div class="utilityblock description power" id="utilitydescriptionpower">
+			<div class="utilityblock-content" id="utilityblockcontent">
+						
+				<div class="utilityblock-inner-content" id="utilityblockinnercontent">
+					<div class="utilityblock-inner-text" id="utilityblockinnertext">
+                        
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="utilityblock productdetaillist" id="utilityblockproductdetaillist">
+			<div class="productdetaillist-inner" id="utilityblockproductdetaillistinner">
+                
+
+			</div>
+		</div>
+        <!-- One Column  -->
+        <div class="section-container one-column" id="onecolumncontainer">
+			<div class="col-sec" id="onecolumncontainersection">
+                
+
+            </div>
+		</div>
+        <!-- Two Columns with form -->
+        <div class="section-container two-column-contact-form" id="twocolumnswithformcontainer">
+			<div class="col-sec" id="twocolumnswithformcontainersection1">
+                
+
+            </div>
+		    <div class="col-sec" id="twocolumnswithformcontainersection2">
+                
+
+            </div>
+		</div>
+        <!-- Two Columns  -->
+        <div class="section-container two-column" id="twocolumnscontainer">
+			<div class="col-sec" id="twocolumnscontainersection1">
+                
+
+            </div>
+		    <div class="col-sec" id="twocolumnscontainersection2">
+                
+
+            </div>
+		</div>
+        <!-- Three Columns  -->
+        <div class="section-container three-column" id="threecolumnscontainer">
+			<div class="col-sec" id="threecolumnscontainersection1">
+                
+
+            </div>
+            <div class="col-sec" id="threecolumnscontainersection2">
+                
+
+            </div>
+            <div class="col-sec" id="threecolumnscontainersection3">
+                
+
+            </div>
+        </div>
+        <!-- Four Columns  -->
+        <div class="section-container four-column" id="fourcolumnscontainer">
+			<div class="col-sec" id="fourcolumnscontainersection1">
+                
+
+            </div>
+            <div class="col-sec" id="fourcolumnscontainersection2">
+                
+
+            </div>
+            <div class="col-sec" id="fourcolumnscontainersection3">
+                
+
+            </div>
+			 <div class="col-sec" id="fourcolumnscontainersection4">
+                
+
+            </div>
+        </div>
+
+		
+           
+            <div class="badges" id="top-tab-items-container">
+	            <ul class="nav" id="top-tab-items-individual-list-items">
+                    
+
+	            </ul>
+
+	            <div class="nav-container" id="top-tab-items-content-area-for-each">
+                     
+<div class='sfContentBlock'><h1>12.375 Inch Steel Tubing</h1>
+<p>Valmont's 12.375 OD SAW (submerged arc welded) round steel tubing is produced to ASTM A252 and A787 and is produced in hot rolled (HR)&nbsp; and hot dip galvanized (HDG) <a href="/valmont-tubing/brands/steel-tubing/finishes-chemistries">finishes</a>.&nbsp;&nbsp;Our&nbsp;<a href="/valmont-tubing/brands/steel-tubing/finishes-chemistries">chemistry</a> offerings for 12.375"&nbsp;(314.33 mm) include&nbsp;1008, 1010, 1015, 1020, and 1021 carbon steel. &nbsp;Valmont also offers select value added capabilities such as cutting, hole drilling and special fabrication if requested.</p>
+<p>
+Call one of our knowledgeable sales team members at 1-800-825-6668 or&nbsp;<a href="/about-us/contact-us">click here</a> so that we can answer&nbsp;any questions you may have and provide you with pricing and lead time information.&nbsp; For additional information on other sizes that we produce, please visit our&nbsp;<a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<p>
+Please reference the following chart that shows the weight per foot information for all of the gauges or wall thicknesses that we produce for 12 3/8 inch OD.
+</p>
+<div class="table_scroll">
+<h3><strong>Welded Tubing Weight Per Foot Chart</strong></h3>
+<table>
+    <tbody>
+        <tr>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">GAUGE</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">12</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">11</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">1/8</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">10</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">9</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">5/32</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">8</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">7</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">3/16</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">6</span></strong></td>
+            <td style="text-align: center;" bgcolor="#006084"><strong><span style="color: rgb(255, 255, 255);">5</span></strong></td>
+        </tr>
+        <tr>
+            <td bgcolor="#228ABC"><span></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.109</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.120</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.125</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.134</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.148</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.156</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.165</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.180</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.188</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.203</strong></span></td>
+            <td bgcolor="#228ABC"><span style="color: rgb(255, 255, 255);"><strong>0.220</strong></span></td>
+        </tr>
+        <tr>
+            <td><span><strong>12.375</strong></span></td>
+            <td><span>14.264</span></td>
+            <td><span>15.690</span></td>
+            <td><span>16.337</span></td>
+            <td><span>17.500</span></td>
+            <td><span>19.306</span></td>
+            <td><span>20.337</span></td>
+            <td><span>21.494</span></td>
+            <td><span>23.419</span></td>
+            <td><span>24.444</span></td>
+            <td><span>26.362</span></td>
+            <td><span>28.530</span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="feature-content-inner-image">
+</div>
+
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_50">
+        <div id="cphTabContentAreaOneDivForEachTab_C008_Col00" class="sf_colsIn sf_2cols_1in_50"><div class='sfContentBlock'><br>
+<br>
+<h2>To view specific OD sizes that Valmont produces, click on the size range links below:</h2>
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td><a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch">Round Tubing - 1.05 to 2.50 Inch</a></td>
+        </tr>
+        <tr>
+            <td><a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch">Round Tubing - 2.75 to 6 Inch</a></td>
+        </tr>
+        <tr>
+            <td><a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch">Round Tubing - 6.25 to 16 Inch</a></td>
+        </tr>
+        <tr>
+            <td><a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch">Square and Rectangle Tubing - Up to 6 Inch</a></td>
+        </tr>
+        <tr>
+            <td><a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/oval-special-shaped-tubing">Oval and Special Shaped Tubing</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_50">
+        <div id="cphTabContentAreaOneDivForEachTab_C008_Col01" class="sf_colsIn sf_2cols_2in_50">            
+        </div>
+    </div>
+</div><div class='sfContentBlock'><!--#include virtual="/shared/link-chart-6-25-to-16-round.html" -->
+<div class="feature-content-inner-image">
+</div>
+
+</div>
+	            </div>
+
+            </div>
+   
+			
+		
+		
+		<div class="utilityblock support product-detail" id="utilityblocksupport">
+		
+				<div class="utilityblock-content" id="utilityblocksupportcontent">
+			
+				<div class="utilityblock-inner-content" id="utilityblocksupportinnerleft">
+                    
+<div class='sfContentBlock'><div class="utilityblock-inner-img">
+<center>
+<img title="Badge 1" style="width: 100px;  height:100px; float: none;" alt="Badge 1" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/icons/val-prod-sol-icn-employment.png" />
+</center></div>
+<div class="utilityblock-inner-text">
+<h4>All Product Pages Badge 1</h4>
+<p>Very small paragraph, 10-20 words.</p>
+<a class="universal_learn_more" href="/careers/careers-locations">Learn More</a>
+</div>
+
+</div>
+				</div>
+				
+				<div class="utilityblock-inner-content" id="utilityblocksupportinnercenter">
+					
+<div class='sfContentBlock'><div class="utilityblock-inner-img">
+<center>
+<img title="Badge 2" style="width: 100px;  height:100px; float: none;" alt="Badge 2" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/icons/val-prod-sol-icn-investors.png" />
+</center></div>
+<div class="utilityblock-inner-text">
+<h4>All Product Pages Badge 2</h4>
+<p>Very small paragraph, 10-20 words.</p>
+<a class="universal_learn_more" href="/careers/careers-locations">Learn More</a>
+</div>
+
+</div>
+				</div>				
+				<div class="utilityblock-inner-content" id="utilityblocksupportinnerright">
+						
+<div class='sfContentBlock'><div class="utilityblock-inner-img">
+<center>
+<img title="Badge 3" style="width: 100px;  height:100px; float: none;" alt="Badge 3" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/icons/val-prod-sol-icn-global.png" />
+</center></div>
+<div class="utilityblock-inner-text">
+<h4>All Product Pages Badge 3</h4>
+<p>Very small paragraph, 10-20 words.</p>
+<a class="universal_learn_more" href="/careers/careers-locations">Learn More</a>
+</div>
+
+</div>
+				</div>	
+                <div id="utilityblocksupportinnerMoreThan3lBadges">
+						
+
+				</div>			
+		
+			</div>
+		</div>		
+
+	
+
+				<!--#include virtual="/shared/questions-footer-cta.html" -->
+			
+
+	</div>	
+	
+
+   
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    _trxid = "valmont";
+webTraxs();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script><script type="text/javascript">$(function() {
+  $(".nav-container p").each(function() { 
+    var text = $(this).text();
+    $(this).text(text.replace("1-800-825-6668","+1 800.825.6668")); 
+});
+});
+
+
+/* $('h1').each(function() {
+        var text = $(this).text();
+        $(this).text(text.replace('Steel', 'STEELSS')); 
+    });
+*/
+
+  
+  
+
+
+
+</script>
+
+<!--#include virtual="/shared/footer.html" -->

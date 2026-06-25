@@ -1,0 +1,156 @@
+ .sfNavWrp .sfNavHorizontalWrp  {
+ display:none; 
+}
+.sfNavHorizontal{
+ display:none; 
+}
+.sfNavWrp .sfNavToggle {
+  display: none;
+}
+
+@media only screen and (max-width : 240px) {
+		
+#title-bar {
+margin-top:100px;
+}
+}
+
+@media only screen and (max-width : 320px) {
+	
+#title-bar {
+margin-top:100px;
+}
+}
+
+@media only screen and (max-width : 480px) {
+	#title-bar {
+margin-top:100px;
+}
+
+}
+@media only screen and (max-width : 640px) {
+#title-bar {
+margin-top:100px;
+}
+	
+}
+
+@media only screen and (max-width : 768px) {
+
+  
+}
+
+@media only screen and (max-width : 1024px) {
+
+ div.RadMenu_Sitefinity {
+   display:block; 
+      
+  }
+ /*Webforge Asia Nav*/
+ div.RadMenu_Sitefinity ul.rmHorizontal {
+  width: 100%;
+}
+ #header-center-background {
+  background: darkgrey !important;
+  /*end Webforge*/
+
+#center-top-with-background{
+/*display:none; */
+}
+div.RadMenu_Sitefinity ul.rmHorizontal {
+/*top navigation
+   display:none; 
+   */
+     background: rgb(66, 60, 60);
+  }
+#sidebar{
+   /*hide sidebar */
+   /*display:none;*/
+   /*show sidebar but on bottom under content*/
+  position: relative;
+  float: left;
+  bottom: 0;
+    width: 174px;
+	z-index: 2;
+    padding-bottom: 5px;
+}
+ 
+    
+#top-right-utilities{ display:none;}
+  
+#title-bar-center {
+background: none;
+}
+
+footer {
+display:none !important; 
+}
+  
+.center {
+width: 100%;
+}
+  
+#main-content-full-width {
+padding: 0 20px 10px 20px;
+}
+  
+#main-content {
+float: left;
+width: 100%;
+padding: 17px 0 0px;
+    border-right:none;
+    padding-bottom:5px;
+}
+  
+#internal h1 {
+width:100%;
+}
+  
+.RadSocialShare_Default {
+  display: none;
+  }
+  
+hr
+{
+display: none;
+}
+#footer-center-outside-background {
+  display: none;
+  }
+  
+  #center-top-with-background {
+  width: 100%;
+  height: 166px;
+  background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-gray-2-new.gif?sfvrsn=2) repeat-x;
+  }
+   #internal #main-container {
+width: 100%;
+}
+
+#internal #main-content {
+  width: 100%;
+  border-right:none;
+  padding-bottom:5px;
+  }
+  
+    #internal h2{
+    font-size: small;
+  font-weight: 700;
+  }
+  
+    #appGalleryNav {
+  bottom: 720px;
+  right: 200px;
+}
+  
+  
+  body {
+min-width:100%;
+}
+  
+  
+}
+
+@media only screen  and (max-width : 1224px) {
+
+}

@@ -1,0 +1,732 @@
+/********************************************
+Common Styles
+********************************************/
+
+html, body {background: #ffffff !important; margin: 0 !important; padding: 0 !important; height: 100% !important;}
+
+#wrapper {min-height: 100% !important; margin-bottom: -312px !important; position: relative !important;}
+
+.clear {clear: both !important; }
+
+.zeroMargPadd {margin: 0 !important; padding: 0 !important;}
+
+p {font-family: Verdana; font-size: 14px; line-height: 17px; color: #666666;}
+
+h1 {font-size: 44px; line-height: 46px; margin: 0; padding: 0; color: #665D46; font-weight: normal; text-transform: uppercase; letter-spacing: 1px;}
+h2 {font-size: 20px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; line-height: 22px; margin: 0; padding: 0; text-transform: uppercase; font-weight: normal; color: #665D46;}
+h3 {color: #ffffff; font-family: "ff-angie-web-pro","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; font-size: 18px; line-height: 20px; margin: 0; padding: 0; text-transform: uppercase;}
+h4 {color: #799240; font-family: Verdana; font-size: 16px; line-height: 16px; margin: 0; padding: 0; text-transform: uppercase;}
+h5 {color: #cccccc; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; font-size: 25px; line-height: 28px; margin: 0; padding: 0; font-weight: normal;}
+h6 {color: #666666; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; font-size: 15px; line-height: 20px; margin: 0 0 15px; 0; padding: 0; font-weight: normal; text-transform: uppercase;} 
+
+a {outline: none;}
+a img {outline: none;}
+img {border: 0;}
+
+.alignLeft {float: left; margin: 0 8px 8px 0;}
+
+.alignRight {float: right; margin: 0 0 8px 8px;}
+
+.uppercase {text-transform: uppercase;}
+ 	
+.marginBottom20px {margin-bottom: 20px;}
+
+/********************************************
+Header Styles
+********************************************/
+
+#header {width: 100%; min-height: 173px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/headerbg.png) repeat-x;}
+
+#inner-header {width: 960px; position: relative; margin: 0 auto; height: 107px;}
+
+.logo {position: absolute; top: 8px; left: 0px;}
+#breadCrumbArea {height: 69px; border-bottom: 1px solid #cccccc; width: 100%; margin: 0; padding: 0;}
+
+#breadCrumbInner {width: 960px; height: 59px; margin: 0 auto; padding-top: 10px;}
+
+#breadCrumbInner p {margin: 0; padding: 0;}
+#breadCrumbInner p a:last-child {font-weight: bold;}
+
+#breadCrumbInner a:link {font-family: Verdana; font-size: 14px; color: #666666; text-decoration: none; line-height: 14px;}
+#breadCrumbInner a:visited {font-family: Verdana; font-size: 14px; color: #666666; text-decoration: none; line-height: 14px;}
+#breadCrumbInner a:hover {font-family: Verdana; font-size: 14px; color: #666666; text-decoration: none; line-height: 14px;}
+
+/********************************************
+Main Navigation Styles
+********************************************/
+
+.nav {height: 45px; width: 960px; margin:18px auto 0 auto;}
+
+.nav ul {margin: 0; padding: 0; list-style: none; height: 40px; margin-top: 20px;}
+
+.nav ul li {display: inline-block;  border-left: 1px dotted #cccccc;}
+
+.nav ul li a:link {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+.nav ul li a:visited {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+.nav ul li a:hover {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+
+.navFirst {}
+.navLast {border-right: 1px dotted #cccccc;}
+
+/********************************************
+Sub Navigation Styles
+********************************************/
+
+#subNavContainer {width: 100%; height: 35px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/subnavbg.png) repeat-x; margin-top: 3px; padding-top: 2px;}
+
+#subNavContainer ul {width: 960px; margin: 0 auto; height: 28px; padding: 0;}
+
+#subNavContainer ul li {display: inline-block;  border-left: 1px dotted #999999;}
+
+#subNavContainer ul li a:link {font-size: 14px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #666666; text-transform: uppercase; display: block; padding: 0 20px;text-decoration: none; line-height: 30px;}
+#subNavContainer ul li a:visited {font-size: 14px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #666666; text-transform: uppercase; display: block; padding: 0 20px;text-decoration: none; line-height: 30px;}
+#subNavContainer ul li a:hover {font-size: 14px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #666666; text-transform: uppercase; display: block; padding: 0 20px;text-decoration: none; line-height: 30px;}
+
+#subNavFirst {padding-left: 0px;}
+#subNavLast {border-right: 1px dotted #999999;}
+
+/********************************************
+Content Area Styles
+********************************************/
+
+#mainContainer {width: 960px; margin: 0 auto; padding-top: 15px;}
+#mainContainer.noTopPadding {padding-top: 0px!important;}
+
+#leftColumn {width: 295px; float: left; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/doubledottedvertical.png) top right repeat-y; padding-top: 10px;}
+
+.calloutWrapper {margin-bottom: 12px;}
+
+.callOutTop {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/callouttopbg.png) no-repeat; width: 253px; height: 32px; margin: 0; padding: 8px 0 0 18px;}
+.callOutTop img {float: left;}
+.callOutTop h4 {float: left; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; font-size: 15px; line-height: 26px; color: #ffffff; margin: 0 0 0 8px;; padding: 0; text-transform: uppercase; font-weight: lighter;}
+
+.callOutMiddle {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/calloutmiddlebg.png) repeat-y; width: 241px; min-height: 96px; margin: 0; padding: 5px 15px 0 15px; }
+.callOutMiddle img {float: left; margin-right: 8px;}
+.callOutMiddle p {margin: 0; padding: 0; font-size: 13px; line-height: 15px;}
+.callOutMiddle a:link {font-family: Verdana; font-size: 14px; line-height: 25px; color: #666666; text-decoration: none;}
+.callOutMiddle a:visited {font-family: Verdana; font-size: 14px; line-height: 25px; color: #666666; text-decoration: none;}
+.callOutMiddle a:hover {font-family: Verdana; font-size: 14px; line-height: 25px; color: #666666; text-decoration: underline;}
+
+.callOutBottom {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/calloutbottombg.png) no-repeat; width: 271px; height: 9px; margin: 0; padding: 0;}
+
+#rightColumn {margin-left: 320px; width: 640px; height: 500px; padding-top: 10px;}
+#rightColumn h1 {color: #675D47; font-size: 44px; line-height: 44px; font-family: "ff-angie-web-pro","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; padding: 0; font-weight: normal;}
+#rightColumn h3 {margin: 0; padding: 0; color: #778E3F; font-size: 19px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; font-weight: normal; text-transform: none;}
+
+.dottedLine {margin: 25px 0;}
+
+.homepageH1 {margin-bottom: 32px!important;}
+
+#homeRotator {float: left; width: 346px;}
+
+
+#secondaryLeftColumn {width: 700px; float: left; border-right: 1px solid #cccccc; height: 100%; margin: 0 0 20px 0; padding: 0 35px 0 0;}
+
+#secLeftTop {padding-top: 15px; border-bottom: 1px solid #cccccc;}
+#secLeftTop p {font-size: 16px; line-height: 19px;}
+
+.secLeftBottom {border-bottom: 1px solid #cccccc; padding: 20px 0; position: relative;} 
+
+.secLeftBottomPic {float: left; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/secleftbottompicbg.png) no-repeat; position: relative; width: 255px; height: 152px;}
+.secLeftBottomPic img {position: absolute; top: 7px; left: 7px;}
+
+.secLeftBottomContent {margin-left: 270px;}
+.secLeftBottomContent h3 {font-size: 15px; line-height: 17px; text-transform: uppercase; color: #666666; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; margin: 0; padding: 0; font-weight: normal;}
+
+#bigPicBG {float: right; width: 321px; height: 369px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/bigpicbg.png) no-repeat; position: relative; margin-left: 15px;}
+#bigPicBG img {position: absolute; top: 10px; left: 10px;}
+
+#secondaryRightColumn {width: 215px; margin-left: 745px; padding: 15px 0 0 9px; }
+#secondaryRightColumn h3 {font-size: 20px; line-height: 22px; color: #665D46; font-family: "ff-angie-web-pro","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; text-transform: uppercase; font-weight: normal;}
+
+#secRightPic {width: 206px; height: 368px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/secrightpicbg.png) no-repeat; position: relative; margin-bottom: 20px;}
+#secRightPic img {position: absolute; top: 10px; left: 10px;}
+
+#dontSee {width: 171px; height: 150px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/dontseebg.png) no-repeat; margin-top: 20px; padding: 15px;}
+#dontSee p {font-family: 13px; line-height: 15px; color: #ffffff; margin: 0 0 10px 0;}
+#dontSee a:link {color: #7E9643;}
+#dontSee a:visited {color: #7E9643;}
+#dontSee a:hover {color: #7E9643;}
+
+
+.prodOverFirst p {font-size: 16px;}
+
+.prodOverPic {width: 118px; height: 179px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/prodoverpicbg.png) no-repeat; float: left; margin: 0 15px 15px 0; padding:7px 7px 7px 9px; font-family: Verdana;}
+.prodOverPic a:link {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.prodOverPic a:visited {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.prodOverPic a:hover {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.prodOverPic p {font-size: 12px; line-height: 13px; margin:2px 0; padding: 0;}
+
+.poleSpecifications {margin-bottom: 25px;}
+
+.specificationTitle {width: 186px; height: 42px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/specificationbg.png) no-repeat; padding: 0 0 0 20px; margin-bottom: 10px;}
+.specificationTitle h4 {color: #665D46; font-family: "ff-angie-web-pro"; font-size: 18px; line-height: 37px; margin: 0; padding: 0; text-transform: uppercase; font-weight: normal;}
+
+.poleSpecification {width: 126px; height: 278px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/polespecificationbg.png) no-repeat; float: left; margin-right: 5px; padding: 7px 0 0 9px;}
+
+.poleSpecification a:link {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.poleSpecification a:visited {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.poleSpecification a:hover {color:#7E9643; font-size: 13px; line-height: 15px; text-transform: uppercase;}
+.poleSpecification a span {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/pdf-icon.png) 0px 0px no-repeat; min-width: 17px; min-height: 23px; padding-left: 25px; display: block;}
+.poleSpecification p {font-size: 13px; margin:-6px 0 0 25px;}
+
+/* Color Chart Code Table Styles (eww tables!) */
+#colorChartCode {width: 201px; margin: 70px 0 50px 0;}
+
+#tableHeader {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/tableheaderbg.png) no-repeat; width: 201px; height: 40px; text-align: center;}
+#tableHeader h3 {text-transform: none; font-size: 18px; line-height: 36px;}
+
+#colorChartCode table {width: 197px; background: #F4F4F4; border-left: 1px solid #cccccc; margin: -1px 0 0 1px; border-right: 1px solid #cccccc; color: #666666; font-family: Verdana; font-size: 14px; line-height: 14px;}
+#colorChartCode table tr {}
+#colorChartCode tr td:first-child {font-weight: bold;}
+#colorChartCode table tr td {border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; }
+#colorChartCode table tr td span {font-size: 11px;}
+
+.black {background: #000000;}
+.matteBlack {background: #271606;}
+.darkBronze {background: #3F3832;}
+.darkGreen {background: #004834;}
+.hunterGreen {background: #104533;}
+.silver {background: #ADAEB2;}
+.white {background: #ffffff;}
+.grey {background: #9E9FA3;}
+
+.resourceLinks a:link {color: #7E9643;}
+.resourceLinks a:visited {color: #7E9643;}
+.resourceLinks a:hover {color: #7E9643;}
+
+.availableFiles {list-style: none; margin: 0; padding: 0;}
+.availableFiles li {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/availablefilebg.png) top left no-repeat; padding-left: 25px;}
+.availableFiles li a:link {color: #7E993D;}
+.availableFiles li a:visited {color: #7E993D;}
+.availableFiles li a:hover {color: #7E993D;}
+
+/* Resources Video/Photo Gallery Styles */
+.sfLightboxMode {list-style: none; margin: 0; padding: 0;}
+.sfvideoTmb {display: inline-block; margin: 0 25px 15px 0; width: 138px; height: 83px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/resourcesphotothumbbg.png) no-repeat; position: relative;}
+.sfvideoTmb img {width: 128px; height: 72px; position: absolute; top: 6px; left: 5px;}
+
+.sfimagesTmbList {list-style: none; margin: 0; padding: 0;}
+.sfimagesTmb {display: inline-block; margin: 0 25px 15px 0; width: 138px; height: 83px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/resourcesphotothumbbg.png) no-repeat; position: relative;}
+.sfimagesTmb img {width: 128px; height: 72px; position: absolute; top: 6px; left: 5px;}
+
+
+.blogFeaturedImage {float: left; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/blogfeaturedbg.png) no-repeat; width: 187px; height: 188px; position: relative;}
+.blogFeaturedImage img {position: absolute; top: 7px; left: 7px; width: 170px; height: 172px;}
+.blogPostContent {margin-left: 210px;}
+.blogPostContent p {font-size: 16px; margin: 0; padding: 0;}
+.blogPostContent .date {line-height: 22px; color: #6C8C22;}
+.blogPostContent h4 a:link {font-family: "futura-pt"; font-size: 20px; margin: 0; padding: 0; line-height: 30px; text-transform: uppercase; font-weight: normal; color: #665D46; text-decoration: none;}
+.blogPostContent h4 a:visited {font-family: "futura-pt"; font-size: 20px; margin: 0; padding: 0; line-height: 30px; text-transform: uppercase; font-weight: normal; color: #665D46; text-decoration: none;}
+.blogPostContent h4 a:hover {font-family: "futura-pt"; font-size: 20px; margin: 0; padding: 0; line-height: 30px; text-transform: uppercase; font-weight: normal; color: #665D46; text-decoration: none;}
+.blogPostContent a:link {color: #7E993D;}
+.blogPostContent a:visited {color: #7E993D;}
+.blogPostContent a:hover {color: #7E993D;}
+
+.rssSubscribe {line-height: 31px; padding-left: 40px; height: 31px; display: block; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/rssicon.png) no-repeat;color: #7E993D; margin-bottom: 20px;}
+.rssSubscribe:visited {color: #7E993D;}
+.rssSubscribe:hover {color: #7E993D;}
+
+.recentPosts {list-style: none; margin: 0 0 20px 0; padding: 0;}
+.recentPosts li {border-bottom: 1px solid #cccccc;}
+.recentPosts a:link {color: #7E993D;}
+.recentPosts a:visited {color: #7E993D;}
+.recentPosts a:hover {color: #7E993D;}
+
+/* Application Gallery Page Styles */
+.appGalleryTitle {text-transform: none; margin: 15px 0 0px 0;}
+
+.appGalleryLeft {width: 486px; height: 679px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/applicationgallerybg.png?sfvrsn=2) no-repeat; float: left; position: relative;}
+.appGalleryLeft img {position: absolute; top: 9px; left: 23px; width: 437px; height: 659px;}
+
+.caption {position: absolute; bottom: 4px; left: 3px; width: 459px; padding: 10px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/captionbg.png?sfvrsn=2) repeat; z-index: 9999999;}
+.caption p {color: #ffffff;}
+
+.appGalleryRight {margin-left: 508px; width: 205px;}
+
+#appGalleryNav {list-style: none; width: 188px; padding: 0; margin: 0; position: absolute; bottom: 155px; right: -12px; z-index: 99999999;}
+#appGalleryNav li {float: left; margin: 0 10px 5px 0;}
+#appGalleryNav li img {background: #CCCCCC; padding: 5px; -webkit-border-radius: 4px; border-radius: 4px; opacity: .5;}
+#appGalleryNav .activeSlide img {background: #666666; padding: 5px; -webkit-border-radius: 0px; border-radius: 0px; opacity: 1;}
+#appGalleryNav li img:hover {opacity: 1}
+
+.inThisPhotoInfo {margin-bottom: 50px; width: 197px}
+.inThisPhotoInfo tr td {border-bottom: 1px solid #cccccc; padding: 5px 0;}
+.inThisPhotoInfo h3 {font-weight:normal; color: #665D46; text-transform: none; font-size: 20px;}
+.inThisPhotoInfo a:link {font-family: Verdana; font-size: 14px; color: #7E9643; line-height: 22px;}
+.inThisPhotoInfo a:visited {font-family: Verdana; font-size: 14px; color: #7E9643; line-height: 22px;}
+.inThisPhotoInfo a:hover {font-family: Verdana; font-size: 14px; color: #7E9643; line-height: 22px;}
+
+/* Application Gallery Accordions */
+.appGalleryAccordion1 {margin:65px 0 20px 0!important;}
+.appGalleryAccordion1, .appGalleryAccordion2 {width: 200px;}
+.appGalleryAccordion1 div, .appGalleryAccordion2 div {margin: 0!important; padding: 0!important;}
+
+.appGalleryAccordion1 h3, .appGalleryAccordion2 h3 {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderclosedbg13CAEAEEAD9C.png?sfvrsn=2) -511px 0px no-repeat; width: 180px; height: 43px; font-family: "ff-angie-web-pro"; font-size: 18px!important; color: #665D46; font-weight: normal; text-transform: none!important; margin: 0!important; padding:0 0 0 20px!important; line-height: 37px!important; border-left: 1px solid #cccccc;}
+.appGalleryAccordion1 h3.ui-state-active, .appGalleryAccordion2 h3.ui-state-active {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderopenbgCB5ED2561D7D.png?sfvrsn=2) -511px 0px no-repeat;}
+
+.appGalleryAccordion1 div img {display: block; margin: 0 auto;}
+	
+.sortBy {list-style: none; width: 165px; background: #F4F4F4; margin: 0; padding: 0 15px; border: 1px solid #cccccc; border-top: none;}
+.sortBy li {display: block; border-bottom: 1px solid #cccccc; background: transparent; padding: 5px 0; margin: 0;}
+.sortBy p {font-size: 15px; line-height: 17px; font-family: "futura-pt"; color: #333333; margin: 0; padding: 0;}
+.sortBy a:link {color: #666666; font-size: 12px; line-height: 17px; text-decoration: none; font-family: Verdana;}
+.sortBy a:visited {color: #666666; font-size: 12px; line-height: 17px; text-decoration: none; font-family: Verdana;}
+.sortBy a:hover {color: #666666; font-size: 12px; line-height: 17px; text-decoration: underline; font-family: Verdana;}
+.sortByActive {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/currentlyviewingarrow.png?sfvrsn=2) left center no-repeat!important; padding-left: 20px!important;}
+.sortByActive, .sortByActive p {color: #859B4D!important; text-transform: uppercase;}
+ 		
+/********************************************
+Product Detail Slideshow/Accordion Styles
+********************************************/
+
+/* Slideshow */
+#detailSlideshow {width: 394px; height: 567px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailslideshowbg.png) no-repeat; position: relative; float: left;}
+#detailSlideshow img {position: absolute; top: 7px!important; left: 8px!important; width: 376px; height: 550px;}
+
+#detailNav {list-style: none; float: right; width: 285px; padding: 0; margin: 0;}
+#detailNav li {float: left; margin: 0 10px 5px 0;}
+#detailNav li img {background: #CCCCCC; padding: 5px; -webkit-border-radius: 4px; border-radius: 4px; opacity: .5;}
+#detailNav .activeSlide img {background: #666666; padding: 5px; -webkit-border-radius: 0px; border-radius: 0px; opacity: 1;}
+#detailNav li img:hover {opacity: 1}
+
+#details {margin-left: 414px; border-bottom: 1px solid #cccccc; margin-bottom: 15px;}
+#details span {font-size: 11px; font-style: italic;}
+
+/* Accordion */
+#detailAccordion {width: 711px; margin-top: 30px;}
+
+#detailAccordion h3 {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderclosedbg.png) no-repeat; width: 691px; height: 43px; font-family: "ff-angie-web-pro"; font-size: 18px; line-height: 37px; color: #665D46; font-weight: normal; text-transform: none; margin: 0; padding:0 0 0 20px;}
+#detailAccordion h3.ui-state-active {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderopenbg.png) no-repeat;}
+
+#detailAccordion div{padding: 0;}
+#detailAccordion div img {display: block; margin: 0 auto;}
+
+#detailAccordion2 {width: 711px; margin-top: 30px;}
+
+
+#detailAccordion2 h3 {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderclosedbg13CAEAEEAD9C.png?sfvrsn=2) -511px 0px no-repeat; width: 180px; height: 43px; font-family: "ff-angie-web-pro"; font-size: 18px!important; color: #665D46; font-weight: normal; text-transform: none!important; margin: 0!important; padding:0 0 0 20px!important; line-height: 37px!important; border-left: 1px solid #cccccc;}
+#detailAccordion2 h3.ui-state-active {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderopenbgCB5ED2561D7D.png?sfvrsn=2) -511px 0px no-repeat;}
+
+
+#detailAccordion2 div{padding: 0;}
+#detailAccordion2 div img {display: block; margin: 0 auto;}
+
+
+#thumbnailTitle {margin-left: 414px;}
+
+/********************************************
+Contact Us Styles
+********************************************/
+
+/* Accordions */
+.contactAccordions {width: 711px; margin-top: 30px;}
+
+.contactAccordions h3 {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderclosedbg13CAEAEEAD9C.png?sfvrsn=2) no-repeat; width: 691px; height: 43px; font-family: "ff-angie-web-pro"; font-size: 18px; line-height: 37px; color: #665D46; font-weight: normal; text-transform: none; margin: 0; padding:0 0 0 20px;}
+.contactAccordions h3.ui-state-active {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/detailaccordionheaderopenbgCB5ED2561D7D.png?sfvrsn=2) no-repeat;}
+
+.contactAccordions div{padding: 0;}
+.contactAccordions div img {display: block; margin: 0 auto;}
+
+/* Page Styles */
+.contactAccordions h3 {cursor: pointer;}
+
+.contactMap {margin:15px 0 15px 0!important;}
+
+#mapContacts p {margin: 0; padding: 0;}
+#mapContacts span {font-weight: bold; color: #ffffff;}
+#mapContacts a:link, #mapContacts a:visited, #mapContacts a:hover {color: #859E4C;}
+
+#grayContact, #blueContact, #brownContact, #greenContact {width: 164px; height: 72px; float: left; margin-right: 4px; padding: 3px 0 0 10px!important;}
+#grayContact {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/graycontactbg.png?sfvrsn=2) left top no-repeat;}
+#blueContact {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/bluecontactbg.png?sfvrsn=2) left top no-repeat;}
+#brownContact {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/browncontactbg.png?sfvrsn=2) left top no-repeat;}
+#greenContact {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/greencontactbg.png?sfvrsn=2) left top no-repeat; margin-right: 0px!important;}
+
+#contactFeatured {width: 206px; height: 368px; position: relative; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/contactfeaturedbg.png?sfvrsn=2) no-repeat; margin-bottom: 25px;}
+#contactFeatured img {position: absolute; top: 10px; left: 10px;}
+
+.contactH3 {font-size: 18px!important; font-weight: normal; line-height: 22px; text-transform: none!important;}
+
+span.bigGreen {color: #79923F; font-weight: bold; font-size: 16px;}
+
+.contactLast a:link, .contactLast a:visited, .contactLast a:hover {color: #666666; font-weight: bold;}
+
+/* Project Assistance Form Styles */
+.mapContactForm2 {width: 720px; padding-top: 10px!important;}
+.mapContactForm2 label {float: left; width: 340px;  margin: 0 20px 10px 0; font-size: 14px; line-height: 19px; color: #666666; font-family: verdana;}
+.mapContactForm2 input {width: 340px; border: 0!important; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/inputbg.png?sfvrsn=2) repeat; height: 32px; font-size: 22px; line-height: 32px; -webkit box-shadow: inset 1px 1px 3px 0px #665D45; box-shadow: inset 1px 1px 3px 0px #665D45; color: #665D46; font-size: 17px}
+.mapContactForm2 textarea {border: 0!important; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/inputbg.png?sfvrsn=2) repeat; -webkit box-shadow: inset 1px 1px 3px 0px #665D45; box-shadow: inset 1px 1px 3px 0px #665D45; color: #665D46; font-size: 17px;}
+
+.mapAddress {width: 700px!important;}
+.mapAddress input {width: 700px!important;}
+
+.mapCity {width: 340px!important;}
+.mapCity input {width: 340px!important;}
+
+.mapState {width: 170px!important;}
+.mapState input {width: 170px!important;}
+
+.mapZip {width: 150px!important;}
+.mapZip input {width: 150px!important;}
+
+.mapPhone {margin-bottom: 20px!important;}
+
+.mapProjectsLabel {float: none!important;}
+.mapProjects {width: 700px; list-style: none; margin: 0; padding: 0;} 
+.mapProjects li {float: left; width: 230px; margin-bottom: 10px;}
+.mapProjects label {float: none!important; font-size: 14px!important;}
+.mapProjects input {width: 16px!important; height: 16px!important;}
+
+.mapSelectionTime {}
+.mapSelectionTime input {width: 16px!important; height: 16px!important;}
+.mapSelectionTime label {font-size: 14px!important; float: none!important;}
+
+.mapComments {float: none!important;}
+
+.submitForm {width: 123px!important; height: 37px!important; float: right; margin: 10px 34px 0 0; background: none!important; box-shadow: none!important;}
+
+.fileUpload {margin-bottom: 15px;}
+
+.partsPhoneNumber {float: right; margin-right: 35px!important; font-size: 14px!important; font-family: verdana!important; color: #666666!important; line-height: 42px;}
+
+
+/********************************************
+Footer Styles
+********************************************/
+
+#footer {width: 100%; height: 305px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/footerbg.png) repeat-x; position: relative; padding-top: 7px;}
+
+#innerFooter-first {width: 540px; height: 34px; padding-top: 15px; margin: 0 auto;}
+#innerFooter-first span {font-size: 14px; line-height: 17px; color: #666666; font-weight: normal; text-transform: none;}
+#innerFooter-first a:link {font-size: 14px; line-height: 17px; color: #666666; font-weight: normal; text-decoration: none; font-weight: bold;}
+#innerFooter-first a:visited {font-size: 14px; line-height: 17px; color: #666666; font-weight: normal; text-decoration: none; font-weight: bold;}
+#innerFooter-first a:hover {font-size: 14px; line-height: 17px; color: #666666; font-weight: normal; text-decoration: underline; font-weight: bold;}
+
+#innerFooter-second {width: 960px; margin:20px auto 0 auto;}
+
+.footerBlock {width: 193px; height: 215px; border-right: 1px dotted #ffffff; float: left; padding: 5px 15px 0 30px;}
+.footerBlock p {color: #cccccc; line-height: 14px;}
+.footerBlock p span {color: #ffffff;}
+.footerBlock a:link {font-family: Verdana; font-size: 14px; line-height: 17px; text-decoration: none; color: #ffffff;}
+.footerBlock a:visited {font-family: Verdana; font-size: 14px; line-height: 17px; text-decoration: none; color: #ffffff;}
+.footerBlock a:hover {font-family: Verdana; font-size: 14px; line-height: 17px; text-decoration: underline; color: #ffffff;}
+
+.footerBlockLast {border: none!important;}
+.footerBlockLast img {padding: 6px; background: #cccccc; float: left; margin-right: 10px;}
+
+.aboutValmont a {font-weight: normal!important;}
+
+.clearfooter {height: 312px; clear: both;}
+
+
+
+/********************************************
+Sitefinity Blog Footer Styles
+********************************************/
+.sfpostTitle{
+  color: #cccccc;
+line-height: 14px;
+  font-family: Verdana;
+font-size: 14px;
+  margin: 0;
+padding: 0;
+border: 0;
+  vertical-align: baseline;
+  text-decoration: underline;
+}
+
+.sfpostListTitleDate .sfpostDate {
+ font-family: Verdana;
+font-size: 14px;
+line-height: 17px;
+text-decoration: none;
+color: #ffffff;
+}
+
+
+/********************************************
+Sitefinity Blog Page Styles
+********************************************/
+
+.sfpostListTitleDateContent .sfpostAuthorAndDate {
+  
+font-size: 12px;line-height: 22px;
+color: #6C8C22;
+  font-size: 16px;
+margin: 0;
+padding: 0;
+  display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+.sfpostListTitleDateContent h2.sfpostTitle {
+margin-bottom: 3px;
+font-size: 19px;
+font-weight: bold;font-family: "futura-pt";
+font-size: 20px;
+margin: 0;
+padding: 0;
+line-height: 30px;
+text-transform: uppercase;
+font-weight: normal;
+color: #665D46;
+text-decoration: none;
+}
+
+
+.sfpostListTitleDateContent .sfpostContent {
+font-size: 16px;
+margin: 0;
+padding: 0;
+  font-family: Verdana;
+line-height: 17px;
+color: #666666;
+  display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+
+a:link, a:visited, a:hover, a:active {
+color: #6C8C22;
+text-decoration: none;
+}
+
+.footerBlock h3 a:hover {
+color: #ffffff;
+font-family: "ff-angie-web-pro";
+font-size: 18px;
+line-height: 20px;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+}
+
+
+.footerBlock h3 a:visited {
+color: #ffffff;
+font-family: "ff-angie-web-pro";
+font-size: 18px;
+line-height: 20px;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+}
+
+
+
+
+.footerBlock h3 a:link {
+color: #ffffff;
+font-family: "ff-angie-web-pro";
+font-size: 18px;
+line-height: 20px;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+}
+
+
+
+
+.footerBlock a:visited {
+font-family: Verdana;
+font-size: 14px;
+line-height: 17px;
+text-decoration: none;
+color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sfpostDetails .sfpostTitle {
+margin-bottom: 3px;
+font-size: 19px;
+font-weight: bold;font-family: "futura-pt";
+font-size: 20px;
+margin: 0;
+padding: 0;
+line-height: 30px;
+text-transform: uppercase;
+font-weight: normal;
+color: #665D46;
+text-decoration: none;
+}
+
+
+
+.sfpostDetails .sfpostContent {
+font-size: 16px;
+margin: 0;
+padding: 0;
+  font-family: Verdana;
+  line-height: 17px;
+color: #666666;
+  display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+
+.sfpostDetails .sfpostTitle {
+margin: 0;
+padding: 35px 0 0;
+color: #000;
+font-size: 24px;
+line-height: 1.2;font-family: "futura-pt";
+font-size: 20px;
+margin: 0;
+padding: 0;
+line-height: 30px;
+text-transform: uppercase;
+font-weight: normal;
+color: #7E993D;
+text-decoration: none;
+}
+
+
+.sfpostDetails .sfpostAuthorAndDate {
+  line-height: 22px;
+color: #6C8C22;
+  font-size: 16px;
+margin: 0;
+padding: 0;
+  display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+Sitefinity Top Navigation Styles
+********************************************/
+
+.RadMenu RadMenu_Sitefinity{
+  height: 45px; width: 960px; 
+  margin:18px auto 0 auto;
+
+}
+
+div.RadMenu_Sitefinity {
+padding-left:350px;
+
+
+  background-color: transparent;
+}
+.RadMenu_Sitefinity, .RadMenu_Sitefinity a.rmLink {
+  font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;
+  
+}
+div.RadMenu_Sitefinity .rmHorizontal .rmItem a.rmLink {
+line-height: 46px;
+color: #eeeeee;
+cursor: pointer;
+}
+.RadMenu_Sitefinity .rmVertical .rmItem a.rmLink .rmText {
+border-bottom: 1px solid #000000;
+border-right: 0;
+}
+
+
+.rtsLevel2 ul li a:visited {
+  color: #000000;
+}
+.rtsLevel2 ul li a:link {
+  color: #000000;
+}
+div.RadMenu_Sitefinity .rmGroup .rmItem a.rmLink .rmText {
+  color: #000000;
+}
+
+rmRootGroup rmHorizontal{
+  margin: 0; padding: 0; list-style: none; height: 40px; margin-top: 20px;
+}
+rmLink sfNoGroupPageNavigation rmRootLink{
+    display: inline-block;  border-left: 1px dotted #cccccc;
+}
+rmItem{
+  display: inline-block;  border-left: 1px dotted #cccccc;
+}
+
+.rmItem ul li a:link {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+.rmItem ul li a:visited {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+.rmItem ul li a:hover {font-size: 14px; text-transform: uppercase; line-height: 40px; font-family: "futura-pt","nimbus-sans-condensed-n4", "nimbus-sans-condensed", sans-serif; color: #CCCCCC; text-decoration: none; padding: 0 42px; display: block;}
+rmItem rmFirst}
+
+|
+rmItem rmLast{
+  border-right: 1px dotted #cccccc;
+}
+
+
+.RadMenu_Sitefinity .rmItem a.rmLink:hover, .RadMenu_Sitefinity .rmItem a.rmFocused, .RadMenu_Sitefinity .rmItem a.rmSelected, .RadMenu_Sitefinity .rmItem a.rmExpanded, .Radmenu_Sitefinity .rmItem a.rmExpanded:hover {
+color: #000000;
+}
+
+.rmHorizontal .rmItem a.rmLink {
+  background-color:transparent;
+}
+
+.RadMenu_Sitefinity ul li {
+border-right: none;
+float: left;
+}
+div.RadMenu_Sitefinity ul.rmHorizontal{
+padding-top:18px;
+  padding-bottom:-18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#needHelp {width: 170px; height: 57px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/whatley/needhelpbg.png?sfvrsn=2) no-repeat; padding: 15px;}
+#needHelp p {font-size: 17px; line-height: 18px; color: #ffffff; font-family: "ff-angie-web-pro"; margin: 0; padding: 0;}
+#needHelp p span {font-size: 12px; font-family: verdana; line-height: 12px;}
+#needHelp a:link {color: #7E9643;}
+#needHelp a:visited {color: #7E9643;}
+#needHelp a:hover {color: #7E9643;}

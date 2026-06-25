@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="owl.carousel-new.css"/>
+<link rel="stylesheet" type="text/css" href="owl.theme1.css"/>
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="media.css"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+
+<style>
+
+</style>
+
+<script>
+$(document).ready(function(){
+
+	$("#web-select-pointer").click(function(){
+		$(".website-selector").slideToggle();
+	}); 
+
+	$("#website-selector-close").click(function(){
+		$(".website-selector").slideToggle();
+	}); 
+
+	$("#search-icon").click(function(){
+		$(".search-box").slideDown();
+	}); 
+			
+	$("#search-clear").click(function(){
+		$(".search-box").slideUp();
+	}); 	
+	
+	$(".search-text").click(function(){
+		$(".select ul").slideToggle();
+		$(this).children("i").toggleClass("fa-chevron-down");
+		$(this).children("i").toggleClass("fa-chevron-up");
+	});	
+			
+	if ($(window).width() <= 800){	
+		
+			$("#search-icon").click(function(){
+				$(".search-box").slideDown();
+				$(".nav-header").hide();
+			}); 
+			
+			$("#search-clear").click(function(){
+				$(".search-box").slideUp();
+			}); 	
+			
+			$(".menu").click(function(){
+				$(".nav-header").slideToggle();
+				$(".search-box").hide();
+			});  
+
+			$("ul.nav-header li").click(function(){
+				$(this).children("#submenu").slideToggle();
+				$(this).children("i").toggleClass("fa-chevron-right");
+				$(this).children("i").toggleClass("fa-chevron-down");
+			});  
+			
+			$("ul#submenu li").click(function(event){
+				event.stopPropagation();	
+				$(this).children("#submenu1").slideToggle();
+			});  
+				
+	}	
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		autoplay:true,
+		autoplayTimeout:3000,
+		autoplayHoverPause:true,
+		margin:10,
+		nav:true,
+		responsive:{
+			0:{
+				items:1
+			}
+		}
+	});
+		
+});
+</script>
+</head>
+
+<body>
+		
+	<div class="container">
+	
+	    <div class="website-selector" style="display:none;">
+		    <div class="border"><span></span></div>
+			
+			<div class="website-select">	
+				<div class="webselect">
+					<img src="images/web-select-logo.png" alt="website selector"/>
+					<i class="material-icons close" id="website-selector-close">close</i>
+				</div>
+				
+				<ul class="website-select-list">
+					<li>AgSense</li>
+					<li>Carsonite</li>
+					<li>Cascade Earth Sciences</li>
+					<li>CMT</li>
+					<li>Donhad</li>
+					<li style="font-weight: 600;">Delta EMD</li>
+					<li>Ezyguard</li>
+					<li>Feralux</li>
+				</ul>
+				
+				<ul class="website-select-list">
+					<li>Hi-Light</li>
+					<li>HSS Superstruct</li>
+					<li>Industrial Fastners</li>
+					<li>Industrial Galvanizers</li>
+					<li>Ingal Civil</li>
+					<li>Ingal EPS</li>
+					<li>Locker Group</li>
+					<li>MATCO Services</li>
+				</ul>	
+				
+				<ul class="website-select-list">
+					<li>Microflect</li>
+					<li>PiRod</li>
+					<li>Shakespeare</li>
+					<li>SitePro1</li>
+					<li>Stainton</li>
+					<li>Tehomet</li>
+					<li>Valley</li>
+					<li>Valmont Industries Inc.</li>
+					<li>Valmont Structures</li>
+				</ul>	
+				
+				<ul class="website-select-list">
+					<li>Valmont Coatings</li>
+					<li>Valmont Highway</li>
+					<li>Valmont Utility</li>
+					<li>Valmont Tubing</li>
+					<li>Valmont SM</li>
+					<li>Webforge</li>
+					<li>West Coast Engineering</li>
+					<li>Whatley</li>
+					<li>Valley Water Management</li>
+				</ul>			
+			</div>
+		</div>
+
+		<div class="header">
+
+			<div class="header-sec-1">
+			
+				<div class="valmont-websites">
+				
+					<img id="web-select-pointer" src="images/webnav.png" alt="webnav"/>		
+					
+					<p>Valmont websites</p>
+					
+				</div>
+
+				<div class="temperature">
+				
+					<p>NYSE VMI 211 +1.5</p>
+					
+				</div>
+
+				<div class="global">
+				
+					<p>Global Presence</p>
+					
+				</div>
+				
+				<div class="language-selector">
+				
+					<p style="text-align: right;">English</p>
+					
+				</div>		
+				
+			</div>
+			
+			<div class="header-sec-2">
+			
+				<div class="logo">
+				
+					<img src="images/logo.png" alt="logo"/>
+					
+				</div>
+
+				<div class="navigation">
+					<span class="menu"> <i id="menu-icon" class="material-icons">menu</i> </span>
+					<ul class="nav-header">					
+						<li class="sub-level"> <i class="fa fa-chevron-right" aria-hidden="true"></i> <a><span>Products & Solutions</span><i class="fa fa-chevron-down web" aria-hidden="true"></i></a>
+							<ul class="submenu" id="submenu">
+								<li> <i id="subic" class="fa fa-chevron-right" aria-hidden="true"> </i> <a><span>Architecture</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a>
+									<ul class="submenu" id="submenu1">
+										<li> <a href=""><span>Architectural Materials</span></a>	
+										<li> <a href=""><span>Conveyor Belting</span></a>										
+										<li> <a href=""><span>Expanded Metal</span></a>
+										<li> <a href=""><span>Perforated Metal</span></a>
+										<li> <a href=""><span>Woven Wire</span></a>
+										<li> <a href=""><span>Sunscreen and Louvres</span></a>
+										<li> <a href=""><span>All Architecture</span></a>
+									</ul>
+								</li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Coatings</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Energy & Mining</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Industrial & Civil</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Irrigation</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Lighting</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Telecommunications</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li> <i class="fa fa-chevron-right" aria-hidden="true"> </i> <a href=""><span>Utility</span><i aria-hidden="true" class="fa fa-chevron-right web"></i></a></li>
+								<li><a href=""><span>All Products</span></a></li>
+							</ul>
+						</li>
+						<li> <i class="fa fa-chevron-right" aria-hidden="true"></i> <a><span>Brands</span><i class="fa fa-chevron-down web" aria-hidden="true"></i></a></li>						
+						<li> <i class="fa fa-chevron-right" aria-hidden="true"></i> <a><span>Company</span><i class="fa fa-chevron-down web" aria-hidden="true"></i></a></li>
+						<li> <i class="fa fa-chevron-right" aria-hidden="true"></i> <a><span>Investors</span><i class="fa fa-chevron-down web" aria-hidden="true"></i></a></li>
+						<li> <a><span>News</span></a></li>
+						<li> <a><span>Careers</span></a></li>						
+					</ul>
+
+				</div>
+
+				<div class="search">
+						<i id="search-icon" class="material-icons">search</i>
+						<div class="search-box" style="display:none;"><span><i class="material-icons close" id="search-clear">close</i></span></div>
+				</div>
+				
+			</div>
+
+		</div>
+
+		<div class="slide-carousel owl-carousel">
+			<div class="item">
+				<img src="images/slide.jpg">
+				
+				<div class="slide-content">
+					<h4>Powering new economies</h4>
+					<p>Thriving economies need infrastructure to support growth. We show the leaders of emerging economies a 
+						path to reliable power, safer streets, dependable mass transit and proven telecommunications.</p>
+					<span class="slide-button">Learn more</span>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/slide.jpg">
+				
+				<div class="slide-content">
+					<h4>Powering new economies</h4>
+					<p>Thriving economies need infrastructure to support growth. We show the leaders of emerging economies a 
+						path to reliable power, safer streets, dependable mass transit and proven telecommunications.</p>
+					<span class="slide-button">Learn more</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="selectproduct">
+			
+			<div class="selectproduct-heading">
+			
+				<div class="explore">Explore Our Products & Solutions</div>
+				
+				<p>From Infrastructure to agriculture, we'll help you<span> conserve resources and improve life</span></p>
+			
+			</div>
+
+			<div class="selectproduct-dropdown">
+			    
+				<div class="select">
+					<div class="search-text">Search for a product....<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+					<ul style="display:none;">
+						<li>Architecture</li>
+						<li>Coatings</li>
+						<li>Energy & Mining </li>
+						<li>Industrial & Civil</li>
+						<li>Irrigation</li>
+						<li>Light</li>
+						<li>Telecommunications</li>
+						<li>Transportation</li>
+						<li>Utility</li>
+					</ul>
+				</div>
+			
+			</div>
+			
+		</div>
+
+		<div class="investblock">
+			<div class="investblock-heading">
+				<h2>Invest With Valmont</h2>
+			</div>
+			<div class="investblock-content">
+				<div class="investblock-inner-content">
+					<div class="investblock-inner-img">
+						<img src="images/careers.jpg" alt="careers" data-displaymode="Original" title="careers" sfref="[images|librariesProvider80]cbcd0878-98cf-6a15-a1a9-ff3800d30354">
+					</div>
+					<div class="investblock-inner-text">
+						<h4>Careers</h4>
+						<p><span>Passion. Integrity. Continuous Improvement. Results.</span> These
+						values drive Valmont. Do they drive you? If so, there's a place for you at Valmont.</p>
+						<a href="">Learn more</a>
+					</div>
+				</div>
+				<div class="investblock-inner-content">
+					<div class="investblock-inner-img">
+						<img src="images/investors.jpg" alt="investors" data-displaymode="Original" title="investors" sfref="[images|librariesProvider80]e2cd0878-98cf-6a15-a1a9-ff3800d30354">
+					</div>
+					<div class="investblock-inner-text">
+						<h4>Investors</h4>
+						<p>Valmont is a recognized global leader in support structures and services for civil infrastructure, and
+						water management for agriculture.</p>
+						<a href="">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="feature-tab">
+			<div class="feature-tab-heading">
+				<h2>The Latest</h2>
+			</div>
+			<div class="feature-tab-option">		
+			
+				<ul class="feature-tab-list">
+					<li>Financial news</li>
+					<li>Featured positions</li>
+				</ul>
+
+			</div>
+
+			<div class="feature-content">
+			
+					<div class="feature-block-inner-text">
+					
+						<div class="feature-content-inner-text">
+											
+							<p>Valmont Reports Fourth Quarter and Fiscal Year 2016 Results.</p>
+							
+							<a href="">Learn more</a>
+						
+						</div>
+						
+					</div>	
+
+					<div class="feature-block-inner-text active">
+											
+						<div class="feature-content-inner-text">
+											
+							<p>Valmont Reports Fourth Quarter and Fiscal Year 2016 Results.</p>
+							
+							<a href="">Learn more</a>
+						
+						</div>
+						
+					</div>	
+					
+					<div class="feature-block-inner-text">
+											
+						<div class="feature-content-inner-text">
+											
+							<p>Valmont Reports Fourth Quarter and Fiscal Year 2016 Results.</p>
+							
+							<a href="">Learn more</a>
+						
+						</div>
+						
+					</div>					
+					
+			</div>
+
+		</div>
+
+		<div class="footer">
+		
+			<div class="footer-sec-1">
+			
+				<div class="footer-column">					
+					<img src="images/logo-footer.png" alt="footer-logo"/>									
+					<p class="address">One Valmont Plaza<br/>Omaha, NE 68154 USA <br/>1.402.963.1000</p>
+				</div>
+
+				<div class="footer-column">
+					<ul class="footer-column-list">
+						<li>Products & Solutions</li>
+						<li>Brands</li>
+						<li>Company</li>
+						<li>Investors</li>						
+					</ul>
+				</div>
+
+				<div class="footer-column">
+					<ul class="footer-column-list">
+						<li>Careers</li>
+						<li>Sitemap</li>
+						<li>Policy</li>
+						<li>Contact us</li>						
+					</ul>
+				</div>
+
+				<div class="footer-column">
+					<div class="footer-column-list">
+					
+						<div class="footer-column-icon">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</div>
+						
+						<div class="footer-column-icon">
+							<i class="fa fa-twitter" aria-hidden="true"></i>	
+						</div>
+						
+						<div class="footer-column-icon">
+							<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+						</div>	
+
+						<div class="footer-column-icon">
+							<i class="fa fa-google-plus" aria-hidden="true"></i>
+						</div>						
+
+					</div>
+				</div>	
+				
+			</div>		
+
+		</div>
+		
+		<div class="footer-sec-2">
+			
+			<div class="footer-column left">
+				<p>@2017 Valmont Industries, Inc.</p>
+			</div>
+
+			<div class="footer-column right">
+				<p>English</p>
+			</div>
+				
+		</div>			
+
+	</div>	
+	
+</body>
+
+</html>

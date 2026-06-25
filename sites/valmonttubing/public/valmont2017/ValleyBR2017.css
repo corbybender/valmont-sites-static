@@ -1,0 +1,23 @@
+
+li.sub-level.level-3{
+ //background-color:yellow; 
+}
+ul.nav-header > li:nth-child(2) {
+    width: auto;
+}
+ul.nav-header li {
+     min-width: 0px !important;
+}
+ul.nav-header li:first-child {
+    width: 14.5% !important;
+}
+#sala-de-imprensa{
+width:15%;
+}
+#servicos-financeiros{
+width:16%;
+}
+
+#irriger, #eventos {
+width:7%;
+}

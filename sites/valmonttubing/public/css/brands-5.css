@@ -1,0 +1,243 @@
+body, body#internal{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/checkerboard.gif) repeat #a8a8a8;
+}
+footer{
+	background: none;
+	height: 306px;
+}
+
+#logo{
+	position: absolute;
+	top: 25px;
+}
+
+
+
+#center-stage .green a{
+	color: #B00000;
+}
+#center-stage .green img{
+	border: none;
+}
+#center-stage-background{
+	background: #FFF;
+	margin: 20px 0 0;
+}
+#main-nav{
+	box-shadow: none;
+	top: 127px;
+	background: #504244;
+	width: 100%;
+	height: 40px;
+}
+#main-nav a{
+	padding: 7px 15px 0 15px;
+	text-shadow: none;
+	border-left: solid #CCC 1px;
+	height: 24px;
+	margin: 4px 0 0;
+}
+#main-nav a:hover, #main-nav a.hover{
+	padding: 0 15px 0 15px;
+	height: 20px;
+	line-height: 9px;
+}
+#main-nav li:last-child a:hover{
+	border-right: solid #CCC 1px;
+}
+#main-nav li:last-child a{
+	border-right: none;
+}
+#main-nav li:first-child a{
+	border-left: none;
+}
+#main-nav li:first-child a:hover{
+	border-left: none;
+	padding: 7px 15px 0 15px;
+	height: 24px;
+	line-height: 16px;
+}
+#main-nav a:hover{
+	padding: 11px 16px 0 15px;
+}
+#header-center-background{
+	background: #FFF;
+}
+#header-center-background .center{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/green-stripe.gif) repeat-x 0px 105px;
+}
+#center-top-with-background{
+	background: none;
+	height: 159px;
+}
+#search{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/search-white.gif) no-repeat;
+	color: #504143;
+	height: 27px;
+}
+#logo{
+	top: 37px;
+}
+#main-container{
+	background: #FFF;
+	margin: 0 auto;
+	width: 985px;
+}
+#internal #main-container{
+	background: #FFF;
+}
+#news-bar{
+	background: none;
+	border: none;
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #D8D8D8;
+	float: none;
+	width: auto;
+}
+#middle-bar{
+	background: none;
+}
+#news-bar-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/news-fade-orange.gif) no-repeat;
+}
+#news-bar strong, #news-bar a{
+	color: #b5cb8b;
+}
+#news-bar h3{
+	color: #504143;
+	background: none;
+	padding: 0;
+}
+#footer-center{
+	background: none;
+	height: 306px;
+}
+#footer-center-outside-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-white-green-stripe.gif) repeat-x;
+	height: 306px;
+}
+#middle-bar{
+	padding: 0;
+	height: 48px;
+}
+#main-content{
+	padding: 0 0 306px;
+	font-size: 13px;
+	float: none;
+	width: auto;
+}
+#copyright, #credit, #copyright a, #credit a{
+	color: #959595;
+}
+#rotator-indicators{
+	background: none;
+	box-shadow: none;
+	width: auto;
+	right: 0;
+}
+#rotator-indicators li{
+	background: #857776;
+}
+#center-stage-left, #center-stage-right{
+	display: none;
+}
+#main-content a{
+	color: #FFF;
+}
+#title-bar-center{
+	background: none;
+	border-bottom: 1px solid #CCC;
+}
+#title-bar{
+	background: none;
+	padding: 0;
+	margin: 0 0 1px;
+}
+#internal h2.green{
+	color: #B5CB8B;
+}
+#main-content .top-right img{
+	margin: 0;
+}
+#internal #main-content{
+	width: 729px;
+	float: left;
+	padding: 17px 0 358px;
+}
+#internal h1{
+	font-weight: 200;
+	font-size: 41px;
+	line-height: 48px;
+}
+#breadcrumbs{
+	margin: 10px 0 0;
+}
+
+
+
+
+
+.badge-container{
+	padding: 15px 0;
+	border-bottom: 1px solid #D8D8D8;
+}
+.badge-container-last{
+	padding: 15px 0;
+}
+.footer-links{
+	padding: 0 24px 0 16px;
+	margin: 21px 0 0 0;
+}
+.footer-links h4{
+	color: #504244;
+	text-transform: lowercase;
+	font-size: 19px;
+	font-family: "pragmatica-web", sans-serif;
+	font-weight: 200;
+}
+.footer-links a{
+	color: #959595;
+}
+.footer-links sup{
+	font-size: 8px;
+}
+.phone{
+	color: #959595;
+	font-size: 23px;
+}
+.shade-box{
+	width: auto;
+	padding: 0;
+	background: none;
+	border: none;
+}
+.shade-box .last{
+	float: right;
+	margin: 10px 0 20px;
+	background: #b5cb8b;
+}
+.shade-box .first{
+	margin: 10px 0 20px;
+	background: #504244;
+}
+.wide-rectangle-badge{
+	margin: 10px 0 20px 74px;
+	color: #FFF;
+	box-shadow: none;
+	background: #857776;
+	border: none
+}
+.wide-rectangle-badge a, .wide-rectangle-badge h4{
+	color: #FFF;
+}
+.wide-rectangle-badge .right img{
+	border: none;
+	margin: 11px 0 0;
+}
+.center-stage-border{
+	left: 312px;
+	display: none;
+}
+.wide-rectangle-badge .right{
+	width: 70px;
+}

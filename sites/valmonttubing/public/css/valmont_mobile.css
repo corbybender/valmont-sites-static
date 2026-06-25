@@ -1,0 +1,168 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*
+Name: Valmont Mobile
+URL: http://www.valmont.com
+Author: Valmont International, Inc.
+Version: 1.0
+*/
+
+#wrapper{
+	margin:0 auto;
+	width: auto;
+	height: auto;
+	position:relative;
+	color:#666;
+	overflow:visible;
+}
+
+#content_wrapper .cap_left{
+	background-color: #000;
+	width:20px;
+	height:100%;
+	left:-20px;
+	top:0;
+	position:absolute;
+}
+
+#content_wrapper .cap_right{
+	background-color: #000;
+	width:20px;
+	height:100%;
+	right:-20px;
+	top:0;
+	position:absolute;
+}
+
+body {font-family:Arial, sans-serif;
+     background-color: #333;
+	font-size:14px;
+	}
+
+#back {margin-left: 20px;
+width: 40px;
+}
+	  
+p { font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+	font-size: 17px;
+}
+
+h1 {font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+	text-align: center;
+	font-size: 22px;
+}
+
+h2 {font-family: Arial, Helvetica, sans-serif;
+color: #0088ce;
+font-size: 20px;
+}
+
+img{border:none;
+}
+
+a {color: #0088ce;
+}
+
+.clear{clear:both;
+}
+
+ul{margin-top:4px;
+   margin-bottom:10px;
+   font-size: 17px;
+   }
+
+#header{background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-middle-gray.gif) repeat-x #0088CE;
+-webkit-border-top-left-radius: 15px;
+-webkit-border-top-right-radius: 15px;
+-moz-border-radius-topleft: 15px;
+-moz-border-radius-topright: 15px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+}
+
+
+#header_logo{padding:4px;
+             text-align:center;
+			 }
+			  
+#front_page, #header_bottom{background-color:#fff;
+}
+
+#header_bottom{height:8px;
+}
+
+#header_nav a{display:block;
+              float:left;
+			  margin:4px;}
+			  
+#header_nav a.header-nav-products{width:48px;
+                 height:33px;
+				 background:url(images/header-icon-products.png) no-repeat;
+				 }
+
+#header_nav a.header-nav-my-account{width:59px;
+     height:29px;
+	 margin-top:8px;
+	 background:url(images/header-icon-my-account.png) no-repeat;
+	 }
+
+#header_nav a.header-nav-contact{width:47px;
+height:27px;
+margin-top:10px;
+background:url(images/header-icon-contact.png) no-repeat;
+}
+
+#front_page{padding-bottom:8px;
+}
+
+#front_page a {display: block;
+border: solid 1px #58595B;
+padding:10px;
+text-decoration:none;
+color:#0075BF;
+margin:8px 12px;
+font-size:16px;
+font-weight:bold;
+background: url(footer_bg.jpg) repeat-x;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+#front_page a:hover {background: url(hover_nav.gif) repeat-x;
+                     color: #333;
+}
+
+#footer, #container{background: url(footer_bg.jpg) repeat-x;
+-webkit-border-bottom-right-radius: 15px;
+-webkit-border-bottom-left-radius: 15px;
+-moz-border-radius-bottomright: 15px;
+-moz-border-radius-bottomleft: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;}
+
+#container{padding-bottom:10px;position:relative;}
+
+#content{color:#333;padding:6px;background-color:#fff;}
+
+#footer_nav{float:left;margin:6px 12px;font-size:12px;}
+
+#footer_nav a, #footer-nav span{color:#0075BF;font-weight:bold;}
+
+#footer_nav a{text-decoration:none;}
+
+#footer_nav span{margin:0 6px;}
+
+#footer_socialicons{padding-top:3px;}
+
+#copyright{color:#414042;font-size:10px;}
+
+
+
+#webgallery {
+	height: 125px;
+	width: 300px;
+}

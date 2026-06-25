@@ -1,0 +1,410 @@
+<!--#include virtual="/shared/header.html" -->
+<script type="text/javascript">/* Matomo Analytics Start */
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.valmont.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+/* Matomo Analytics End */
+</script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript">$(document).ready(function(){
+
+    var a = $(".utilityblock.brands .utilityblock-inner-content .sfContentBlock .utilityblock-inner-img").length;	
+	
+	//alert(a);
+	
+       if (a == "1")
+        {
+		// alert("1")
+          $(".utilityblock.brands .utilityblock-inner-content .utilityblock-inner-img").css("width", "100%");
+        }	
+				
+       else if (a == "2")
+        {
+		// alert("2")
+          $(".utilityblock.brands .utilityblock-inner-content .utilityblock-inner-img").css("width", "50%");
+        } 
+		
+       else {
+		// alert("3")
+          $(".utilityblock.brands .utilityblock-inner-content .utilityblock-inner-img").css("width", "33.33%");
+        }  
+
+});</script>
+<script type="text/javascript"> $(document).ready(function () {
+
+        $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+        });
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+   
+ /*   $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });</script>
+
+<style type="text/css" media="all">ul.nav-header li:first-child {
+    width: 15%;
+}
+
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/*
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+*/
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink {
+    color: white;
+    text-decoration: underline;
+}
+ 
+
+
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: tran<!--#include virtual="/shared/questions-footer-cta.html" -->lity" id="slidecarousel">
+            
+<div class='sfContentBlock'><img alt="" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider75/products-and-solutions/product-catalog/banners/val_product-catalog_1920x300.jpg?sfvrsn=2">
+<div class="slide-content">
+<h1>Product Catalog
+</h1>
+</div>
+
+</div>
+		</div>
+
+		<div class="utilityblock description" id="utilityblockdesc">
+			<div class="utilityblock-heading" id="utilityblockheading">
+                
+
+			</div>
+			<div class="utilityblock-content" id="utilityblockcontent">
+						
+				<div class="utilityblock-inner-content" id="utilityblockinnercontent">
+					<div class="utilityblock-inner-text" id="utilityblockinnercontenttext">
+                        
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="utilityblock products" id="utilityblockproducts">
+			<div class="utilityblock-heading" id="utilityblockproductsheading">
+                
+
+	        </div>
+		    <div class="utilityblock-content" id="utilityblockproductscontent">
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent1">
+                    
+<div class='sfContentBlock'><div class="utilityblock-inner-img wpointfdinup-3 s-150 d-030 animated">
+<a href="/product-catalogs/welded-steel-tubing">
+<img title="XXX" alt="XXX" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider103/blue-banners-badges/blue-badge.jpg">
+</a>
+</div>
+<div class="utilityblock-inner-text">
+<a href="/product-catalogs/welded-steel-tubing">
+<h4>Welded Steel Tubing
+</h4>
+</a>
+</div>
+
+</div>
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent2">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent3">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent4">
+                    
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent5">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent6">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent7">
+                    
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent8">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent9">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent10">
+                    
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent11">
+	                
+
+                </div>
+                <div class="utilityblock-inner-content" id="utilityblockproductsinnercontent12">
+	                
+
+                </div>			
+		    </div>
+        </div>
+		
+		<div class="utilityblock services" id="utilityblockservices">
+			<div class="utilityblock-heading" id="utilityblockservicesheading">
+                
+
+			</div>
+			<div class="utilityblock-content" id="utilityblockservicescontent">
+			
+				<div class="utilityblock-inner-content" id="utilityblockservicesinnercontent1">
+                    
+
+				</div>
+				
+				<div class="utilityblock-inner-content" id="utilityblockservicesinnercontent2">
+                    
+
+				</div>			
+		
+			</div>
+		</div>
+		
+		<div class="utilityblock brands" id="utilityblockbrands">
+			<div class="utilityblock-heading" id="utilityblockbrandsheading">
+                
+
+			</div>
+			
+			<div class="utilityblock-content" id="utilityblockbrandscontent">
+				<div class="utilityblock-inner-content" id="utilityblockbrandsinnercontent1">
+                    
+
+				</div>
+				
+				<div class="utilityblock-inner-content" id="utilityblockbrandsinnercontent2">
+                    
+			
+					
+				</div>
+						
+			</div>
+		</div>
+		
+		<div class="utilityblock support" id="utilityblocksupport">
+		
+			<div class="utilityblock-content" id="utilityblocksupportcontent">
+			
+				<div class="utilityblock-inner-content" id="utilityblocksupportinnercontent1">
+                    
+
+				</div>
+				
+				<div class="utilityblock-inner-content" id="utilityblocksupportinnercontent2">
+                    
+<div class='sfContentBlock'><style>.trustarc-banner-close img {
+        width: 14px !important;
+    }
+    .trustarc-client-logo img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+</style>
+<div id="consent-banner"></div><div id="teconsent"><script type="text/javascript" async="async" src="https://consent.trustarc.com/v2/notice/r8qrjn"></script></div>
+
+</div>
+				</div>			
+		
+			</div>
+		</div>		
+
+		<div class="utilityblock contact" id="utilityblockcontact">
+		
+			<div class="utilityblock-content"  id="utilityblockcontactcontent">
+			
+					<div class="utilityblock-inner-text"  id="utilityblockcontactinnertext"> 
+                        
+<div class='sfContentBlock'><div class="f3 fw3 pb-1 white tl">Do you have a question or need more information? </div>
+<div class="f5 fw3 tl white">Discover ways to reach us and use what works best for you.</div>
+
+</div>					
+                    </div>
+					
+					<div class="utilityblock-inner-button" id="utilityblockcontactinnerbutton">
+                        
+<div class='sfContentBlock'><a class="btn btn--out-white" href="/about-us/contact-us">CONTACT US</a>
+
+</div>
+					</div>	
+					
+			</div>
+		</div>
+			
+
+	</div>	
+	
+<script>
+(function () {             
+  var ll = new LazyLoad({
+        elements_selector: ".lazy"
+   });
+})();
+    </script>
+	<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+   
+<script type="text/javascript">_trxid = "valmont";
+webTraxs();
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    </script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script>
+
+<!--#include virtual="/shared/footer.html" -->

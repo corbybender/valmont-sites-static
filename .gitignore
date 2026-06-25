@@ -1,0 +1,7 @@
+.env
+node_modules/
+.fastembed_cache/
+webapp_logs/
+*.log
+*.tmp
+*.zip

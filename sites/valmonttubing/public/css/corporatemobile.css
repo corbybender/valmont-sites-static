@@ -1,0 +1,179 @@
+.RadSiteMap_mobilefooter{
+display:none;
+}
+
+@media only screen and (max-width: 768px) {
+body{
+min-width:inherit;
+}
+  #internal, #internal #main-container {
+    background: #d8d8d8;
+}
+#main-content {
+border-right:none;
+}
+#sidebar{
+float:none;
+margin-top: 20px;
+padding:0;
+width: 95%;
+background-color:#d8d8d8;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+#internal h1 {
+width:85%;
+}
+#main-content{
+float:none;
+width:95%;
+padding:0;
+color: #000000;
+font-size: 18px;
+margin-left:5px;
+}
+
+.center {
+width: 95%;
+}
+
+#secondary-navigation-top li a, #main-content .officers-list li a {
+background-color:#d8d8d8;
+font-size: 18px;
+    margin-left:5px;
+}
+
+
+#rotator{
+display:none;
+}
+#breadcrumbs{
+display:none;
+}
+#internal h2 {
+    font-size: 48px;
+}
+
+  .RadMenu .rmItem {
+background-color: #d8d8d8;
+}
+#title-bar{
+background: none;
+width:95%;
+}
+.tall-rectangle-badge{
+display:none;
+}
+  
+div.RadMenu_Sitefinity .rmHorizontal .rmItem a.rmLink {
+    color: #000;
+}
+
+ footer{
+background:none;
+position:relative;
+} 
+footer .noclass{
+display:none;
+}
+  .RadSiteMap_mobilefooter{
+  display:block;
+    background-color:#eee;
+  }
+ 
+#footer-center{
+background:none;
+}
+ #footer-quick-links{
+ display:none;
+ }
+ #footer-tabs{
+ display:none;
+ }
+ #brand-carousel-arrow-container{
+ display:none;
+ }
+  .RadSiteMap .rsmItem .rsmItem {
+    padding-left: 15px;
+    font-size: 16;
+    font-size: 16px;
+    font-weight: 700;
+  
+}
+
+#region-countries-lists ul:first-child {
+     padding: 0px;
+     float: none;
+}
+  #region-countries ul {
+     list-style-type: none; 
+     margin: 0px;
+    padding: 0 px; 
+    border-right: none;
+ 
+}
+#region-countries ul {
+    list-style-type: none;
+     margin: 0px; 
+    padding: 0px; 
+    border-right: none;
+}
+
+#title-bar-center{
+background:none;
+}
+  
+  #header-center-background{
+  
+    background:#d8d8d8 !important;
+      
+  }
+  #center-top-with-background{
+  
+    background:#d8d8d8 !important;
+  }
+  div.RadMenu_Sitefinity ul.rmHorizontal {
+       margin-left: -15px;
+}
+  
+  .RadTreeView .rtSelected .rtIn {
+    background-color: #fff;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  #title-bar {
+    padding-top: 80px;
+  }
+  #sidebar{
+  font-size:16px;
+  margin-bottom: 10px;
+  }
+  #footer-center-outside-background {
+  background:none;
+  }
+  

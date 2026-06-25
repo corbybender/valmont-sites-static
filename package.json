@@ -1,0 +1,16 @@
+{
+  "name": "valmont-tubing-static",
+  "private": true,
+  "description": "Static site tooling and Proofpoint form relay",
+  "scripts": {
+    "forms": "node api/form-server.js",
+    "site:fetch": "node fetch-pages.js",
+    "site:aliases": "node detect-url-aliases.js",
+    "site:shared": "node detect-shared-page-blocks.js",
+    "site:charts": "node detect-shared-link-charts.js",
+    "site:footer": "node strip-duplicate-footer-sec-2.js"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.3"
+  }
+}

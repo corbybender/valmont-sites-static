@@ -1,0 +1,13 @@
+{
+  "defaultTo": "tubing@valmont.com",
+  "forms": {
+    "contact-us": {
+      "to": "tubing@valmont.com",
+      "subject": "Valmont Tubing Contact Form Submission"
+    },
+    "request-a-quote": {
+      "to": "tubing@valmont.com",
+      "subject": "Valmont Tubing Request a Quote"
+    }
+  }
+}

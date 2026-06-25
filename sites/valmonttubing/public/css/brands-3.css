@@ -1,0 +1,249 @@
+body{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/background.gif) repeat-x #a8a8a8;
+}
+footer{
+	background: none;
+	height: 331px;
+}
+#logo{
+	position: absolute;
+	top: 25px;
+}
+
+
+
+
+body#internal{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/background.gif) repeat-x #a8a8a8; 
+}
+#internal #main-container{
+	background: #FFF;
+}
+#internal #main-content{
+	padding: 0 0 368px;
+	background: #FFF;
+}
+#rotator-indicators{
+	left: -65px;
+	top: 448px;
+	right: auto;
+	bottom: auto;
+	box-shadow: none;
+	background: none;
+}
+#rotator-indicators a.green{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/circle-green.gif) no-repeat;
+}
+#rotator-indicators li{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/circle-frame.gif) no-repeat;
+}
+#center-stage{
+	height: 485px;
+	width: 635px;
+	border-right: 1px solid #d8d8d8;
+	float: left;
+	margin: 0;
+}
+#center-stage h2{
+	font-size: 22px;
+	font-family: "pragmatica-web-n2", "pragmatica-web", sans-serif;
+	font-weight: 200;
+	width: 610px;
+	line-height: 22px;
+	margin: 13px 0;
+	position: absolute;
+	top: 155px;
+	left: 0;
+	color: #B4CB8A;
+}
+#right-center-stage{
+	float: right;
+	width: 255px;
+	padding: 20px 0 0;
+}
+#right-center-stage .wide-rectangle-badge{
+	margin: 10px 0 10px;
+	border-bottom: 1px solid #d8d8d8;
+}
+#center-stage h1{
+	left: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#center-stage p{
+	left: 0;
+	top: 220px;
+	width: 310px;
+	padding: 0;
+}
+#center-stage .green a{
+	color: #B00000;
+}
+#center-stage-background{
+	background: #FFF;
+}
+#main-nav{
+	box-shadow: none;
+	top: 127px;
+}
+#main-nav a{
+	padding: 3px 15px 0 15px;
+	text-shadow: none;
+	border-left: solid #CCC 1px;
+	height: 20px;
+}
+#main-nav a:hover, #main-nav a.hover{
+	padding: 4px 16px 7px 15px;
+	margin: 0;
+	height: 12px;
+}
+#main-nav li:last-child a:hover, #main-nav a.last{
+	border-right: solid #CCC 1px;
+}
+#main-nav li:last-child a{
+	border-right: solid #CCC 1px;
+}
+#header-center-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-middle-gray-green-stripe.gif) repeat-x;
+}
+#center-top-with-background{
+	background: none;
+	height: 159px;
+}
+#search{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/search-gray.gif) no-repeat;
+	color: #FFF;
+	height: 27px;
+}
+#logo{
+	top: 37px;
+}
+#main-container{
+	width: 985px;
+	position: relative;
+	margin: 0 auto;
+	box-shadow: 0px 20px 49px rgba(0, 0, 0, .7);
+	background: #FFF;
+}
+#news-bar{
+	background: none;
+	border: none;
+	margin: 5px 0 0;
+	float: none;
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
+#middle-bar{
+	background:none;
+}
+#news-bar-background{
+	background: none;
+}
+#news-bar strong, #news-bar a{
+	color: #B00000;
+}
+#news-bar h3{
+	color: #b0a3a3;
+	margin: 3px 17px -10px 0;
+	width: 55px;
+	float: none;
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/arrow-dark-gray-on-white.gif) no-repeat right 12px;
+}
+#footer-center{
+	background: none;
+	height: 331px;
+}
+#footer-center-outside-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-gray.gif) repeat-x;
+	height: 331px;
+}
+#middle-bar{
+	padding: 0 0 15px;
+	margin: 0 0 15px;
+	border-bottom: 1px solid #D8D8D8;
+	height: auto;
+}
+#main-content{
+	padding: 0 0 306px;
+	font-size: 13px;
+	background: none;
+}
+#center-stage-background{
+	padding: 0 0 338px;
+}
+#copyright, #credit, #copyright a, #credit a{
+	color: #FFF;
+}
+#title-bar-center{
+	background: none;
+}
+#title-bar{
+	background: none;
+	border-bottom: 1px solid #D8D8D8;
+}
+#internal h2.green{
+	color: #B5CB8B;
+}
+#main-content .top-right img{
+	margin: 0;
+}
+#main-content .top-right img.green{
+	border: 8px solid #B5CB8B;
+}
+#internal #main-content{
+	width: 729px;
+	float: left;
+	padding: 17px 0 358px;
+}
+#internal h1{
+	font-weight: 700;
+	font-size: 51px;
+	line-height: 48px;
+}
+
+
+
+
+
+.badge-container{
+	padding: 15px 0;
+	border-bottom: 1px solid #D8D8D8;
+}
+.badge-container-last{
+	padding: 15px 0;
+}
+.footer-links{
+	padding: 0 24px 0 16px;
+	margin: 51px 0 0 0;
+}
+.footer-links h4{
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: "pragmatica-web", sans-serif;
+	font-weight: 700;
+}
+.footer-links sup{
+	font-size: 8px;
+}
+.phone{
+	color: #FFF;
+	font-size: 23px;
+}
+.shade-box{
+	width: auto;
+	padding: 20px 0 20px 98px;
+}
+.wide-rectangle-badge{
+	margin: 0 8px 10px; 
+	float: none;
+}
+.wide-rectangle-badge a{
+	color: #B00000;
+	font-size: 13px;
+}
+.center-stage-border{
+	left: 312px;
+	display: none;
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "cmt-poles",
+  "siteName": "CMT Poles",
+  "baseUrl": "https://www.cmt-poles.com",
+  "hosts": [
+    "www.cmt-poles.com",
+    "cmt-poles.com"
+  ],
+  "aliases": [
+    "cmt-poles.local",
+    "staticstage.cmt-poles.com"
+  ],
+  "shellMode": "semantic-header-footer",
+  "publicDir": "public",
+  "formsConfig": "forms.config.json"
+}

@@ -1,0 +1,781 @@
+<!--#include virtual="/shared/header.html" -->
+<script type="text/javascript">/* Matomo Analytics Start */
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.valmont.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+/* Matomo Analytics End */
+</script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript">$(document).ready(function(){
+
+	$("#by_email").click(function(){
+		$(this).addClass("active");
+		$("#by_phone").removeClass("active");
+		$("#by_faq").removeClass("active");
+		$(".investor-contact").show();
+		$(".contact-phone-block").hide();
+		$(".contactus-faq").hide();
+	});
+	
+	$("#by_phone").click(function(){
+		$(this).addClass("active");	
+		$("#by_email").removeClass("active");
+		$("#by_faq").removeClass("active");
+		$(".investor-contact").hide();
+		$(".contact-phone-block").show();
+		$(".contactus-faq").hide();
+	});
+	
+	$("#by_faq").click(function(){
+		$(this).addClass("active");
+		$("#by_email").removeClass("active");
+		$("#by_phone").removeClass("active");	
+		$(".investor-contact").hide();
+		$(".contact-phone-block").hide();
+		$(".contactus-faq").show();
+	});	
+	
+	$(".contactus-faq-inner-answers").hide();
+	
+	$(".contactus-faq-inner-queries > .contactus-faq-inner-question").click(function(){		
+		$(".contactus-faq-inner-answers").not($(this).next(".contactus-faq-inner-answers")).hide();
+		$(this).next(".contactus-faq-inner-answers").toggle();
+		$(".contactus-faq-inner-question").not(this).removeClass('close');
+		$(this).toggleClass("close");
+	});		
+
+});
+
+
+
+
+
+</script>
+<script type="text/javascript">$(document).ready(function () {
+
+
+        $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+        });
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+   
+
+             /*  $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });
+
+
+
+
+</script>
+<script type="text/javascript">$(document).ready(function(){
+
+    var a = $(".badges ul.nav li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".badges ul.nav li").css("width", c+"%");
+	
+	$(".nav-container > .nav-content:first-child").show();
+	
+	$("ul.nav > li:first-child").addClass("active");
+	
+    $(".badges ul.nav > li").click(function(){
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-content-" + y;
+        //alert(z);
+		$(".nav-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+});
+
+
+
+
+
+
+</script>
+
+<style type="text/css" media="all">ul.nav-header li:first-child {
+    width: 15%;
+}
+
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/* 
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+.nav-content{
+display:block;
+}
+*/
+
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+/**/
+
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+#fourcolumnscontainer, #threecolumnscontainer, #twocolumnscontainer, #twocolumnswithformcontainer, #onecolumncontainer, #utilityblockproductdetaillist, #utilitydescriptionpower{
+display:none;
+}
+
+
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+
+
+/*Breadcrumb styles*/
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: transparent !important;
+}
+/*End Breadcrumb styles*/
+
+
+/* START Tabs and Tab-Content Styles
+.badges { width: 80%; margin: 50px auto; }
+.nav-container {float: left; width: 100%; text-align: center; padding: 100px 0; background-color: #404040; color: #fff; text-transform: uppercase; font-size: 26px; font-family: arial;}
+.nav-content {display: none;}
+ul.nav { float: left; width: 100%; padding: 0; margin: 0; list-style: none; }
+ul.nav li{ float: left; border-left: 1px solid #ccc; background-color: #eeeeee;text-align: center;padding: 8px 0;margin: 0 0 10px 0; font-family: arial; font-size: 14px; color: #606060;}
+ul.nav > li:first-child { border: 0; }
+.nav-list.active { background-color: #b0b0b0; color: #fff; }
+
+END Tabs and Tab-Content Styles */
+
+
+.fa6{
+color:#005d83;
+}
+
+
+
+
+
+
+</style>
+<style type="text/css" media="all">.highlights-footer-section{
+ display: none; 
+}</style>
+<style type="text/css" media="all">#offsetNav {
+    padding-left:0% !important;
+}
+
+.nav-tab>li.active>a, .nav-tab>li>a:hover{
+ border-radius: initial !important; 
+}
+.nav-list .nav-tab{
+  border-bottom: 1px solid #e2e5e8 !important;
+}
+
+.nav-list .nav-tab li.active{
+  border-bottom: none !important;
+}
+
+
+
+@media only screen and (max-width: 2920px) and (min-width: 992px)
+{
+.nav-tab li{
+ width: 13% !important; 
+}
+  .offset{
+ background: none !important; 
+}
+}
+@media only screen and (max-width: 991px) and (min-width: 320px)
+{
+.nav-tab li{
+ width: 100% !important; 
+}
+
+}
+.clearfix{
+  padding-top: 30px; 
+}
+.badges .nav-container ul{
+ margin-left: 0px !important; 
+}</style>
+<style type="text/css" media="all">.feature-content-inner-image {
+    float: left;
+    width: 48%;
+}
+.feature-content-inner-image img {
+    float: left;
+    width: 100%;
+}
+.feature-content-inner-text {
+    float: right;
+    width: 48%;
+    text-align: left; 
+}
+.feature-content-inner-text p{
+    text-align: left !important; 
+}
+.nav-content{
+    float: left;
+    width: 100%;
+    margin: 2% 0 6% 0;
+}
+.tab-nav-list{
+ text-align: left; 
+}</style>
+<style type="text/css" media="all">.slide-carousel.utility .slide-content {
+        /*width: 100%;*/
+    }
+    .chairmain-msg-img .slide-content {
+        background-color: transparent !important;
+}
+.chairmain-msg-content{display: none;}
+
+.chairmain-msg-img {
+    float: left;
+    width: 100%;
+}
+</style>
+<style type="text/css" media="all">@media only screen and (max-width: 2920px) and (min-width: 1140px)
+{
+
+.leaders_img img {
+    float: left;
+    width: 100%;
+    min-width: 262px;
+}
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 699px)
+{
+
+	.board-directors ul li {
+		float: none !important;
+		width: 47% !important;
+		text-align: center !important;
+		margin: 0 1% !important;
+		display: inline-block !important;
+		vertical-align: top !important;
+	}
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 500px)
+{
+
+	.slide-carousel.utility .slide-content {
+		position: absolute;
+		z-index: 1111;
+		left: 0;
+		width: 90%;
+		background-color: transparent;
+		padding: 0;
+		margin: 0 5%;
+	}
+	
+	.slide-carousel.utility img {
+		height: 270px;
+	}	
+
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 699px)
+{
+
+	.slide-carousel.utility .slide-content {
+		position: absolute;
+		z-index: 1111;
+		left: 0;
+		width: 90%;
+		top: 0;
+		background-color: transparent;
+		padding: 0;
+		margin: 5%;
+	}
+	
+	#slidecarousel.slide-carousel.utility img {
+		height: auto !important;
+		width: 100%;
+		margin: 0 !important;
+		min-height: 245px;
+		max-height: inherit;
+	}
+}
+
+
+
+
+</style>
+<style type="text/css" media="all">.RadTreeView {
+color:white;
+}</style>
+<div class='sfContentBlock'><p style="text-align:right;"><a target="_blank" href="https://webassets.valmont.com/valmontstaging/docs/librariesprovider103/default-document-library/weight-per-ft-tubing-05-2026.pdf" data-skip-sfref="true">Tubing Size Sheet</a></p>
+<p>&nbsp;</p>
+
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+
+		<div class="slide-carousel utility" id="slidecarousel">
+            
+<div class='sfContentBlock'><img src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/architectural/product-child-banners/val-bnr-tubingb.jpg">
+<div class="slide-content">
+<h1>About Us</h1>
+<p>&nbsp;</p>
+</div>
+
+</div>
+		</div>
+        
+    	<div class="utilityblock products leadership">
+            
+<div class='sfContentBlock'><div class="container mt-5">
+<!--<div class="f5 fw3 tl coolgrey-80 w-90 lh-copy ml-auto mr-auto mb-4">For years, Valmont Utility has claimed that we are Engineered to Perform with The Capacity to Deliver. In a word, we’re talking about leadership. It’s a big claim. And we don’t make it lightly. Explore our site to learn more about our leadership. And, more importantly, how we can put it work for you.</div>-->
+<div class="row">
+<!--item1-->
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 box">
+<div class="hmpge-item">
+<!--<div class="figure">Learn More</div>-->
+<img title="Steel Tubing Products" class="fade-in" alt="Steel Tubing Products" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider103/blue-banners-badges/tubing-aboutus-2.jpg">
+</div>
+</div>
+<!--item2-->
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 box">
+<div class="hmpge-cont mt-1 mb-3">
+<div class="f2 fw3 coolgrey-80 mb-4 pt-3 tracked-tight">About Valmont Tubing</div>
+<div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+In 1953, Valley Manufacturing acquired the patent for the center pivot irrigation system. It was during this time that Daugherty realized the need for a lighter, higher quality pipe, leading to the establishment of Valmont Tubing and its steel pipe and tubing operations. Originally focused on providing solutions for irrigation, Valmont Tubing has since expanded its reach to serve a wide range of industries. Today, in addition to the agricultural sector, we support diverse markets such as transportation, pneumatic, exhaust, construction, structural, and many other industrial applications.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><div class='sfContentBlock'><div style="clear: both"></div>
+<div class="f2 fw3 tc coolgrey-80 mb-4 tracked-tight pt-5">Markets We Serve</div>
+
+</div><div class='sfContentBlock'><div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+Valmont Tubing is a leading producer of welded steel tubing, serving diverse markets including agriculture, industrial, and pneumatic applications. Our tubing is utilized in equipment such as grain handling systems, air compressors, conveyors, and water heaters. With options ranging from large OD light wall tubing to ultra-low carbon and HSLA grades, we provide a variety of finishes—including hot rolled, galvanized, stainless, and more—to meet stringent requirements and evolving customer needs. Explore our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a> for detailed specifications, sizes, and finishes.
+</div>
+
+</div><div class='sfContentBlock'><!--#include virtual="/shared/markets-we-serve.html" -->
+
+</div><div class='sfContentBlock'><div class="f2 fw3 tc coolgrey-80 mb-4  mt-5 tracked-tight">Our Mission</div>
+
+</div><div class='sfContentBlock'><p style="text-align: left;">Valmont Tubing’s mission is to be the preferred provider of steel tubing and the market leader in customer service, value, quality and on-time delivery. We will always adhere to our core values of passion, integrity, continuous improvement and deliver results.</p>
+
+</div><div class='sfContentBlock'><div class="f2 fw3 coolgrey-80 tc mb-1 pt-5" style="clear: both;">Driven by Our Values</div>
+
+</div><div class='sfContentBlock'><p style="text-align: left;">Valmont Tubing stays ahead in a rapidly evolving marketplace by continuously enhancing capabilities and partnering with customers for success. Backed by an ISO 9001:2015-certified quality management system, we lead in tubular innovation with ongoing R&amp;D, introducing new processes, sizes, shapes, and products. Our swift response to increasing line capacity needs reflects our commitment to staying at the forefront of the industry.</p>
+
+</div><div class='sfContentBlock'><div id="projects" class="pt-3 pb-5 bg-warmgrey-10">
+<div class="lo-wdth pad-20 pad-20--f1420 container-fluid p-0 box">
+<div class="row align-items-center m-0 box">
+<div class="col-12 p-0 box">
+</div>
+</div>
+<div class="wrapper">
+<div class="row">
+<!--item1-->
+<div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 mb-4 box reveal">
+<div class="grw-container pt-4">
+<div class="tc">
+<img title="PASSION" class="grw-lrge" alt="PASSION" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider161/default-album/passion_sm.svg">
+</div>
+<div class="p-2 v-top paragraph">
+<p class="f6 lh-copy coolgrey-70 tl mb-3">
+<span class="db fw6 coolgrey-90">PASSION</span>
+We have passion for our products, services and customers.
+</p>
+</div>
+</div>
+</div>
+<!--item1-->
+<!--item2-->
+<div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 mb-4 box reveal">
+<div class="grw-container pt-4">
+<div class="tc">
+<img title="INTEGRITY" class="grw-lrge" alt="INTEGRITY" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider161/default-album/integrity_sm.svg">
+</div>
+<div class="p-2 v-top paragraph">
+<p class="f6 lh-copy coolgrey-70 tl mb-3">
+<span class="db fw6 coolgrey-90">INTEGRITY</span>
+We operate with absolute integrity.</p>
+</div>
+</div>
+</div>
+<!--item2-->
+<!--item3-->
+<div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 mb-4 box reveal ">
+<div class="grw-container pt-4">
+<div class="tc">
+<img title="CONTINUOUS IMPROVEMENT" class="grw-lrge" alt="CONTINUOUS IMPROVEMENT" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider161/default-album/continuous_improvement_sm.svg">
+</div>
+<div class="p-2 v-top paragraph">
+<p class="f6 lh-copy coolgrey-70 tl mb-3">
+<span class="db fw6 coolgrey-90">CONTINUOUS IMPROVEMENT</span>
+We strive for continuous improvement, removing waste everywhere with a true sense of urgency.</p>
+</div>
+</div>
+</div>
+<!--item3-->
+<!--item4-->
+<div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 mb-4 box reveal">
+<div class="grw-container pt-4">
+<div class="tc">
+<img title="Nam vitae" class="grw-lrge" alt="Nam vitae" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider161/default-album/deliver_results_sm.svg">
+</div>
+<div class="p-2 v-top paragraph">
+<p class="f6 lh-copy coolgrey-70 tl mb-3">
+<span class="db fw6 coolgrey-90">DELIVER RESULTS</span>
+We consistently deliver results.</p>
+</div>
+</div>
+</div>
+<!--item4-->
+</div>
+</div>
+</div>
+</div>
+
+</div><div class='sfContentBlock'><div class="container">
+<div class="row">
+<!--item1-->
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 box">
+<div class="hmpge-item">
+<!--<div class="figure">Learn More</div>-->
+<img title="Steel Tubing Products" class="fade-in" alt="Steel Tubing Products" src="https://webassets.valmont.com/valmontstaging/images/librariesprovider103/blue-banners-badges/tubing-aboutus-3.jpg">
+</div>
+</div>
+<!--item2-->
+<div class="col-lg-6 col-md-6 col-sm-6 col-sm-12 box">
+<div class="hmpge-cont mt-1 mb-3">
+<div class="f2 fw3 coolgrey-80 mb-4 pt-3 tracked-tight">About Valmont Industries</div>
+<div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+Valmont is here to modernize vital infrastructure and increase agricultural productivity, sustainably and reliably. We galvanize steel to last a century with minimal environmental impact. We modernize irrigation to feed a growing population by utilizing the latest technology. We harden the electrical grid to enable the delivery of reliable power to millions of homes around the world. And we help make communities everywhere safer, cleaner and more connected through our smart infrastructure technology.</div>
+<div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+Valmont serves two primary segments — agriculture and infrastructure — with seven markets we serve: Utility, Lighting and Transportation, Telecom, Solar, Coatings, Irrigation and Ag Tech. We manufacture products in 85 facilities spread across six continents, and we do business in over 100 different countries. That’s what Valmont does.</div>
+<div class="f5 fw3 lh-copy coolgrey-70 pb-3">
+We conserve resources and improve life, finding ways to make innovation and technology beneficial in the real world.</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+			<div class="leadership-values">
+			
+				<div class="leadership-values-inner">
+			
+					<div class="leadership-values-img">
+                        
+
+					</div>
+					
+					<div class="leadership-values-content">
+					
+						<div class="leadership-values-inner-content first">
+                            
+
+						</div>
+						
+						<div class="leadership-values-inner-content second">
+                            
+
+						</div>
+
+						<div class="leadership-values-inner-content third">
+                            
+
+						</div>
+						
+						<div class="leadership-values-inner-content fourth">
+                            
+
+						</div>
+						
+						
+					</div>	
+
+					<div class="bottom-value-text">
+                        
+
+
+					</div>
+					
+				</div>
+			
+			
+			</div>					
+				
+		</div>
+		<div class="meet_leaders">
+            
+
+            
+
+		</div>
+        <div class="board-directors">
+            
+
+			
+
+		</div>
+        <div class="chairmain-msg">
+		
+			<div class="chairmain-msg-img">
+                
+<div class='sfContentBlock'><div class="slide-carousel utility business-conduct" id="">
+<div class="noclass"><a id="conduct"></a>
+<img src="https://webassets.valmont.com/valmontstaging/images/librariesprovider103/about-pages/guiding-our-growth_20170815_gjp_vmi_073_1920x600.jpg">
+<div class="slide-content">
+<h4>Interested in a Career with Valmont?</h4>
+<p>
+<a href="https://www.valmont.com/careers" target="_blank"><span class="btn btn--out-white">SEARCH jobs</span></a>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+				
+				
+			</div>
+		
+			<div class="chairmain-msg-content">
+                
+
+
+			</div>
+			
+		</div>
+        <div class="highlights highlights-footer-section leadership">
+			<div class="investblock-content">
+			
+				<div class="investblock-inner-content right-border">
+                    
+
+
+				</div>
+				
+				<div class="investblock-inner-content">
+                    
+<div class='sfContentBlock'><style>.trustarc-banner-close img {
+        width: 14px !important;
+    }
+    .trustarc-client-logo img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+</style>
+<div id="consent-banner"></div><div id="teconsent"><script type="text/javascript" async="async" src="https://consent.trustarc.com/v2/notice/r8qrjn"></script></div>
+
+</div>
+				</div>
+
+			</div>
+		</div>
+			
+
+	</div>	
+	
+<script>
+(function () {             
+  var ll = new LazyLoad({
+        elements_selector: ".lazy"
+   });
+})();
+    </script>
+	<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+   
+<script type="text/javascript">$(document).ready(function() {
+// Swiper: Slider
+    new Swiper('.swiper-container', {
+        loop: false,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 30,
+        breakpoints: {
+            1920: {
+                slidesPerView: 3,
+                spaceBetween: 60
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            1028: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            780: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+           580: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        },
+       navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    });
+});
+</script><script type="text/javascript">_trxid = "valmont";
+webTraxs();
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    </script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script>
+
+<!--#include virtual="/shared/footer.html" -->

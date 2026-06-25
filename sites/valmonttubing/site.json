@@ -1,0 +1,18 @@
+{
+  "slug": "valmonttubing",
+  "siteName": "Valmont Tubing",
+  "baseUrl": "https://www.valmonttubing.com",
+  "hosts": [
+    "www.valmonttubing.com",
+    "valmonttubing.com"
+  ],
+  "aliases": [
+    "valmonttubing.local",
+    "localhost",
+    "127.0.0.1",
+    "valmont-cws-stage-staticsites-gad8aeb2fuf4h6ds.centralus-01.azurewebsites.net",
+    "staticstage.valmonttubing.com"
+  ],
+  "publicDir": "public",
+  "formsConfig": "forms.config.json"
+}

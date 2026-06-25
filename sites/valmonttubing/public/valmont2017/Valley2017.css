@@ -1,0 +1,295 @@
+.footer, .footer-sec-2 {
+    background-color: #005587;
+    border-color: #005587;
+    border: 0;
+}
+.footer-column-list .footer-column-icon {
+    float: left;
+    margin: 0 3% 0 0;
+}
+.footer-sec-1 .footer-column p {
+    float: left;
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+}
+footer-sec-1 ul.footer-column-list li {
+    line-height: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 7px 0 0 0;
+}
+.footer-sec-1 ul.footer-column-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+.header-sec-2 .search {
+    width: 3%;
+    float: right;
+    text-align: right;
+    margin: 12px 0;
+}
+.submenu2 {
+    position: absolute;
+    left: 100%;
+    float: left;
+    padding: 20px 15% 20px 10%;
+    border-left: 1px solid #ced0d1;
+    border-top: 1px solid #ced0d1;
+    background-image: url(/valmont2017/images/nav_menu_bg_img.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    top: -1px;
+    min-height: 460px;
+    margin: 0;
+    background-color: #fff;
+    width: 75%;
+}
+ul.submenu1 {
+    float: left;
+    top: -1px;
+    display: none;
+    left: 100%;
+    width: 100%;
+    padding: 20px 0 20px 0 !important;
+    border-left: 1px solid #ced0d1;
+    list-style: none !important;
+    margin: 0 !important;
+    position: absolute;
+    min-height: 460px;
+    background-color: #fff;
+    border-top: 1px solid #ced0d1;
+    background-image: url(/valmont2017/images/nav_menu_bg_img.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+ul.submenu {
+    float: left;
+    width: 33.3%;
+    padding: 20px 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    left: 0;
+    display: none;
+    top: 137px;
+    background-color: #fff;
+    border-top: 1px solid #ced0d1;
+    background-image: url(/valmont2017/images/nav_menu_bg_img.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    list-style: none !important;
+    min-height: 460px;
+    z-index: 11111111111;
+}
+ul.nav-header li a span {
+    float: left;
+    color: #58595b;
+    font-weight: 500;
+}
+ul.nav-header li a em.web {
+    display: block;
+    float: left;
+    font-size: 11px;
+    margin: 3px 6px;
+    color: #59cbe8;
+}
+ul.nav-header li a i.web, ul.nav-header li a em.web {
+    color: #59cbe8;
+}
+.val-display-h1-alt {
+    color: #0076a8;
+}
+.investblock, .utilityblock.products {
+    background-color: #f0f1f1;
+}
+#buildworldsection {
+    background-color: #f0f1f1;
+}
+.utilityblock.products p {
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+    color: #58595b;
+    margin: 2px 6% 20px 6%;
+    line-height: 26px;
+    text-align: left;
+}
+.investblock, .utilityblock.products {
+    background-color: #f0f1f1;
+}
+
+p.homeBadgeP a.supporting_content_button, a.supporting_content_button {
+    border: 2px solid #00a3e0;
+    color: #00a3e0!important;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 0.875rem;
+    min-width: 120px;
+    text-align: center;
+    padding: 1.25rem 1.75rem;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #005d83;
+    white-space: nowrap;
+    line-height: 0.875rem;
+    text-decoration: none;
+    margin: 10px 0px;
+    transition: color 0.3s ease, opacity 0.1s ease;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+p.homeBadgeP a.supporting_content_button:hover {
+    background: #00a3e0;
+    color: #fff !important;
+    transition: .25s ease;
+}
+.utilityblock-inner-content h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #58595b;
+}
+
+    .footer-column-list .footer-column-icon a.footer-fb {
+    background-image: url(https://valmontstaging.blob.core.windows.net/valmontstaging/facebook%20icon.svg);
+    }
+    .footer-column-list .footer-column-icon a.footer-twitter {
+    background-image: url(https://valmontstaging.blob.core.windows.net/valmontstaging/twitter%20icon-01.svg);
+    }
+    .footer-column-list .footer-column-icon a.footer-linkedin {
+    background-image: url(https://valmontstaging.blob.core.windows.net/valmontstaging/linkedin%20icon.svg);
+    }
+    .footer-column-list .footer-column-icon a.footer-youtube {
+    background-image: url(https://valmontstaging.blob.core.windows.net/valmontstaging/youtube%20icon-01.svg);
+    }
+    .footer-column-list .footer-column-icon a.footer-instagram{
+    background-image: url(https://valmontstaging.blob.core.windows.net/valmontstaging/instagram%20icon.svg);
+    }
+	
+	
+body {
+    overflow-x: hidden;
+}
+
+.lang-dropdown span#lang {
+    margin: 0 0 4px 0;
+    float: left;
+    color: #323232;
+}
+
+ul.nav-header li a i.web, ul.nav-header li a em.web {
+    color: #2197ca;
+}
+
+
+.sub2_content a.sub2_content_button {
+    float: left;
+    padding: 10px 15px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    color: #2197ca;
+    border: 2px solid #2197ca;
+    text-transform: uppercase;
+}
+
+.products .utilityblock-inner-content:hover .utilityblock-inner-img img {
+    opacity: 1;
+}
+
+.products .utilityblock-inner-content:hover .utilityblock-inner-img {
+    background-color: inherit;
+}
+  
+  #footer.footer {
+    border-image: url(http://az276019.vo.msecnd.net/valmontstaging/images/librariesprovider87/homepage/footer-bar.png) 12 stretch;
+    border-top: 7px solid;
+    border-color: #FFF;
+  }
+
+nav-header i, .nav-header em {
+    color: #2197ca;
+}
+
+div#footer2-columnright p {
+    float: left;
+}
+
+.utilityblock-inner-content center h5 {
+    margin: 20px 0;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.center.res-blck {
+    float: left;
+    width: 100%;
+}
+
+.col-sec .center.res-blck h4 {
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div#threecolumnscontainer .center.res-blck img {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    display: block;
+    width: 70%;
+}
+
+.col-sec .center.res-blck a.btn {
+    margin: 20px auto;
+    display: block;
+    width: 20%;
+}
+
+.header-sec-2 .navigation {
+    margin: 12px 0 0 30px;
+}
+
+div#global.global .global ul > li:last-child {
+    width: 35%;
+}
+
+.sfContentBlock.equip-left-content {
+    float: left;
+    margin: 0 0 30px 0;
+}
+
+
+@media only screen and (max-width: 2920px) and (min-width: 1025px)
+{
+
+	ul.nav-header > li:hover {
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+
+}
+
+
+@font-face{ 
+font-family: RubikBlack; 
+src: url('/Fonts/rubik-black-webfont.woff') format('woff'); 
+src: url('/Fonts/rubik-black-webfont.woff2') format('woff2');
+}
+	
+	

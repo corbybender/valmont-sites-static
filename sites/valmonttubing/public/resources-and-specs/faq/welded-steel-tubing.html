@@ -1,0 +1,698 @@
+<!--#include virtual="/shared/header.html" -->
+<script src="https://www.w3schools.com/lib/w3data.js"></script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript">$(document).ready(function(){
+
+ if ($(window).width() >= 1025){ 
+    
+$("#web-select-pointer").click(function(){
+ $(".website-selector").slideToggle();
+}); 
+
+$("#website-selector-close").click(function(){
+ $(".website-selector").slideToggle();
+});  
+
+  $("ul.nav-header li.sub-level.level-3").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+      $(this).find("ul.submenu").css("display", "block");
+   $(this).find("ul.submenu1").first().css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  }); 
+  
+
+  $("ul.nav-header li.sub-level.level-3 ul.submenu > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $("ul.submenu1, .submenu2").css("display", "none");
+   $(this).find("ul.submenu1").css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });  
+
+  $("ul.nav-header li.sub-level.level-3 ul.submenu > li ul.submenu1 > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+  
+  
+  $("ul.nav-header li.sub-level.level-2").on('mouseover', function(event){
+   $("ul.submenu, ul.submenu1, .submenu3").css("display", "none");
+      $(this).find("ul.submenu").css("display", "block");
+   $(this).find("ul.submenu1").first().css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+  
+  $("ul.nav-header li.sub-level.level-2 ul.submenu > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+ 
+  $("ul.nav-header li.sub-level.level-2 ul.submenu1 > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });  
+  
+  $("ul.nav-header li.level-0").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  }); 
+
+  $(".global, .language-selector, .valmont-websites, .share-market-details, .search, .logo").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  });
+   
+   
+  $( window ).scroll(function() {
+     $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  });
+   
+   
+
+  $(".clear-nav-close").click(function(){
+  
+   $("ul.submenu, ul.submenu1, .submenu2, .submenu3").css("display", "none");
+   
+  }); 
+  
+  $("#search-icon").click(function(){
+   $("ul.submenu, ul.submenu1, .submenu2, .submenu3").css("display", "none");
+   $(".search-box").slideToggle();
+   $(this).toggleClass("search-close-icon");
+  });    
+
+ $(".nav-header").mouseover(function(){
+   $("#search-icon").removeClass("search-close-icon");
+  $(".search-box").slideUp();
+ }); 
+  
+ }
+ 
+ if ($(window).width() <= 1024){ 
+     
+   $(".web-list-option").clone().appendTo(".web-select-res .submenu"); 
+   
+   $("<div class='overflow-overlay' style='display:none;'></div>").insertAfter(".footer-sec-2");
+   
+   $("#search-icon").click(function(){
+    $("body").removeClass("overflow-control");
+    $(".overflow-overlay").hide();     
+    $(".nav-header").hide();
+    $(".search-box").slideToggle();
+     $(this).toggleClass("search-close-icon");
+   }); 
+   
+   $(".menu").click(function(){
+    
+    $("body").toggleClass("overflow-control");
+    $(".overflow-overlay").toggle();
+    $(".nav-header").slideToggle();
+    $(".search-box").hide();
+    $("#search-icon").removeClass("search-close-icon");
+   });  
+   
+    $(".overflow-overlay").click(function(event) {
+     	
+        event.preventDefault();
+    });
+   
+   $(".overflow-overlay").bind("touchstart", function(event) {
+     	
+        event.preventDefault();
+    });  
+
+   $("ul.nav-header li.level-3").click(function(){
+        $("ul.nav-header li").not(this).children("em").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+       $("ul.nav-header li").not(this).children(".submenu, .submenu1").hide();
+       $(this).children(".submenu").slideToggle();
+       $(this).children("em").toggleClass("fa-chevron-right");
+       $(this).children("em").toggleClass("fa-chevron-down");
+   });  
+   
+   $("ul.nav-header li.level-3 ul.submenu li").click(function(event){
+       event.stopPropagation(); 
+       $(this).children(".submenu1").slideToggle();
+       $(this).children("em").toggleClass("fa-chevron-right");
+       $(this).children("em").toggleClass("fa-chevron-down");
+   });  
+   
+   $("ul.nav-header li.level-2").click(function(){
+      $("ul.nav-header li").not(this).children("em").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+      $("ul.nav-header li").not(this).children(".submenu, .submenu1").hide();
+      $(this).children(".submenu").slideToggle();
+      $(this).children(".submenu1").slideToggle();
+      $(this).children("em").toggleClass("fa-chevron-right");
+      $(this).children("em").toggleClass("fa-chevron-down");
+   });     
+    
+ } 
+ 
+
+});</script>
+<script type="text/javascript">$(document).ready(function () {
+
+       $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+       });
+   
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+      /*
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var a = $(".career-location-badges > ul li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".career-location-badges > ul li").css("width", c+"%");
+	
+	$(".nav-location-container > .nav-location-content:first-child").show();
+	
+	$("ul.nav-location > li:first-child").addClass("active");
+	
+    $(".career-location-badges ul > li").click(function(){
+      
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-location-content-" + y;
+        //alert(z);
+		$(".nav-location-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav-location li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+	
+	
+	$(".inner-nav-location-content-block").hide();
+	
+    $(".inner-nav-location-content > h5").click(function(){
+        $(".inner-nav-location-content-block").not($(this).next(".inner-nav-location-content-block")).hide();
+        $(this).next(".inner-nav-location-content-block").toggle(500);	
+        $(".inner-nav-location-content > h5").not(this).removeClass('close'); 
+               $(this).toggleClass("close");
+
+
+              
+    });	
+});</script>
+
+<style type="text/css" media="all">ul.nav-header li:first-child {
+    width: 15%;
+}
+
+
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/*
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+.nav-location-container > .nav-location-content {
+  display: block !important;
+}
+.nav-location-container{
+background-color: lightgrey;
+height: 25%;
+}
+*/
+
+
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+/**/
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+
+
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink {
+    color: white;
+    text-decoration: underline;
+}
+ 
+
+
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: transparent !important;
+}
+/*End Breadcrumb styles*/
+
+.inner-nav-location-content-block-sec2
+{
+ float:none; 
+  width:100%;
+}</style>
+<style type="text/css" media="all">/*Required for editing.
+  Once done editing, comment this css out.
+*/
+/**/
+.nav-region-logo{
+ text-align:left; 
+}
+.sfContentBlock p, .noclass p{
+  
+    text-align: left;
+}
+.nav-location-container > .nav-location-content {
+  display: block !important;
+}
+.nav-location-container{
+background-color: #fff;
+height: 25%;
+}
+
+.inner-nav-location-content-block-sec2 {
+    float: right;
+    width: 100%;
+}
+
+.utilityblock.contact.careers-footer {
+    margin-bottom: 50px;
+}
+.utilityblock-inner-text a{
+ padding:0px; 
+}
+a:link{
+color: #005d83;
+}
+a:hover{
+color: #0098d1;
+}
+.careers-locations{
+  width:90% !important;
+  padding-left:50px !important;
+}
+b, strong {
+text-align:left;
+    display: inherit;
+  padding-top:60px;
+}
+
+.inner-nav-location-content-block-sec2 .nav-region-logo {
+    text-align: left;
+  width:100%;
+}
+.careers-locations p {
+    padding-bottom: 20px;
+}</style>
+<style type="text/css" media="all">.RadTreeView {
+color:white;
+}</style>
+<div class='sfContentBlock'><p style="text-align:right;"><a target="_blank" href="https://webassets.valmont.com/valmontstaging/docs/librariesprovider103/default-document-library/weight-per-ft-tubing-05-2026.pdf" data-skip-sfref="true">Tubing Size Sheet</a></p>
+<p>&nbsp;</p>
+
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+
+		<div class="slide-carousel utility careers" id="slidecarousecareerslocations">
+            
+<div class='sfContentBlock'><img src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/about-us/banners/val-bnr-governance.jpg?sfvrsn=2">
+<div class="slide-content">
+<h1>Welded Steel Tubing FAQs</h1>
+</div>
+
+</div>
+		</div>
+        <div class="careers-locations" id="careerlocations">
+            
+<div class='sfContentBlock'>
+
+</div>
+			<div class="career-location-badges" id="careerlocationbadges">
+                
+<div class='sfContentBlock'><h4><a name="q1"></a>
+<p style="text-align: left;">
+</p>
+<div class="inner-nav-location-content">
+<h5>What types of steel tubing does Valmont produce?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont Tubing produces mechanical steel tubing that is electric resistance welded (ERW) in sizes up to 12.75" OD round, up to 6.00" square and in our 2.00" x 3.00" rectangle size. Valmont also produces tubing that is submerged arc welded (SAW) and is produced to ASTM specification A252 in 12.375", 14.00" and 16.00" OD round sizes,  . Please refer to our on-line steel tubing product catalog for Valmont Tubing for a listing of specific sizes of tubing produced in each of our standard shapes.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q1">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<p>&nbsp;</p>
+<div class="inner-nav-location-content">
+<a name="q2"></a>
+<h5>What standard shapes does Valmont Tubing produce?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont Tubing produces round tubing up to 16", square tubing ranging from 1.00" up to 6.00" and rectangle tubing in a 2.00" x 3.00" size. Please refer to our steel tubing product catalog on this site for specific sizes.
+</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#q2">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<div class="inner-nav-location-content">
+<a name="q3"></a>
+<h5>Is Valmont capable of producing special shapes?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont has a strong reputation for our willingness to look at unique sizes and special shapes that other mills are not. Valmont Tubing has produced shapes such as oval tubing, D shaped tubing, bowtie shaped tubing, and peanut shaped tubing among other shapes for unique customer requirements. Please contact the Valmont sales staff if you have such needs. They will work in conjunction with our engineering department to determine capabilities and tooling costs.
+</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#q3">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<!-- START -->
+<div class="inner-nav-location-content">
+<a name="q4"></a>
+<h5>What type of finishes does Valmont Tubing offer?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont produces steel tubing in hot rolled, hot rolled pickled &amp; oiled, cold rolled, pregalvanized, hot dip galvanized, aluminized finishes along with stainless 409. Please refer to our steel tubing product catalog on this site for specific finish options based upon OD and wall thickness combinations or inquire for specific capability questions that may fall outside of those shown.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q4">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<!-- START -->
+<div class="inner-nav-location-content">
+<a name="q5"></a>
+<h5>What type of chemistries does Valmont Tubing produce?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont Tubing is capable of producing ultra low carbon chemistries up to ultra high strength chemistries and a multitude of chemistries in between. Valmont as a standard produces chemistries such as 1006, 1008, 1010, 1015, 1020, 1021, 1026 and up to 1030. Valmont also produces tubing utilizing weathering steel grade (A606 chemistry) and high strength, low alloy (HSLA). Please inquire with our sales staff for specific requirements.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q5">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<!-- START -->
+<div class="inner-nav-location-content">
+<a name="q6"></a>
+<h5>Is Valmont Tubing ISO Certified?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+The Valmont Tubing management system is certified to ISO 9001:2015 for the manufacture of welded steel tubing.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q6">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<!-- START -->
+<div class="inner-nav-location-content">
+<a name="q7"></a>
+<h5>What value added services does Valmont offer?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont offers our secondary cutting, hot dip galvanizing, painting, bending, hole drilling, special packaging and other specialized fabrication as required. Please inquire with specific value added services needs that you may have.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q7">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<!-- START -->
+<div class="inner-nav-location-content">
+<a name="q8"></a>
+<h5>What ASTM specifications does Valmont Tubing produce steel tubing to?</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<p>
+Valmont is capable of producing steel tubing to several different ASTM specifications depending upon the end use that the tubing will be used in, the type of weld and the finish of tubing. Valmont produces tubing to the following ASTM specifications along with both destructive and non-destructive testing:<br>
+ASTM A513 Type 1a, A513 Type 1b and A513 Type 2<br>
+ASTM A135 Grade A, A135 Grade B<br>
+ASTM A252 Grade 1, A252 Grade 2, A252 Grade 3<br>
+ASTM A500 Grade A, A500 Grade B and A500 Grade C<br>
+ASTM A787 Type 1, A787 Type 2, A787 Type 3 and A787 Type 4<br>
+ASTM A847<br>
+ASTM A53 Type E Grade A, ASTM Type E Grade B *<br>
+ASTM A268 *<br>
+<br>
+<br>
+* For specific capabilities, please check with our sales staff as certain exceptions may apply depending upon OD size.
+</p>
+<a style="margin-bottom: 40px; float: left;" href="#q8">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+</h4>
+
+</div>
+				<div class="nav-location-container" id="navlocationcontainer">
+				      <div id="nav-location-content-1" class="nav-location-content">	
+                          
+			  			  
+				      </div>
+				      <div id="nav-location-content-2" class="nav-location-content">
+                        
+			  
+				      </div>
+				      <div id="nav-location-content-3" class="nav-location-content">
+                        
+			  
+				      </div>
+				      <div id="nav-location-content-4" class="nav-location-content">
+                          
+			  
+				      </div>
+				      <div id="nav-location-content-5" class="nav-location-content">
+                          
+			  
+				      </div>
+				      <div id="nav-location-content-6" class="nav-location-content">
+                          
+			  
+				      </div>
+				</div>
+			</div>
+		</div>
+        <div id="careers-apply" class="careers-apply">	
+			<div class="utilityblock-content" id="careersapplycontentarea">			
+				<div class="utilityblock-inner-content" id="careersapplycontentwrapper">
+					<div class="utilityblock-inner-text" id="careersapplycontentinnertext">
+                        
+					
+                    </div>
+				</div>			
+				
+			</div>
+		</div>
+        <div class="utilityblock contact careers-footer" id="careersfooterwrapper">
+			<div class="utilityblock-content" id="careersfootercontent">
+					<div class="utilityblock-inner-text" id="careersfootercontentinnertext">
+                        
+<div class='sfContentBlock'><style>.trustarc-banner-close img {
+        width: 14px !important;
+    }
+    .trustarc-client-logo img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+</style>
+<div id="consent-banner"></div><div id="teconsent"><script type="text/javascript" async="async" src="https://consent.trustarc.com/v2/notice/r8qrjn"></script></div>
+
+</div>
+					</div>
+					<div class="utilityblock-inner-button" id="careersfooterbutton">
+                        
+
+					</div>	
+			</div>
+		</div>
+			
+	</div>	
+	<script>
+(function () {             
+  var ll = new LazyLoad({
+        elements_selector: ".lazy"
+   });
+})();
+    </script>
+	<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+   
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    _trxid = "valmont";
+webTraxs();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script>
+
+<!--#include virtual="/shared/footer.html" -->

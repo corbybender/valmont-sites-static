@@ -1,0 +1,109 @@
+#web-select-pointer{
+	display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(http://az276019.vo.msecnd.net/valmontstaging/images/librariesprovider89/default-album/webnavcoatings.png) no-repeat;
+  width: 28px; /* Width of new image */
+  height: 31px; /* Height of new image */
+  padding-left: 28px; /* Equal to width of new image */
+  
+}
+.footer {
+    background-color: #857874;
+	}
+	
+
+.footer-sec-2 {
+    background-color: #857874;
+    border-top: 1px solid #857874;
+	}
+	#careersfooterwrapper.utilityblock.contact {
+    background-color: #d6d2c4;
+	}
+	
+	.btn--primary {
+	background-color: #236192;
+    border: 2px solid #4f868e;
+}
+.btn--primary:hover {
+    background-color: #4f868e;
+    border: 2px solid #236192;
+	}
+	
+	.btn--out-blue:hover {
+      background-color: #4f868e;
+    border: 2px solid #236192;
+	}
+	
+.career-benifits {
+    background-color: #d6d2c4;
+	}
+.website-select {
+background-color: #a7a8aa;
+}
+.utilityblock.services {
+background-color: #a7a8aa;
+}
+.utilityblock.support {
+    background-color: #a7a8aa;
+}
+#search .search-box fieldset.sfsearchBox input.sfsearchSubmit {
+background-color: #857874;  
+}
+.footer-sec-1 .footer-column-list i:hover{
+	 color: #857874;
+}
+
+.utilityblock.contact.careers-footer {
+    background-color: #d6d2c4;
+	}
+	
+	.highlights-footer-section.grey {
+    background: #d6d2c4;
+}
+
+h1{
+color: #5e514d;
+}
+h2{
+color: #857874;
+}
+h3{
+color: #236192;
+}
+
+@media only screen and (max-width: 2920px) and (min-width: 1025px)
+{
+ul.nav-header ul.submenu > li:hover {
+    background-color: #d6d2c4;
+}
+}
+
+@media only screen and (max-width: 2920px) and (min-width: 1025px)
+{
+ul.nav-header > li:hover ul.submenu > li:hover ul.submenu1 li:hover {
+    background-color: #d6d2c4;
+}
+
+@media only screen and (max-width: 2920px) and (min-width: 1025px)
+{
+ul.nav-header > li:hover ul.submenu > li:hover ul.submenu1 li:hover > a {
+    color: #236192;
+    font-weight: 500;
+}
+
+.sfNavHorizontalDropDown .k-item > a.k-link.sfSel, .sfNavHorizontalDropDown .k-item > a.k-link.sfSel:hover {
+    background-color: #a7a8aa;
+}
+.sfNavHorizontalDropDown .k-popup {
+    background-color: #a7a8aa;
+	}
+
+.sfNavHorizontalDropDown a:hover {
+    background-color: #d6d2c4;
+}
+
+
+
+
+

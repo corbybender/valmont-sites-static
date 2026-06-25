@@ -1,0 +1,20 @@
+.wrapperImg {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 1000px; /* Update to your slider width */
+  height: 474px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.slider li {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}

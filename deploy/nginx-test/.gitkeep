@@ -1,0 +1,2 @@
+# Prefix directory for local nginx testing: nginx -p deploy/nginx-test -c deploy/nginx.conf
+# Create before first test: mkdir -p deploy/nginx-test/logs deploy/nginx-test/tmp

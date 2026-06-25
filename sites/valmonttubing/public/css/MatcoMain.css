@@ -1,0 +1,809 @@
+/*****************************
+== Available Webfonts ==
+font-family: 'quicksanddash';
+font-family: 'quicksandbold';
+font-family: 'quicksandbold_italic';
+font-family: 'quicksanditalic';
+font-family: 'quicksandlight_italic';
+font-family: 'quicksandregular';
+font-family: 'quicksandlight';
+font-family: 'Miso';
+font-family: 'Miso-Light';
+font-family: 'Miso-Bold';
+font-family: 'futura';
+*****************************/
+
+
+/*****************************
+General Styles
+*****************************/
+
+html, body {height: 100%; margin: 0; padding: 0;}
+
+#container {min-height: 100%; margin-bottom: -351px; position: relative;}
+
+p {font-family: arial; font-size: 16px; line-height: 20px; color: #666666;}
+
+h1 {font-size: 36px !important; line-height: 40px; margin: 0; padding: 0; color: #0087B1; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100 !important;}
+h2 {font-size: 28px !important; line-height: 32px; margin: 0; padding: 0; color: #0087B1; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100 !important;}
+h3 {font-size: 24px !important; line-height: 28px; margin: 0; padding: 0; color: #0089B1; font-family: 'Miso'; text-transform: uppercase; font-weight: 100 !important;}
+h4 {font-size: 18px !important; margin: 0 0 10px 0; padding: 0; line-height: 22px; color: #ffffff; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100 !important;}
+h5 {font-size: 16px !important; margin: 0 0 10px 0; padding: 0; line-height: 20px; color: #989185; font-family: 'Verdana', sans-serif; font-style: italic; font-weight: 100 !important;}
+h6 {}
+
+a:link {font-family: arial; font-size: 16px; line-height: 20px; color: #0085B2;}
+a:visited {font-family: arial; font-size: 16px; line-height: 20px; color: #0085B2;}
+a:hover {font-family: arial; font-size: 16px; line-height: 20px; color: #0085B2;}
+
+a, a img, img, input {outline: none; border: 0;}
+
+/*input {-webkit-appearance: none; -webkit-border-radius:0px;}*/
+
+.clear {clear: both;}
+
+ul {margin: 0; padding: 0; list-style: none;}
+
+.width75percent {width: 75%;}
+
+a, a img {outline : none; border: none;}
+
+.middle960 {width: 960px; margin: 0 auto; position: relative;}
+
+hr {height: 1px; background: #cccccc; border: 0; margin: 20px 0;}
+
+.borderRight {border-right: 1px solid #cccccc;}
+
+.moveUp3 {margin-bottom: 3px;}
+
+.moveUp2 {margin-bottom: 2px;}
+
+.paddingTop15 {padding-top: 15px;}
+
+.fancybox-skin {background: #ffffff!important;}
+
+.noMargin {margin: 0!important;}	 	
+		 	
+.noBottomMargin {margin-bottom: 0!important;}	 	
+	 	
+.marginBottom5px {margin-bottom: 5px!important;}
+
+.alignleft {float: left; margin: 0 5px 5px 0;}
+
+.alignright {float: right; margin: 0 0 5px 5px;}
+
+.noBorder {border: none!important;}
+
+/*****************************
+Header Styles
+*****************************/
+
+#header {width: 100%; height: 200px; position: relative; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/headerbgnew.jpg?sfvrsn=2) left top repeat-x; margin-bottom: 15px;}
+
+#inner-header {width: 960px; height: 200px; position: relative; margin: 0 auto;}
+
+#logo {position: absolute; top: 15px; left: 0px;}
+
+#searchBox {width: 237px; height: 109px; position: absolute; top: 5px; right: 0px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/searchboxbg.png) left top no-repeat;}
+#seachInput {width: 201px; height: 30px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/searchinputbg.jpg) no-repeat; border: none; position: relative; top: 71px; left: 36px; z-index: 1}
+#searchButton {width: 22px; height: 20px; z-index: 2; position: relative; top: 77px; left: 5px;}
+
+/* The Main Navigation Styles */
+
+#mainNav {width: 100%; height: 43px; position: absolute; bottom: 0; left: 0;  margin: 0; padding: 0px;}
+#mainNav ul {list-style: none; margin: 0; padding: 0px;}
+#mainNav ul li {float: left; border-right: 1px solid #cccccc; position: relative; list-style: none;}
+#mainNav ul li:hover > ul {display: block;}
+#mainNav ul li:hover > a {background: #989185; color: #313140!important;}
+#mainNav ul li a:link {display: block; line-height: 43px; color: #CCCCCC; font-size: 22px; text-transform: uppercase; text-decoration: none; font-family: 'Miso'; padding: 0 43px;}
+#mainNav ul li a:visited {display: block; line-height: 43px; color: #CCCCCC; font-size: 22px; text-transform: uppercase; text-decoration: none; font-family: 'Miso'; padding: 0 43px;}
+#mainNav ul li a:hover {background: #989185; color: #313140;}
+
+#nav-services {border-left: 1px solid #cccccc;}
+
+/* Sub Nav Drop Down Styles */
+
+.navDropDown { background: #DADDDB; padding: 0!important; position: absolute; top: 43px; left: 0px; z-index: 999; display: none;}
+.navDropDown li {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/subnavlibg.png) left bottom repeat-x; border-right: none!important; padding: 0; float: none!important;}
+.navDropDown li a:link {color: #666666!important; font-family: 'Quicksand', sans-serif!important; font-size: 16px!important; line-height: 20px!important; padding: 10px!important; width: 230px; text-transform: none!important;}
+.navDropDown li a:visited {color: #666666!important; font-family: 'Quicksand', sans-serif!important; font-size: 16px!important; line-height: 20px!important; padding: 10px!important; width: 230px; text-transform: none!important;}
+.navDropDown li a:hover {color: #666666!important; font-family: 'Quicksand', sans-serif!important; font-size: 16px!important; line-height:  padding: 10px!important; width: 230px; text-transform: none!important; background: transparent!important; text-decoration: underline!important;}
+
+
+/*****************************
+Content Area Styles
+*****************************/
+
+#content {width: 960px; margin: 0 auto;}
+
+#content li {font-family: arial; font-size: 16px; line-height: 20px; color: #666666; list-style: disc; margin-left: 15px;}
+
+#inner-content {}
+#inner-content strong {color: #0087B1;}
+
+/* Home page specific styles */
+
+#homeContentLeft {width: 649px; border-right: 1px solid #cccccc; float: left; padding: 15px 20px 0 0; position: relative;}
+
+#solutionsGraphics {margin: 0; padding: 0; list-style: none;}
+#solutionsGraphics li {float: left; width: 90px; height: 92px; padding:0 20px 0 2px; margin: 0; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutionsdivider.png) right center no-repeat;}
+#solutionsGraphics li a {margin: 0; padding: 0; width: 90px; height: 91px; display: block;}
+
+#solutions1 {padding-left: 0!important;}
+#solutions1 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-inspections.jpg) left top no-repeat;}
+#solutions1 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-inspections.jpg) left bottom no-repeat;}
+
+#solutions2 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-corrosion.jpg) left top no-repeat;}
+#solutions2 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-corrosion.jpg) left bottom no-repeat;}
+
+#solutions3 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-repair.jpg) left top no-repeat;}
+#solutions3 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-repair.jpg) left bottom no-repeat;}
+
+#solutions4 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-rootcause.jpg) left top no-repeat;}
+#solutions4 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-rootcause.jpg) left bottom no-repeat;}
+
+#solutions5 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-datagis.jpg) left top no-repeat;}
+#solutions5 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-datagis.jpg) left bottom no-repeat;}
+
+#solutions6 {background: none!important; padding: 0!important;}
+#solutions6 a {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-training.jpg) left top no-repeat;}
+#solutions6 a:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/solutions-training.jpg) left bottom no-repeat;}
+
+#homeRotator {width: 648px; height: 393px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/homerotatorbg.png) no-repeat; position: relative; margin: 15px 0;}
+#homeRotator img {position: absolute; margin: 10px 0 0 11px; width: 622px; height: 369px;}
+
+#rotatorNavWrapper {margin-bottom: 25px;}
+#rotatorNav {float: left;}
+#rotatorNav a {width: 15px; height: 15px; display: inline-block; margin-right: 7px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/rotatordot.png) no-repeat;}
+#rotatorNav .activeSlide {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/activesliderotatordot.png) no-repeat!important;}
+
+#previousSlide {float: left; margin-right: 7px;}
+
+#nextSlide {float: left;}
+
+.inner-content-split {float: left;}
+
+.split-left {width: 290px;}
+
+.split-right {width: 335px; margin-left: 20px;}
+
+#homeContentRight {width: 270px; float: left; padding: 15px 0 0 20px;}
+
+#industriesList {list-style: none; margin: 0; padding: 0;}
+
+#industriesList li {width: 270px; height: 49px;  background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/industrieslibg.png) no-repeat; list-style: none; margin-left:0px;}
+#industriesList li:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/industrieslibg-hover.png) no-repeat;}
+#industriesList li a:link {width: 225px; height: 49px; padding-left: 45px; margin-bottom: 2px; display: block; line-height: 49px; font-size: 20px; text-transform: uppercase; color: #cccccc; font-family: 'Miso'; text-decoration: none;}
+#industriesList li a:visited {width: 225px; height: 49px; padding-left: 45px; margin-bottom: 2px; display: block; line-height: 49px; font-size: 20px; text-transform: uppercase; color: #cccccc; font-family: 'Miso'; text-decoration: none;}
+#industriesList li a:hover {width: 225px; height: 49px; padding-left: 45px; margin-bottom: 2px; display: block; line-height: 49px; font-size: 20px; text-transform: uppercase; color: #cccccc; font-family: 'Miso'; text-decoration: none;}
+
+#industry-electric {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/electricbg.png) 8px center no-repeat;}
+#industry-electric:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/electricbg-hover.png) 8px center no-repeat;}
+
+#industry-prop-mgmt {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/commmgmtbg.png) 8px center no-repeat;}
+#industry-prop-mgmt:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/commmgmtbg-hover.png) 8px center no-repeat;}
+
+#industry-telecom {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/telecombg.png) 8px center no-repeat;}
+#industry-telecom:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/telecombg-hover.png) 8px center no-repeat;}
+
+#industry-munic {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/municbg.png) 8px center no-repeat;}
+#industry-munic:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/municbg-hover.png) 8px center no-repeat;}
+
+#industry-oil-gas {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/oilgasbg.png) 8px center no-repeat;}
+#industry-oil-gas:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/oilgasbg-hover.png) 8px center no-repeat;}
+
+#industry-water {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/waterbg.png) 8px center no-repeat;}
+#industry-water:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/waterbg-hover.png) 8px center no-repeat;}
+
+#industry-aerospace {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/aerospacebg.png) 8px center no-repeat;}
+#industry-aerospace:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/aerospacebg-hover.png) 8px center no-repeat;}
+
+#industry-arena-mgmt {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/arenabg.png) 8px center no-repeat;}
+#industry-arena-mgmt:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/arenabg-hover.png) 8px center no-repeat;}
+
+#industry-renewable {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/renewablebg.png) 8px center no-repeat;}
+#industry-renewable:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/renewablebg-hover.png) 8px center no-repeat;}
+
+#industry-medical {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/medicalbg.png) 8px center no-repeat;}
+#industry-medical:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/medicalbg-hover.png) 8px center no-repeat;}
+
+#quotes {width: 270px; min-height: 180px; margin-top: 20px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/quotemarks.png) left top no-repeat;}
+#quotes div {margin: 5px 0 0 35px;}
+#quotes div p {margin: 0; padding: 0; color: #989185; font-size: 23px; line-height: 26px; font-family: 'Miso-Light'; font-style: italic; font-weight: 100;}
+#quotes div span {color: #666666; font-family: arial; font-size: 13px; float: right;}
+
+#homeContentBelow {width: 100%; height: 245px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #cccccc;}
+
+.compServicesBlock {width: 137px; height: 154px; float: left; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/compservicesblockbg.png) no-repeat; margin: 10px 8px 0 0; padding: 8px; position: relative;}
+.compServicesBlock a {display: block; width: 137px; height: 154px; text-decoration: none;}
+.compServicesBlock h4 {font-family: 'futura'; font-size: 14px !important; line-height: 16px; background: #333333; padding: 8px; -webkit-box-shadow: inset 0px 0px 3px 0px #000000; box-shadow: inset 0px 0px 3px 0px #000000; -webkit-boxshadow: 0px 0px 3px 0px #999999; box-shadow: 0px 0px 3px 0px #999999; margin-bottom: 5px;}
+.compServicesBlock p {font-family: arial; font-size: 13px; line-height: 15px; color: #cccccc; margin: 0; padding: 0 8px;}
+
+.compServicesBlockNew {width: 117px; height: 79px; float: left; /*padding-top:25px;*/ 
+  /*background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/compservicesblockbg.png) no-repeat;*/ 
+  margin: 10px 8px 0 0; margin-top: -34px; padding: 8px; position: relative;}
+.compServicesBlockNew a {display: block; width: 137px; text-decoration: none;}
+.compServicesBlockNew h4 {font-family: 'Quicksand', sans-serif !important; line-height: 20px; background: #333333; padding: 8px; -webkit-box-shadow: inset 0px 0px 3px 0px #000000; box-shadow: inset 0px 0px 3px 0px #000000; -webkit-boxshadow: 0px 0px 3px 0px #999999; box-shadow: 0px 0px 3px 0px #999999; margin-bottom: 5px;}
+.compServicesBlockNew p {font-family: arial; font-size: 13px; line-height: 15px; color: #cccccc; margin: 0; padding: 0 8px;}
+
+#magnifyGlass {position: absolute; bottom: 12px; right: 12px;}
+
+#shield {position: absolute; bottom: 8px; right: 13px;}
+
+#tools {position: absolute; bottom: 9px; right: 10px;}
+
+#microscope {position: absolute; bottom: 8px; right: 14px;}
+
+#barGraph {position: absolute; bottom: 12px; right: 11px;}
+
+#trainingBlock {width: 114px; height: 187px; padding: 15px 20px; float: left; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/trainingbg.png) no-repeat; margin-top: -35px;}
+#trainingBlock p {color: #666666; font-family: arial; font-size: 13px; line-height: 15px;}
+#trainingBlock a {display: block; width: 100%; height: 100%; text-decoration: none;}
+
+
+/* Secondary Page Styles */
+
+.header-secondary {margin-bottom: 0!important;}
+
+#headerBelow {width: 100%; height: 64px; padding-top: 25px; border-bottom: 1px solid #cccccc;}
+
+#breadCrumb {}
+#breadCrumb p {margin: 0; padding: 0;}
+#breadCrumb a:link {color: #666666; font-family: verdana; font-size: 14px; line-height: 16px; text-decoration: none;}
+#breadCrumb a:visited {color: #666666; font-family: verdana; font-size: 14px; line-height: 16px; text-decoration: none;}
+#breadCrumb a:hover {color: #666666; font-family: verdana; font-size: 14px; line-height: 16px; text-decoration: none;}
+#breadCrumb p a:last-child {font-weight: bold;}
+
+#headerBelow h2 {font-size: 28px; line-height: 32px; margin: 0; padding: 0; color: #989184; text-transform: capitalize; font-family: 'Miso', sans-serif; font-weight: 100;}
+
+#secondaryLeft {width: 720px; border-right: 1px solid #cccccc; float: left; padding: 15px 20px 0 0;}
+
+#secondaryRight {width: 218px; float: left; padding-top: 15px;}
+
+#secLeftLeft {width: 380px; float: left; padding-right: 15px;}
+
+#requestInfo {width: 230px; height: 36px; display: block; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/requestinfo.png) left top no-repeat;} 	
+
+#secLeftRight {width: 325px; height: 443px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/secrotatorb g.png) no-repeat;  float: left;}
+
+#requestInfo:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/requestinfo.png) left bottom no-repeat;}
+
+#secLeftRight {width: 325px; height: 443px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/secrotatorbg.png) no-repeat;  float: left;}
+
+#secRotator {width: 325px; height: 365px; position: relative; margin-bottom: 13px;}
+
+.secRotatorSlide {top: 12px!important; left: 13px!important; background: transparent !important; background-color: transparent !important;} 
+
+.secRotatorSlide p {font-family: arial; font-size: 14px; line-height: 20px; color: #ffffff; margin: 0; padding: 0;}
+
+.slideImg {width: 298px; height: 298px;}
+.slideImg-hidden {display: none;}
+
+.enlargePic {position: absolute; z-index: 999999999; bottom: 50px; right: 20px; padding: 5px; background: #989186; font-family: arial; font-size: 13px; line-height: 13px; color: #ffffff; text-decoration: none; opacity: 0.7;}
+.enlargePic:visited {position: absolute; z-index: 999999999; bottom: 50px; right: 20px; padding: 5px; background: #989186; font-family: arial; font-size: 13px; line-height: 13px; color: #ffffff; text-decoration: none; opacity: 0.7;}
+.enlargePic:hover {position: absolute; z-index: 999999999; bottom: 50px; right: 20px; padding: 5px; background: #989186; font-family: arial; font-size: 13px; line-height: 13px; color: #ffffff; text-decoration: underline; opacity: 1.0;}
+
+#secRotatorNav {width: 292px; margin-left: 20px;}
+
+#secRotatorNav li {float: left; margin-right: 8px; list-style: none;}
+
+.caroufredsel_wrapper {margin-left: 18px!important;}
+
+.split44L {width: 44%; padding-right: 5%; float: left;}
+
+.split44R {width: 44%; padding-left: 5%; float: left;}
+
+#secNav {border-top: 1px solid #cccccc; margin-bottom: 45px;}
+#secNav li {border-bottom: 1px solid #cccccc; margin: 0; padding: 0 0 0 15px; list-style: none; height: 36px; width: 203px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/secnavbg.png) no-repeat;}
+#secNav li a:link {color: #0087B1; font-family: 'quicksandlight'; font-size: 16px; line-height: 36px; display: block; width: 100%; text-decoration: none; text-transform: uppercase; font-weight: 600;}
+#secNav li a:visited {color: #0087B1; font-family: 'quicksandlight'; font-size: 16px; line-height: 36px; display: block; width: 100%; text-decoration: none; text-transform: uppercase; font-weight: 600;}
+#secNav li a:hover {color: #0087B1; font-family: 'quicksandlight'; font-size: 16px; line-height: 36px; display: block; width: 100%; text-decoration: underline; text-transform: uppercase; font-weight: 600;}
+
+.extraLinks {
+width: 188px; 
+
+padding: 5px 5px 5px 6px;
+background-image: linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -o-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -moz-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -webkit-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -ms-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.02, #666666),
+	color-stop(0.51, #0D0D0D)
+);
+background-color: #444444;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+margin: 0 0 20px 18px; 
+}
+
+.extraLinksScroll {} 
+
+.extraLinksHeader {width: 189px; height: 37px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/extralinksheaderbg.png) no-repeat; margin-bottom: 2px;}
+.extraLinksHeader h4 {font-family: 'Miso', sans-serif; text-align: center; line-height: 37px; margin: 0; padding: 0;}
+
+.extraLinks hr {height: 5px; border: 0; background: #0089B1; margin: 0 0 10px 1px; padding: 0; width: 185px;}
+
+.extraLinks a:link {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+.extraLinks a:visited {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+.extraLinks a:hover {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+
+/*Created an Extra Links 2 in order to be able to turn on or off Typical Projects or Knowledge Center areas independently*/
+.extraLinks2 {
+width: 188px; 
+
+padding: 5px 5px 5px 6px;
+background-image: linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -o-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -moz-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -webkit-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -ms-linear-gradient(top, #666666 2%, #0D0D0D 51%);
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.02, #666666),
+	color-stop(0.51, #0D0D0D)
+);
+background-color: #444444;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+margin: 0 0 20px 18px; 
+}
+
+.extraLinksScroll2 {} 
+
+.extraLinksHeader2 {width: 189px; height: 37px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/extralinksheaderbg.png) no-repeat; margin-bottom: 2px;}
+.extraLinksHeader2 h4 {font-family: 'Miso', sans-serif; text-align: center; line-height: 37px; margin: 0; padding: 0;}
+
+.extraLinks2 hr {height: 5px; border: 0; background: #0089B1; margin: 0 0 10px 1px; padding: 0; width: 185px;}
+
+.extraLinks2 a:link {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+.extraLinks2 a:visited {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+.extraLinks2 a:hover {font-family: arial; font-size: 13px; display: block; line-height: 17px; color: #cccccc; margin: 0 0 15px 15px;}
+
+.secondaryPageQuotes {width: 199px!important; margin-left: 18px;}
+
+/* The Matco Team Specific Styles */
+	
+#allTeamMembers {}
+
+.teamMember {width: 278px; height: 410px; float: left; margin: 0 62px 40px 0;}
+.teamMember h3 {font-size: 21px; line-height: 44px; color: #0085B1; font-family: 'quicksandlight'; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/membernamebg.png) no-repeat; width: 268px; height: 44px; padding-left: 10px; font-weight: 600;}
+.teamMember h4, .popup h4 {font-family: verdana; color: #666666; font-style: italic; font-size: 16px; font-weight: bold; text-transform: none; margin: 0; padding: 0;}
+.teamMember p {margin: 0; padding: 0;}
+.teamMember a:link {color: #0086B2; font-size: 15px; text-transform: uppercase; text-decoration: none; font-weight: bold;}
+.teamMember a:visited {color: #0086B2; font-size: 15px; text-transform: uppercase; text-decoration: none; font-weight: bold;}
+.teamMember a:hover {color: #0086B2; font-size: 15px; text-transform: uppercase; text-decoration: underline; font-weight: bold;}
+
+.popup {width: 920px;}
+
+.popupLeft {width: 319px; border-right: 1px solid #cccccc; float: left;}
+.popupLeft h3 {font-family: 'quicksandregular'; font-size: 17px; width: 263px; height: 36px; line-height: 36px; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/accordh3bg.png) no-repeat; margin: 0!important; padding: 0 0 0 15px!important; border-top: 1px solid #cccccc!important;}
+
+.accordion {border-bottom: 1px solid #cccccc!important; width: 278px; margin: 0; padding: 0}
+
+.accordion div {margin: 0!important; padding: 0!important; width: 278px;}
+
+.accordion div, .accordion div p, .accordion div ul li {font-size: 13px; line-height: 17px;}
+
+.accordion div ul {padding-left: 15px;}
+.accordion div ul li {list-style: disc; margin-bottom: 15px;}
+
+.popupRight {width: 555px; float: left; padding: 0 15px 0 30px;}
+.popupRight p {font-family: verdana; font-size: 15px; line-height: 18px;}
+
+/* Knowledge Center Specific Styles */
+
+h2.accordTitle {font-family: 'quicksandlight'; font-size: 24px; line-height: 28px; font-weight: bold;}
+
+.knowledgeAccordion {width: 720px!important; border-bottom: 4px solid #cccccc!important; border-top: 1px solid #cccccc!important; padding-bottom: 5px!important; margin-bottom: 40px!important;}
+
+.knowledgeAccordion a:link {color: #7F7A70; font-family: arial; font-size: 16px; padding-left: 0px; width: 345px; float: left; display: block; line-height: 40px; margin-bottom: 10px;}
+.knowledgeAccordion a:visited {color: #7F7A70; font-family: arial; font-size: 16px; padding-left: 0px; width: 345px; float: left; display: block; line-height: 40px; margin-bottom: 10px;}
+.knowledgeAccordion a:hover {color: #7F7A70; font-family: arial; font-size: 16px; padding-left: 0px; width: 345px; float: left; display: block; line-height: 40px; margin-bottom: 10px;}
+
+/* Accordion Links Version 1
+
+.pdfLink a {background: transparent url(img/link-pdf.png) left center no-repeat;}
+.docLink a {background: transparent url(img/link-doc.png) left center no-repeat;}
+.ppLink a {background: transparent url(img/link-pp.png) left center no-repeat;}
+.vidLink a {background: transparent url(img/link-vid.png) left center no-repeat;}
+.webLink a {padding-left: 0!important; width: 345px!important;}
+
+*/
+
+.knowledgeAccordion h3 {font-family: arial; font-size: 16px; line-height: 38px; color: #666666; text-transform: none; padding: 0 0 0 25px !important; border-bottom: 1px solid #cccccc; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/knowledgeh3bg.png) left center no-repeat;}
+.knowledgeAccordion h3:hover {font-weight: bold;}
+
+.knowledgeAccordion h3.ui-state-active {font-weight: bold; border: none; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/knowledgeh3bg-active.png) left center no-repeat;}
+
+.knowledgeAccordion div {width: 720px;}
+
+.knowledgeAccordion div.ui-accordion-content-active {border-bottom: 1px solid #cccccc;  padding-left: 25px!important; width: 695px!important;}
+
+#marginLeft18 {margin-left: 18px;} 	
+	 	
+	 	
+/* Client Specific Styles */	 	
+	 	
+#clientLogos {border-top: 1px solid #cccccc;}	 	
+#clientLogos tr {}	 	
+#clientLogos tr td {border-right: 1px solid #cccccc; border-bottom: 1px solid #cccccc; width: 179px; height: 142px; vertical-align: middle;}	 	
+#clientLogos tr td img {display: block; margin: 0 auto;}
+
+
+/* Matco Complete Specific Styles */
+
+#completeRotatorWrapper {width: 643px; height: 840px; position: relative; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/completerotatorbg.png) left bottom no-repeat;}
+
+#completeRotator {}
+
+.rotateCompleteContent {width: 645px;}
+.rotateCompleteContent span {display: block; width: 270px; float: left; background: #0087B5; margin-top: 25px;}
+.rotateCompleteContent span a:link, .rotateCompleteContent span a:visited, .rotateCompleteContent span a:hover {font-size: 36px; line-height: 36px; color: #ffffff; display: block; width: 220px; font-family: 'Miso-Light'; text-decoration: none;  padding: 8px 25px 6px 25px; text-transform: uppercase;}
+.rotateCompleteContent ul {width: 370px; float: left; -webkit-box-shadow: 1px 1px 3px 0px #666666; box-shadow: 1px 1px 3px 0px #666666;}
+.rotateCompleteContent ul li {min-height: 35px; list-style: none!important; margin: 0!important; padding: 0 10px 0 22px; background-image: url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/lidot.png); background-position: 10px 15px; background-repeat: no-repeat; font-family: 'quicksandregular'!important; text-transform: uppercase; font-size: 14px!important; line-height: 35px!important;}
+
+.goTo {width: 60px; height: 60px; display: block; border: 0; z-index: 999; cursor: pointer;}
+
+#goto1 {background: transparent; position: absolute; bottom: 295px; left: 146px;}
+#goto2 {background: transparent; position: absolute; bottom: 228px; left: 39px;}
+#goto3 {background: transparent; position: absolute; bottom: 111px; left: 111px;}
+#goto4 {background: transparent; position: absolute; bottom: 178px; left: 229px;}
+#goto5 {background: transparent; position: absolute; bottom: 117px; left: 326px;}
+#goto6 {background: transparent; position: absolute; bottom: 239px; left: 387px;}
+
+#pointerOne {position: absolute; top: 28px; left: 184px; z-index: -1;}
+#pointerTwo {position: absolute; top: 48px; left: 81px; z-index: -1;}
+#pointerThree {position: absolute; top: 35px; left: 148px; z-index: -1;}
+#pointerFour {position: absolute; top: 35px; left: 265px; z-index: -1;}
+#pointerFive {position: absolute; top: 59px; left: 295px; z-index: -1;}
+#pointerSix {position: absolute; top: 35px; left: 295px; z-index: -1;}
+
+/* ======= Start Old Complete Rotator ======= */
+
+
+/* ======= Start New Complete Rotator ======= */
+ 
+#completeRotatorWrapper-new {width: 960px; min-height: 465px; position: relative; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/completem-brown.png) left top no-repeat; margin-top: 45px;}
+
+#completeRotator-new {float: right;}
+
+#goto1-new {background: transparent; position: absolute; bottom: 246px; left: 193px;}
+#goto2-new {background: transparent; position: absolute; bottom: 168px; left: 90px;}
+#goto3-new {background: transparent; position: absolute; bottom: 65px; left: 147px;}
+#goto4-new {background: transparent; position: absolute; bottom: 118px; left: 314px;}
+#goto5-new {background: transparent; position: absolute; bottom: 191px; left: 434px;}
+#goto6-new {background: transparent; position: absolute; bottom: 76px; left: 460px;}
+
+#pointerOne-new {position: absolute; top: 18px; left: -64px; z-index: -1;}
+#pointerTwo-new {position: absolute; top: 15px; left: -168px; z-index: -1;}
+#pointerThree-new {position: absolute; top: 22px; left: -111px; z-index: -1;}
+#pointerFour-new {position: absolute; top: 32px; left: 57px; z-index: -1;}
+#pointerFive-new {position: absolute; top: 30px; left: 168px; z-index: -1;}
+#pointerSix-new {position: absolute; top: -2px; left: 177px; z-index: -1;}
+
+
+/* ======= End New Complete Rotator ======= */
+
+
+
+/* ======= Start Matco Complete Version 3 Specific Styles ======= */
+
+.completeFixer {padding: 15px 10px 0 0!important; width: 659px!important;}
+
+#completeLeft {width: 320px; float: left; margin-right: 15px; padding-top: 25px;}
+
+#completeRight {width: 320px; float: left; padding-top: 25px;}
+
+.completeServiceBox {}
+
+.completeServiceBox {margin-bottom: 32px;}
+.completeServiceBox ul {border-left: 1px solid #cccccc; border-bottom: 1px solid #cccccc; padding: 0 0 5px 10px;}
+.completeServiceBox ul li {margin-bottom: 10px; font-size: 14px!important; line-height: 16px!important;}
+
+/* ======= End Matco Complete Version 3 Specific Styles ======= */
+
+/* Contact Matco Specific Styles */
+
+#SubmitSamplesList {}
+#SubmitSamplesList li {font-size: 14px; line-height: 17px; margin-bottom: 15px;}
+
+#contactMatcoForm {width: 649px;}
+#contactMatcoForm label {color: #0085B2; font-family: arial; font-size: 15px; text-transform: uppercase;}
+#contactMatcoForm input {background: #eeeeee; border: 0; font-size: 18px; font-family: arial; color: #666666;}
+
+.formGrid50 {width: 50%; float: left; margin-bottom: 15px; height: 58px;}
+.formGrid50 input {width: 90%; height: 35px;}
+.formGrid50 select {width: 75%; margin-top: 20px;}
+
+.formGrid33 {width: 33.030303%; float: left; margin-bottom: 15px; height: 58px;}
+.formGrid33 input {width: 87%; height: 35px;}
+
+.formGrid100 {width: 649px; margin-bottom: 15px;}
+.formGrid100 textarea {background: #eeeeee; border: 0; width: 95%; height: 155px; font-size: 18px; font-family: arial; color: #666666;}
+
+span.checkbox {width: 50%; float: left; margin-bottom: 5px; font-family: arial; font-size: 12px; color: #000000; text-transform: capitalize;}
+
+div.formSubmitButton {width: 148px; height: 36px; float: right; margin: 15px 30px 0 0;}
+div.formSubmitButton input {width: 148px; height: 36px; border: 0; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/submitform.png) left top no-repeat!important;}
+div.formSubmitButton input:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/submitform.png) left bottom no-repeat!important; cursor: pointer;}
+
+#mapsArea {width: 100%; border-top: 1px solid #cccccc; padding-top: 15px; margin-top: 15px;}
+#mapsArea h5 {font-style: normal; color: #0085B2; margin: 35px 0 25px 0;}
+
+#mapsLeft {width: 48%; padding-right: 1%; float: left; border-right: 1px solid #cccccc;}
+
+#mapsRight {width: 48%; padding-left: 2%; float: left;}
+
+/* News & Events Specific Styles */
+
+#split-news {width: 454px; float: left; border-right: 1px solid #cccccc; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/newsbg.png) right top repeat-y; padding: 35px 20px 0 0;}
+
+#newsTitle {float: left;}
+
+#newsArchive {float: right; margin-top: -15px; padding: 0;}
+#newsArchive p {font-size: 18px; line-height: 20px; text-transform: uppercase; margin: 0; padding: 0; text-align: right; color: #0087B1;}
+
+.styled-select {width: 201px; height: 28px; overflow: hidden; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/selectbg1.png) no-repeat; border: none;  margin: 0; padding: 0;}
+.styled-select select {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/selectbg2.png) 165px 12px no-repeat; width: 222px; padding: 5px; font-size: 16px; line-height: 1; border: 0; border-radius: 0; height: 28px; -webkit-appearance: none; margin: 0; color: #ffffff; font-family: arial;}
+.styled-select select option {color: #666666;}
+
+#split-events {width: 454px; float: right; border-left: 1px solid #cccccc; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/eventsbg.png) left top repeat-y; padding: 35px 0 0 20px;}
+
+#whiteSpace1 {position: absolute; bottom: -13px; left: 475px;}
+
+.postWrapper {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/postwrapperbg.png) center bottom no-repeat; padding-bottom: 10px; margin-bottom: 35px;}
+.postWrapper h3 {text-transform: capitalize;}
+.postWrapper p {color: #000000;}
+.postWrapper hr {margin: 0;}
+.postWrapper a:link {font-weight: bold; text-decoration: none; line-height: 40px;}
+.postWrapper a:visited {font-weight: bold; text-decoration: none;}
+.postWrapper a:hover {font-weight: bold; text-decoration: underline;}
+
+.postMeta {margin: 0; padding: 0; font-size: 14px; line-height: 40px; color: #666666!important; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc;}
+
+.postThumb {float: left; width: 136px; height: 134px; position: relative;  background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/postthumbbg.png) left top no-repeat; margin-right: 15px;}
+.postThumb img {position: absolute; top: 10px; left: 11px;}
+
+#postNav a:link {font-weight: bold; color: #A59F96; text-transform: uppercase; text-decoration: none;}
+#postNav a:visited {font-weight: bold; color: #A59F96; text-transform: uppercase; text-decoration: none;}
+#postNav a:hover {font-weight: bold; color: #A59F96; text-transform: uppercase; text-decoration: underline;}
+
+.olderPosts {float: left;}
+.newerPosts {float: right;}
+
+/* 404 Specific Styles */
+
+.fourOhFour {}
+.fourOhFour h1 {margin-top: 15px;}
+.fourOhFour h2 {margin-top: 25px!important; font-weight: bold!important;}
+
+.linkBox404 {width: 196px; float: left; border-right: 1px solid #cccccc; min-height: 250px; padding: 0 20px;}
+.linkBox404 a:link {display: block; color: #666666; font-family: verdana; margin-bottom: 10px; font-size: 15px;}
+.linkBox404 a:visited {}
+.linkBox404 a:hover {}
+
+/*****************************
+Footer Styles
+*****************************/
+
+#footer {width: 100%; height: 351px; position: relative; background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/footerbg.jpg) left top repeat-x; margin-top: 15px;}
+
+#inner-footer {width: 960px; height: 351px; margin: 0 auto; position: relative;}
+
+.clearfooter {clear: both; height: 351px;}
+
+#safetyStatement {width: 100%; height: 31px; margin: 0 auto; padding-top: 17px; text-align: center;}
+#safetyStatement p {margin: 0; padding: 0; font-family: arial; color: #666666; font-size: 14px; line-height: 16px;}
+#safetyStatement p strong {color: #0086B1; text-transform: uppercase; font-weight: 100; font-size: 16px;}
+#safetyStatement a:link {color: #666666; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: none;}
+#safetyStatement a:hover {color: #666666; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: none;}
+#safetyStatement a:visited {color: #666666; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: underline;}
+
+#footerContent {width: 100%; height: 275px; padding-top: 28px;}
+
+.footerContentBlock {float: left; height: 275px; border-right: 1px solid #ffffff; padding: 0 18px;}
+.footerContentBlock p {font-family: arial; color: #ffffff; font-size: 14px; line-height: 16px; margin: 0; padding: 0;}
+.footerContentBlock a:link {font-family: arial; color: #ffffff; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: none;}
+.footerContentBlock a:visited {font-family: arial; color: #ffffff; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: none;}
+.footerContentBlock a:hover {font-family: arial; color: #ffffff; font-size: 14px; line-height: 16px; font-weight: bold; text-decoration: underline;}
+.footerContentBlock h4 a:link {font-size: 18px; margin: 0 0 10px 0; padding: 0; line-height: 22px; color: #ffffff; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100;}
+.footerContentBlock h4 a:visited {font-size: 18px; margin: 0 0 10px 0; padding: 0; line-height: 22px; color: #ffffff; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100;}
+.footerContentBlock h4 a:hover {font-size: 18px; margin: 0 0 10px 0; padding: 0; line-height: 22px; color: #ffffff; font-family: 'quicksandlight'; text-transform: uppercase; font-weight: 100;}
+
+#footerBlock1 {width: 187px; padding-left: 0;}
+#footerBlock2 {width: 167px;}
+#footerBlock3 {width: 144px;}
+#footerBlock4 {width: 112px;}
+#footerBlock5 {width: 195px; border: none; padding-right: 0;}
+
+.eventPost {margin-bottom: 10px;}
+
+.eventDate {font-weight: bold;}
+
+.banner 
+{ position: relative; 
+  overflow: auto;
+
+}
+.banner ul li { 
+  list-style: none; 
+  padding:0px!important; 
+  margin:0px!important;
+   float: left;
+  display: block;
+  width: 728px !important
+}
+
+.extraLinksHeader h4 {
+    font-family: 'Quicksand', sans-serif!important;
+    font-size: 14px !important;
+}
+
+.extraLinksHeader2 h4 {
+   font-family: 'Quicksand', sans-serif!important;
+    font-size: 14px !important;
+}
+
+#mainNav ul li a:visited {
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif!important;
+}
+#mainNav ul li a:link {
+      font-size: 12px;
+    font-family: 'Quicksand', sans-serif!important;
+}
+
+#industry-labservices:hover {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/labservicesbg.png) 8px center no-repeat;}
+#industry-labservices {background: transparent url(http://az276019.vo.msecnd.net/valmontstaging/matcotemplateimages/labservicesbg-hover.png) 8px center no-repeat;}
+
+#industriesList li a:visited {
+font-size: 12px;
+font-family: 'Quicksand', sans-serif!important;
+}
+
+#industriesList li a:link {
+font-size: 12px;
+font-family: 'Quicksand', sans-serif!important;
+}
+
+#industriesList li a:hover{
+  font-size: 12px;
+font-family: 'Quicksand', sans-serif!important;
+}
+
+
+.iridiannews a {
+  font-size: 16px !important;
+line-height: 28px;
+margin: 0;
+padding: 0;
+color: #0089B1;
+font-family: 'Quicksand', sans-serif!important;
+text-transform: uppercase;
+font-weight: 100 !important;
+}
+
+.iridianevents a {
+  font-size: 16px !important;
+line-height: 28px;
+margin: 0;
+padding: 0;
+color: #0089B1;
+font-family: 'Quicksand', sans-serif!important;
+text-transform: uppercase;
+font-weight: 100 !important;
+}
+#content li {
+  list-style: none;
+margin-left: 0px;
+}
+
+.FullStoryCSS a{
+  font-weight: bold;
+text-decoration: none;
+line-height: 40px;
+color: #105CB6;
+font-family: 'Quicksand', sans-serif!important;
+font-size: 16px;
+outline: 0;
+cursor: auto;
+}
+
+.postWrapper {
+background: transparent;
+  margin-bottom: 0px;
+}
+.postWrapper a:link{
+line-height: 2px;
+}
+
+
+#secNav li a:visited {
+font-family: 'Quicksand', sans-serif!important;
+}
+#secNav li a {
+font-family: 'Quicksand', sans-serif!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

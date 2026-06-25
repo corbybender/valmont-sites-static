@@ -1,0 +1,243 @@
+body{
+	background: #FFF;
+}
+footer{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-gray-stripes.gif) repeat-x;
+	height: 306px;
+}
+hr{
+	border-bottom: dotted 2px #6B6B6B;
+}
+#logo{
+	position: absolute;
+	top: 25px;
+}
+
+
+
+
+#main-nav a{
+	padding: 13px 15px 0 15px;
+	color: #959595;
+	text-shadow: none;
+	border: none;
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/dot-divider.gif) no-repeat right center;
+}
+#main-nav li:last-child a, #main-nav a.last, #main-nav a.last:hover{
+	border: none;
+	background: none;
+}
+#main-nav a:hover{
+	color: #000;
+	padding: 13px 15px 0 15px;
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/dot-divider.gif) no-repeat right center; 
+}
+#header-center-background{
+	background: none;
+}
+#center-top-with-background{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-gray-stripes.gif) repeat-x;
+}
+#search{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/search-white.gif) no-repeat;
+	color: #FFF;
+}
+#logo{
+	top: 37px;
+}
+#main-container{
+	background: #FFF;
+}
+#news-bar{ 
+	background: #CE3229;
+	width: auto;
+	float: none;
+	height: 42px;
+	border: none;
+	color: #FFF;
+	padding: 5px 0 0;
+}
+#middle-bar{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/middle-checkerboard-orange.gif) repeat-x;
+}
+#news-bar-background{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/news-fade-orange.gif) no-repeat;
+}
+#news-bar strong, #news-bar a{
+	color: #FFF;
+}
+#news-bar h3{
+	color: #FFF;
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/arrow-white-on-green.gif) no-repeat right 12px;
+}
+#footer-center{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-middle-white-transparent.png) no-repeat 0px 17px;
+	height: 306px;
+}
+#footer-center-outside-background{
+	background: none;
+	height: 306px;
+}
+#middle-bar{
+	padding: 0;
+	height: 48px;
+	background: none;
+}
+#main-content{
+	padding: 0 0 306px;
+	font-size: 13px;
+	float: none;
+	width: auto;
+}
+#rotator-indicators{
+	background: none;
+	box-shadow: none;
+	width: auto;
+	right: 29px;
+}
+#rotator-indicators li{
+	background: none;
+	border: #504143 solid 1px;
+	width: 13px;
+	height: 13px;
+}
+#rotator-indicators a{
+	width: 13px;
+}
+#center-stage-background{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/centerstage-shadows.gif) center top no-repeat;
+}
+#center-stage{
+	background: none;
+	width: 840px;
+	height: 218px;
+	position: relative;
+	margin: 45px auto 65px;
+	border-right: 2px dotted #000;
+	border-left: 2px dotted #000;
+	overflow: hidden;
+}
+#center-stage img{
+	right: auto;
+}
+#center-stage .green img{
+	border: none;
+	box-shadow: none;
+}
+#center-stage .green h1{
+	right: 0px;
+	left: auto;
+	width: 530px;
+	font-size: 42px;
+	margin: -8px 0 0;
+}
+#center-stage p{
+	left: 310px;
+	width: 510px;
+	padding: 0;
+	top: 110px;
+}
+#center-stage-right, #center-stage-left{
+	top: -189px;
+}
+#center-stage-left{
+    left: -852px;
+}
+#center-stage-right{
+	right: -40px;
+}
+#title-bar-center{
+	background: none;
+}
+#title-bar{
+	background: url(https://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-shadow.gif) no-repeat center bottom;
+	padding: 0 0 10px;
+	margin: 0 0 10px;
+}
+#internal h2.green{
+	color: #B5CB8B;
+}
+#main-content .top-right img{
+	margin: 0;
+}
+#main-content .top-right img.green{
+	border: 8px solid #B5CB8B;
+}
+#internal #main-content{
+	width: 729px;
+	float: left;
+	padding: 17px 0 358px;
+}
+#internal h1{
+	font-weight: 200;
+	font-size: 41px;
+	line-height: 48px;
+}
+#breadcrumbs{
+	border: solid 1px #7d7d7d;
+	padding: 3px;
+	margin: -10px 0 0;
+}
+
+
+
+
+
+.badge-container-first{
+	margin: 0 75px 0 0;
+}
+.badge-container-first, .badge-container{
+	float: left;
+}
+.badge-container-last{
+	float: right;
+}
+.footer-links{
+	border-left: 2px dotted #7d7d7d !important;
+}
+.footer-links a{
+	color: #7d7d7b !important;
+	text-decoration: none !important;
+}
+.footer-links h4{
+	 color: #CE3229;
+	text-transform: lowercase;
+	font-family: "pragmatica-web", sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+.footer-links sup{
+	font-size: 8px;
+}
+.phone{
+	color: #7d7d7b;
+	font-size: 23px;
+}
+.shade-box{
+	width: auto;
+	padding: 20px 0 20px 98px;
+}
+.wide-rectangle-badge{
+	margin: -1px 0 30px; 
+}
+.wide-rectangle-badge a{
+	color: #B00000;
+}
+
+#h1 .eps-red{
+    color: #CE3229;
+}
+#center-stage .eps-red h1{
+	color: #CE3229;
+}
+#center-stage .eps-red a{
+	color: #CE3229;
+}
+
+#rotator-indicators a.eps-red {
+background:#CE3229;
+
+}
+#eps-red{
+	color: #CE3229;
+}

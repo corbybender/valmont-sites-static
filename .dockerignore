@@ -1,0 +1,9 @@
+.git
+.fastembed_cache
+node_modules
+**/node_modules
+*.log
+*.tmp
+.env
+sites/*/.shell-head-inner.html
+sites/*/.shell-header-inner.html

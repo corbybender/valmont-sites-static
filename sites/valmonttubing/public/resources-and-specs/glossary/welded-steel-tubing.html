@@ -1,0 +1,820 @@
+<!--#include virtual="/shared/header.html" -->
+<script src="https://www.w3schools.com/lib/w3data.js"></script>
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<link href="https://d35islomi5rx1v.cloudfront.net/ajax/2023.1.117/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+<script type="text/javascript">$(document).ready(function(){
+
+  $('.inner-nav-location-content-block-sec2').each(function () { 
+  
+    var a = $(this).children().length;	
+	
+	//alert(a);
+	
+       if (a == "1")
+        {
+		// alert("1")
+         $(this).children().css("width", "100%");
+        }	
+				
+       else if (a == "2")
+        {
+		// alert("2")
+          $(this).children().css("width", "100%");
+        } 
+		
+       else {
+		// alert("3")
+          $(this).children().css("width", "100%");
+        }  
+    
+});
+  
+
+     jQuery('.inner-nav-location-content a').click(function(e)
+     {
+       // Cancel jump to top
+       e.preventDefault();
+     });
+ 
+  
+});</script>
+<script type="text/javascript">$(document).ready(function(){
+
+ if ($(window).width() >= 1025){ 
+    
+$("#web-select-pointer").click(function(){
+ $(".website-selector").slideToggle();
+}); 
+
+$("#website-selector-close").click(function(){
+ $(".website-selector").slideToggle();
+});  
+
+  $("ul.nav-header li.sub-level.level-3").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+      $(this).find("ul.submenu").css("display", "block");
+   $(this).find("ul.submenu1").first().css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  }); 
+  
+
+  $("ul.nav-header li.sub-level.level-3 ul.submenu > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $("ul.submenu1, .submenu2").css("display", "none");
+   $(this).find("ul.submenu1").css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });  
+
+  $("ul.nav-header li.sub-level.level-3 ul.submenu > li ul.submenu1 > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+  
+  
+  $("ul.nav-header li.sub-level.level-2").on('mouseover', function(event){
+   $("ul.submenu, ul.submenu1, .submenu3").css("display", "none");
+      $(this).find("ul.submenu").css("display", "block");
+   $(this).find("ul.submenu1").first().css("display", "block");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+  
+  $("ul.nav-header li.sub-level.level-2 ul.submenu > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });   
+ 
+  $("ul.nav-header li.sub-level.level-2 ul.submenu1 > li").on('mouseover', function(event){
+   event.stopPropagation();
+   $(".submenu2").css("display", "none");
+   $(this).find(".submenu2").first().css("display", "block"); 
+  });  
+  
+  $("ul.nav-header li.level-0").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  }); 
+
+  $(".global, .language-selector, .valmont-websites, .share-market-details, .search, .logo").on('mouseover', function(){
+   $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  });
+   
+   
+  $( window ).scroll(function() {
+     $("ul.submenu, ul.submenu1, .submenu2").css("display", "none");
+  });
+   
+   
+
+  $(".clear-nav-close").click(function(){
+  
+   $("ul.submenu, ul.submenu1, .submenu2, .submenu3").css("display", "none");
+   
+  }); 
+  
+  $("#search-icon").click(function(){
+   $("ul.submenu, ul.submenu1, .submenu2, .submenu3").css("display", "none");
+   $(".search-box").slideToggle();
+   $(this).toggleClass("search-close-icon");
+  });    
+
+ $(".nav-header").mouseover(function(){
+   $("#search-icon").removeClass("search-close-icon");
+  $(".search-box").slideUp();
+ }); 
+  
+ }
+ 
+ if ($(window).width() <= 1024){ 
+     
+   $(".web-list-option").clone().appendTo(".web-select-res .submenu"); 
+   
+   $("<div class='overflow-overlay' style='display:none;'></div>").insertAfter(".footer-sec-2");
+   
+   $("#search-icon").click(function(){
+    $("body").removeClass("overflow-control");
+    $(".overflow-overlay").hide();     
+    $(".nav-header").hide();
+    $(".search-box").slideToggle();
+     $(this).toggleClass("search-close-icon");
+   }); 
+   
+   $(".menu").click(function(){
+    
+    $("body").toggleClass("overflow-control");
+    $(".overflow-overlay").toggle();
+    $(".nav-header").slideToggle();
+    $(".search-box").hide();
+    $("#search-icon").removeClass("search-close-icon");
+   });  
+   
+    $(".overflow-overlay").click(function(event) {
+     	
+        event.preventDefault();
+    });
+   
+   $(".overflow-overlay").bind("touchstart", function(event) {
+     	
+        event.preventDefault();
+    });  
+
+   $("ul.nav-header li.level-3").click(function(){
+        $("ul.nav-header li").not(this).children("em").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+       $("ul.nav-header li").not(this).children(".submenu, .submenu1").hide();
+       $(this).children(".submenu").slideToggle();
+       $(this).children("em").toggleClass("fa-chevron-right");
+       $(this).children("em").toggleClass("fa-chevron-down");
+   });  
+   
+   $("ul.nav-header li.level-3 ul.submenu li").click(function(event){
+       event.stopPropagation(); 
+       $(this).children(".submenu1").slideToggle();
+       $(this).children("em").toggleClass("fa-chevron-right");
+       $(this).children("em").toggleClass("fa-chevron-down");
+   });  
+   
+   $("ul.nav-header li.level-2").click(function(){
+      $("ul.nav-header li").not(this).children("em").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+      $("ul.nav-header li").not(this).children(".submenu, .submenu1").hide();
+      $(this).children(".submenu").slideToggle();
+      $(this).children(".submenu1").slideToggle();
+      $(this).children("em").toggleClass("fa-chevron-right");
+      $(this).children("em").toggleClass("fa-chevron-down");
+   });     
+    
+ } 
+ 
+
+});</script>
+<script type="text/javascript">$(document).ready(function () {
+
+       $(".search-text").click(function () {
+            $(".select ul").slideToggle();
+            $(this).children("i").toggleClass("fa-chevron-down");
+            $(this).children("i").toggleClass("fa-chevron-up");
+       });
+   
+       $(".investblock-content img").mouseover(function(){	
+	    $(this).animate({ 
+			opacity: '0.8' 
+		}, "slow");	
+	    $(this).animate({ 
+			opacity: '1' 
+		}, "slow");		
+      });		
+                  
+      $(".investblock-content img").mouseout(function(){
+              $(this).animate({ 
+                          opacity: '1' 
+                  });
+      });	
+   
+      		
+                  
+      $(".investblock-content img").mouseout(function(){
+
+        
+        
+      });
+   
+      /*
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            slideSpeed: 1000,
+            paginationSpeed: 1000,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+   */
+      	$(".selectproduct-dropdown").on("mouseleave", function() {
+		$(".select ul").delay(500).slideUp();
+	});
+
+    });</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var a = $(".career-location-badges > ul li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".career-location-badges > ul li").css("width", c+"%");
+	
+	$(".nav-location-container > .nav-location-content:first-child").show();
+	
+	$("ul.nav-location > li:first-child").addClass("active");
+	
+    $(".career-location-badges ul > li").click(function(){
+      
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-location-content-" + y;
+        //alert(z);
+		$(".nav-location-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav-location li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+	
+	
+	$(".inner-nav-location-content-block").hide();
+	
+    $(".inner-nav-location-content > h5").click(function(){
+        $(".inner-nav-location-content-block").not($(this).next(".inner-nav-location-content-block")).hide();
+        $(this).next(".inner-nav-location-content-block").toggle(500);	
+        $(".inner-nav-location-content > h5").not(this).removeClass('close'); 
+               $(this).toggleClass("close");
+
+
+              
+    });	
+});</script>
+
+<style type="text/css" media="all">ul.nav-header li:first-child {
+    width: 15%;
+}
+
+
+/* Default setting for this  in template is display none.  But in  order to be able to drop Sitefinity  content onto the template or page , we need to be able to see the thing. So lets put a piece of CSS on here. When we're adding content this first piece will show the block you want to be able to put content in. */
+/*
+.website-selector{
+  display:block;
+  width:550px !important;
+  height:200px !important;
+  background-color:darkgrey !important;
+  z-index:9999 !important;
+}
+#stockticker{width:250px;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: none; 
+}
+.nav-location-container > .nav-location-content {
+  display: block !important;
+}
+.nav-location-container{
+background-color: lightgrey;
+height: 25%;
+}
+*/
+
+
+
+/*WHEN DONE EDITING: Uncomment this.  Doing so will overwrite the display:block code above making it behave like we want it to when the page is viewed. */
+/**/
+.website-selector{display:none;} 
+#stockticker{width:auto;}
+.container, .header, .slide-carousel, .selectproduct, .investblock, .feature-tab, .footer {
+     float: left; 
+}
+
+
+
+
+
+.owl-carousel.owl-loaded {
+display: block;
+}
+#slidecarouselcontainer{
+    width: 100%;
+    background-color: grey;
+    height: auto; 
+  display:block;
+}
+
+
+form#Form1 {
+    padding: 0;
+    margin: 0;
+}
+
+ul.website-select-list li a {  text-decoration: none;  color: #fff;  float: left;  width: 100%;  margin: 2px 0; }
+body {
+    line-height: normal;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.RadSiteMap_Default {
+    color: white;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink {
+    color: white;
+    text-decoration: underline;
+}
+ 
+
+
+.sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink, .sfBreadcrumbWrp .RadSiteMap .sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white;
+}
+.website-selector .border{ height:0px; }
+.website-selector .border span { height: 0px; }
+.sfBreadcrumbWrp .RadSiteMap 
+.sfBreadcrumbNavigation .rsmLink {
+    color: #ffffff !important;
+}
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink, 
+.sfBreadcrumbWrp .RadSiteMap 
+.sfNoBreadcrumbNavigation .rsmLink:hover{
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.rsmItem:hover {
+color: white !important;
+background-image: none !important;
+background-color: transparent !important;
+}
+.sfBreadcrumbWrp .RadSiteMap .sfBreadcrumbNavigation .rsmLink:hover {
+color: white !important;
+background-image: none !important;
+text-decoration: underline !important;
+background-color: transparent !important;
+}
+/*End Breadcrumb styles*/
+
+.inner-nav-location-content-block-sec2
+{
+ float:none; 
+  width:100%;
+}</style>
+<style type="text/css" media="all">/*Required for editing.
+  Once done editing, comment this css out.
+*/
+/**/
+.nav-region-logo{
+ text-align:left; 
+}
+.sfContentBlock p, .noclass p{
+  
+    text-align: left;
+}
+.nav-location-container > .nav-location-content {
+  display: block !important;
+}
+.nav-location-container{
+background-color: #fff;
+height: 25%;
+}
+
+.inner-nav-location-content-block-sec2 {
+    float: right;
+    width: 100%;
+}
+
+.utilityblock.contact.careers-footer {
+    margin-bottom: 50px;
+}
+.utilityblock-inner-text a{
+ padding:0px; 
+}
+a:link{
+color: #005d83;
+}
+a:hover{
+color: #0098d1;
+}
+.careers-locations{
+  width:90% !important;
+  padding-left:50px !important;
+}
+b, strong {
+text-align:left;
+    display: inherit;
+  padding-top:60px;
+}
+
+.inner-nav-location-content-block-sec2 .nav-region-logo {
+    text-align: left;
+}
+.careers-locations p {
+    padding-bottom: 20px;
+}</style>
+<style type="text/css" media="all">.RadTreeView {
+color:white;
+}</style>
+<div class='sfContentBlock'><p style="text-align:right;"><a target="_blank" href="https://webassets.valmont.com/valmontstaging/docs/librariesprovider103/default-document-library/weight-per-ft-tubing-05-2026.pdf" data-skip-sfref="true">Tubing Size Sheet</a></p>
+<p>&nbsp;</p>
+
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+
+		<div class="slide-carousel utility careers" id="slidecarousecareerslocations">
+            
+<div class='sfContentBlock'><img src="https://webassets.valmont.com/valmontstaging/images/librariesprovider80/about-us/banners/val-bnr-governance.jpg?sfvrsn=2">
+<div class="slide-content">
+<h1>Welded Steel Tubing Glossary</h1>
+</div>
+
+</div>
+		</div>
+        <div class="careers-locations" id="careerlocations">
+            
+<div class='sfContentBlock'><a name="toptop"></a>
+
+</div>
+			<div class="career-location-badges" id="careerlocationbadges">
+                
+<div class='noclass'><h4>
+<a id="A-G"></a>
+<a name="A-G"></a>
+</h4>
+<p style="text-align: left;">Alphabetical Steel Tubing terms</p>
+<div class="inner-nav-location-container">
+<!-- START -->
+<div class="inner-nav-location-content">
+<h5>A-G</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<strong>4130 Alloy Steel</strong>
+<p>SAE 4130 is a steel grade containing the alloying elements of chromium and molybdenum to help achieve higher strength levels than 1020 carbon steel without increasing the carbon content or wall thickness. For a listing of expected chemical and mechanical properties expected with 4130 steel, please visit our <a href="/products-and-solutions/welded-steel-tubing/finishes-and-chemistries/4130-tubing">4130 ERW Tubing</a> page on our website.</p>
+<strong>Aluminized</strong>
+<p>Aluminized steel is steel that has been coated on both sides with an aluminum silicon alloy. Aluminized steel has a unique combination of properties possessed neither by carbon steel nor by aluminum alone. Aluminized steel shows a better behavior against corrosion and is used in various application where heat resistance is critical. For a listing of standard tubing sizes and gauges that Valmont produces in an aluminized finish, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>. Valmont produces welded aluminized tubing that meets ASTM specification A787 Type 1.</p>
+<strong>ASTM</strong>
+<p>ASTM is the abbreviation for the American Society for Testing &amp; Materials which is the governing body that publishes specifications that cover the ordering of steel, types of testing required and types of tubing produced among others. The <a href="http://www.astm.org/">ASTM website</a> has a complete listing of specifications that you can search for more
+information. For a full listing of ASTM specifications that Valmont produces welded steel tubing to, please <a href="/resources-and-specs/astm-specifications">click here</a>.</p>
+<strong>ASTM A53</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a53">ASTM A53</a> specification covers seamless and welded black and hot-dipped galvanized steel pipe in NPS (Nominal Pipe Sizes). Tubing produced to this specification is typically used for mechanical and pressure applications. Valmont produces tubing made to A53 Type E (electric resistance welded). To view a listing of round OD sizes produced to ASTM A53, please view the <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a> on this website.</p>
+<strong>ASTM A135</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a135">ASTM A135</a> specification covers electric resistance welded steel pipe that is used to convey gas, vapor or liquid. Hydrostatic testing may or may not be required depending upon customer requirements. Two different grades are specified - Grade A and Grade B under A135. The required grade should be specified at time of quotation or order placement. To see a full listing of steel tubing sizes that Valmont produces to meet ASTM A135 or to sort by a particular OD size, please visit our
+<a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>ASTM A252</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a252">ASTM A252</a> specifications covers welded and seamless steel pipe piles. Valmont produces 12.375", 14.00" and 16.00" OD tubing to this specification using as submerged arc welded tubes. ASTM A252 is standardly produced to three different grades (Grade 1, Grade 2, Grade 3) with differing yield and tensile strengths depending upon the grade. Please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a> for a complete listing of OD sizes and the corresponding ASTM specifications for those sizes.</p>
+<strong>ASTM A268</strong>
+<p>ASTM A268 is a specification covering stainless steel tubing used in high temperature applications and where corrosion resistance is importance. Valmont produces a limited range of sizes that conforms in a stainless 409 chemistry. Please contact one of our knowledgeable sales team members by calling 1-800-825-6668 or send an email to <a href="mailto:tubing@valmont.com">tubing@valmont.com</a> to inquire about our specific capabilities.</p>
+<strong>ASTM A500</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a500">ASTM A500</a> is a specification for cold formed welded and seamless carbon steel structural tubing. Rounds and shapes such as square and rectangle are covered under this specification. Valmont produces electric resistance welded structural tubing that meets ASTM A500. Available in different grades (Grade A, B, C or D), it is important for the grade to be specified at time of quotation or order placement or the corresponding yield and tensile strength requirement for an application. For a
+complete listing of sizes produced to ASTM A500, please see our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>ASTM A513</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a513">ASTM A513</a> specification covers electric resistance welded carbon and alloy tubing for use as mechanical tubing. Valmont produces three types of tubing covered under A513:
+<br>
+Type 1a: As welded from <em>hot rolled steel</em>
+<br>
+Type 1b: As welded from <em>hot rolled pickled &amp; oiled steel</em>
+<br>
+Type 2: As welded from <em>cold rolled steel</em>
+<br>
+<br>
+In general, A513 will provide tighter tolerances than other ASTM specification such as A500 and A135. For a complete listing of OD sizes standardly produced to A513 by Valmont, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>ASTM A787</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a787">ASTM A787</a> specification covers round, square, rectangle and special shape electric resistance welded tubing that is zinc-coated after welding (hot dipped galvanized) or coated in coil form (galvanized, aluminized, galvannealed, zinc-aluminum-magnesium). Valmont, as a standard, produces mechanical carbon tubing to the following types:
+<br>
+Type 1: aluminized
+<br>
+Type 2: galvanized
+<br>
+Type 3: post hot dipped galvanized
+<br>
+Type 4: galvannealed
+<br>
+Type 6: zinc-aluminum-magnesium alloy coating
+<br>
+<br>
+For a complete listing of standard sizes produced by Valmont Tubing to ASTM A787, please visit our online <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>ASTM A847</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a847">ASTM A847</a> specification covers cold-formed welded and seamless high-strength, low-alloy round, square, rectangular, or special shaped structural tubing where high strength and enhanced atmospheric corrosion resistance are required. Weathering steel is the most commonly referred to name given to this type of steel.<a href="/products-and-solutions/welded-steel-tubing/finishes-and-chemistries/astm-a606-type-4">ASTM A606</a> is a commonly ordered chemistry for this tube specification. To see the full listing of sizes standardly produced to ASTM A847, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>ASTM A1046</strong>
+<p>
+<a href="/resources-and-specs/astm-specifications/a1065">ASTM A1046</a> is the specification for steel sheet produced with a zinc-aluminum-magnesium alloy coating. Produced with different coating thicknesses, ASTM A1046 steel is used frequently in applications requiring corrosion resistance and painting. For more information on testing results of the corrosion resistance and on tubing sizes that Valmont produces to ASTM A1046, please visit our <a href="/products-and-solutions/welded-steel-tubing/finishes-and-chemistries/zinc-aluminum-magnesium-finish">Zinc-Aluminum-Magnesium Tubing</a>page.</p>
+<strong>Carbon Steel</strong>
+<p>Steel is classified as carbon steel when its properties are defined by the various percentage of carbon without substantial amounts of other alloying elements. As carbon content increases, the steel becomes harder and stronger while the ductility of the steel decreases. Valmont produces welded carbon steel chemistries that include 1006, 1008, 1010, 1015, 1020, 1021, 1026 and 1030. Please visit the <a href="/products-and-solutions/welded-steel-tubing/finishes-and-chemistries">Finishes &amp; Chemistries</a> page for additional
+steel chemistries available.</p>
+<strong>Charpy Test</strong>
+<p>A Charpy test, also known as the Charpy v-notch test, is a high strain test that determines the amount of energy absorbed by a sample of material during fracture. A free swinging pendulum is allowed to strike and break a notched sample. The position of the pendulum before and after the pendulum swings is compared. The energy absorbed is a measure of the the impact strength or notch toughness. ASTM standard E23 outlines the testing requirements.</p>
+<strong>Chemical Properties</strong>
+<p>Chemical properties are the mimimum and maximum limites of chemical elements as established by ASTM and SAE specifications.</p>
+<strong>Coil</strong>
+<p>Steel coils are sheets of steel that have been wound up by a steel mill. Large coils are slit or cut down to smaller widths desired in order to produce tubing. Once unwound, the flat coil is then formed to produce the mechanical tubing that Valmont produces.</p>
+<strong>Cold Rolled</strong>
+<p>Colled rolled steel is hot rolled sheet that has been cold reduced. Cold rolled steel provides tighter wall thickness tolerances and better surface condition than hot rolled steel. For a listing of standard tubing sizes and gauges that Valmont produces in a cold rolled finish, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>. Valmont produces welded cold rolled tubing that meets ASTM specification A513 Type 2.</p>
+<strong>Crush Test</strong>
+<p>A test performed that exerts compressive force that is perpendicular to the diameter of the tube that is placed on end.</p>
+<strong>Drawn Over Mandrel (DOM)</strong>
+<p>A secondary cold working process done to ERW tubing in order to obtain a special shape or tighter OD, ID, or wall thickness tolerances. An intermediate and less costly option to DOM would be to order ERW tubing to tighter than standard A513 tolerances. Please <a href="/about-us/contact-us">contact</a> Valmont for specific options that can be offered. For a listing of standard tubing sizes and gauges produced by Valmont, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>Eddy Current Testing</strong>
+<p>Eddy Current testing is a non-destructive testing method that utilizes an eddy current flow to detect a discontinuity in the weld area of the tubing.</p>
+<strong>Elongation</strong>
+<p>Elongation is the amount of permanent extension in the vicinity of the fracture in a tension test. It is expressed as a percentage of the original gauge length.</p>
+<strong>ERW (Electric Resistance Weld)</strong>
+<p>Electric resistance weld tubing (ERW) is a method of tubing production where slit coils of steel are put through a gradual cold forming operation until the two edges of the steel are joined together in a tubular form. The heat for the continuous weld is generated at the seam by the resistance to the flow of electric current applied through an induction coil. Valmont produces round ERW tubing in sizes up to 12.75" OD along with square and rectangle sized tubing up to 6.00". For a complete listing of sizes that Valmont produces, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>Finish</strong>
+<p>Finish refers to the type of surface and end condition desired in the finished product to suit the customer's need. Common finishes that Valmont produces tubing to include: hot rolled (HR), hot rolled pickled &amp; oiled (P&amp;O), cold rolled (CR), cold rolled matte, cold rolled bright, aluminized (AL), galvanized (GAL), hot dip galvanized (HDG), galvalume, weathering steel, along with 409 stainless (SS). Finish capabilities will vary by size. For a complete listing of tubing sizes produced along with our standard finishes available for each size, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>Flare Test</strong>
+<p>A destructive test performed that tests the weld suitability of a piece of tube when it is expanded over a cone at various degrees of expansion.</p>
+<strong>Flash Control</strong>
+<p>Flash control refers to the different limits that the flash left from the ID weld bead can be controlled to during the ERW tube production process. For example, flash control to .015" means that the maximum ID weld bead that can remain is .015". Flash control requirements will vary by end use application. When placing a request for quote and order, it is important for the customer to make mention of the flash control requirements so that the tubing can be produced accordingly to those requirements.</p>
+<strong>Flash In</strong>
+<p>"Flash in" refers to when the flash from the weld is left on the inside of the tubing and is not removed or controlled during the ERW tube production process. If flash is required or not, please make mention of that at the time of quotation and order placement.</p>
+<strong>Flattening Test</strong>
+<p>A destructive test performed in the tube production process where a sample tube is flattened to a specified height. The weld is positioned at a predetermined location. Examination is made during the test for signs of cracking.</p>
+<strong>Galvanized</strong>
+<p>Refers to the thin layer of zinc finish that is applied to steel. Galvanized steel is used in applications where rust resistance is needed. It is identified by a crystalization patttern on the surface called "spangle". Galvanized tubing can be supplied in two ways: "pregalvanized" meaning that the steel is galvanized at the steel mill or as "hot-dipped galvanized" meaning that the tubing is produced from a hot rolled steel and then hot dipped after welding. For a listing of standard tubing sizes and gauges that Valmont produces in galvanized and hot-dip galvanized finishes, please visit our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>. Valmont produces welded
+galvanized tubing that meets ASTM specification A787 Type 2 and Type 3.</p>
+<strong>Gauge</strong>
+<p>A measurement of wall thickness of the steel. The Birmingham Wire Gauge terminology is commonly used in the tubing industry. For each gauge, there is a corresponding wall thickness to match that. For example an 18 gauge can also be referred to .049" wall thickness. For a complete listing of standard tubing sizes and gauges/wall thicknesses produced for that size, please refer to our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#A-G">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+</div>
+<div class="inner-nav-location-content">
+<a id="H-M"></a>
+<a name="H-M"></a>
+<h5>H-M</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<strong>Hardness</strong>
+<p>A mechanical property of steel that measures the resistance to indentation. Hardness is related to the maximum strength of steel.</p>
+<strong>Hardness Test</strong>
+<p>A test taken in order to measure the hardness (resistance to penetration) of steel. Valmont measures the hardness of steel using the Rockwell test. Please refer to ASTM A370 for details regarding this test method.</p>
+<strong>High Strength Low Alloy</strong>
+<p>Low alloy steels in which the inclusion of moderate amounts of alloying elements other than carbon lead to higher mechanical properties.</p>
+<strong>Hot Rolled</strong>
+<p>Hot rolled steel is steel that while it is being formed or rolled is heated red-hot. As the steel cools in the open air, the surface oxidizes creating a blue grey scale finish. Wall thickness tolerances within the coil will not be as uniform or as tight as steel produced as cold rolled. For a listing of standard tubing sizes and gauges that Valmont produces in a hot rolled finish, please visit our <a href="/valmont-tubing/product-catalogs/steel-tubing">Steel Tubing Product Catalog</a>. Valmont produces welded hot rolled tubing that meets ASTM specification A513 Type 1a.</p>
+<strong>Hydrostatic Testing</strong>
+<p>A pressurized test in which a liquid, normally water, is placed in the pipe or tube at the required pressure to ensure that it will not leak or be damaged.</p>
+<strong>ID</strong>
+<p>ID refers to the inside diameter of the tubing. It is specified in inches and decimals of an inch.</p>
+<strong>Mechanical Properties</strong>
+<p>The mechanical properties of steel show the elastic and inelastic reaction of the steel when force is applied to it. Yield strength, tensile strength and elasticity are common mechanical tests performed. Also referred to physical properties.</p>
+<strong>Mechanical Tubing</strong>
+<p>Mechanical tubing is used for a variety of mechanical purposes and is produced to meet specific end use requirements, specifications, tolerances and chemistries. Closer dimensional tolerances and chemistries allow for more uniformity than standard pipe for the end user.</p>
+<strong>Minimum Wall Thickness</strong>
+<p>The lowest value that steel can be measured at in order to ensure that it meets the corresponding ASTM specification for the coil or tube or customer requirement specified. It can be calculated by subtracting the minus tolerances from the nominal wall thickness.</p>
+<strong>MSCI</strong>
+<p>Abbreviation for the <a href="http://www.msci.org/">Metals Service Center Institute</a>.</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#H-M">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<div class="inner-nav-location-content">
+<a id="N-Q"></a>
+<a name="N-Q"></a>
+<h5>N-Q</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<strong>NASPD</strong>
+<p>Abbreviation for the <a href="http://www.naspd.com/">National Association of Steel Pipe Distributors</a>.</p>
+<strong>Nominal Wall Thickness</strong>
+<p>The theoretical or stated single value given to the gauge or wall thickness of steel.</p>
+<strong>Non-Destructive Testing</strong>
+<p>Testing methods of detecting defects without destroying or permanently changing the material being tested.</p>
+<strong>Normalizing</strong>
+<p>The heat treatment of steel where a tube or weld seam of the tube is heated above the critical range and then cooled in still air. The crystal structure is refined and with a more consistent strength. Internal stresses are removed in the steel. Valmont offers seam normalizing on certain sizes of tubing. Please <a href="/valmont-tubing/contact-us">contact</a> Valmont to learn more about our capabilities to seam normalize.</p>
+<strong>OD</strong>
+<p>OD is an abbreviation for outside diameter. It is expressed in inches, decimals of an inch and in metric.</p>
+<strong>Oiling</strong>
+<p>The application of an oil or coating to the finished tube to help improve the shelf life of the tube and to slow down rusting. Depending upon the end use of the tubing, oiling may or may not be required.</p>
+<strong>Ovality</strong>
+<p>Ovality is the difference between the maximum and minimum diameters of any one section of a round tube as measured.</p>
+<strong>Pickled &amp; Oiled</strong>
+<p>Often referred to as HR P&amp;O, pickled &amp; oiled is a finish where hot rolled coil is descaled of oxide film or scale by either a chemical method, mechanical method, or a combination of both and then oiled to help prevent corrosion after descaling. Pickled &amp; oiled steel offers a cleaner surface than hot rolled steel, making it an attractive alternative to cold rolled steel in terms of cost if wall thickness tolerances are not as critical. For a listing of standard tubing sizes and gauges that Valmont produces in a pickled &amp; oiled finish, please visit our <a href="/resources-and-specs/glossary/welded-steel-tubing">Steel Tubing Product Catalog</a>. Valmont produces welded pickled &amp; oiled tubing that meets ASTM specification A513 Type 1b.</p>
+<strong>
+<a name="pipetubing"></a> Pipe</strong>
+<p>Pipe is a round hollow form of steel produced to a nominal pipe size (NPS) and used in conjunction with the term "schedule" that defines the wall thickness. It is mainly used to convey liquids, gasses and other substances. It is important to distinguish between the terms <a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/od-vs-nominal-pipe-size">pipe and tube</a>. Tube is identified by the OD size and wall thickness. A 2" NPS schedule 40 "pipe" size would be described as 2.375" OD x .156" wall in a "tube" size.</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#N-Q">[Top of Section]</a>
+</div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<div class="inner-nav-location-content">
+<a id="R-V"></a>
+<a name="R-V"></a>
+<h5>R-V</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<strong>Reverse Flattening Test</strong>
+<p>A reverse flattening test involves taking a sample of tubing at a specified length and splitting is longitudinally at 90 degrees on each side of the weld. The sample is opened and flattened with the weld area at the point of maximum bend. It is used primarily to detect lack of weld penetration.</p>
+<strong>Scale</strong>
+<p>Defined as the oxide of iron that is formed on the surface of steel after heating.</p>
+<strong>Slitting</strong>
+<p>Slitting is the continuous longitudinal splitting of a wider coil into two or more separate strips by rotary knifes mounted on a rotating arbor. The slit widths are cut to the widths needed for specific tubing sizes produced by Valmont.</p>
+<strong>Stainless</strong>
+<p>Stainless steel is a steel alloy that contains more than 10 percent chromium. Stainless steel is known for not staining, corroding or rusting as easily as carbon steel. There are various different grades of stainless steel including stainless 304, 316, 409, 410 and 416. Valmont produces stainless 409 in certain sizes and gauges. Please inquire for specifics by clicking
+<a href="/about-us/contact-us">here</a>.</p>
+<strong>STI</strong>
+<p>Abbreviation for the <a href="http://steeltubeinstitute.org/">Steel Tube Institute</a>.</p>
+<strong>Structural Tubing</strong>
+<p>Tubing that is used primarily for structural applications. Strength requirements help dictate the type of steel to be used for the particular application.</p>
+<strong>Submerged Arc Weld (SAW)</strong>
+<p>SAW is a type of arc welding in which a flux—a special welding material—is used to protect the weld area from the effects of the surrounding air and to improve the conditions for formation of the weld. A weld bead up to .250" of an inch is left on the OD of the tube. Valmont produces 12.375", 14.00" &amp; 16.00" round as submerged arc welded. For a complete listing of tubing sizes produced by Valmont, please visit our <a href="/valmont-tubing/product-catalogs/steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>Tensile Strength</strong>
+<p>Tensile strength - also referred to as "ultimate strength" - is a measure of the ability of steel to withstand a longitudinal stress, expressed as the greatest stress that the steel can stand without breaking.</p>
+<strong>Tolerances</strong>
+<p>The allowable difference in measurements from a desired value between what the customer requests or what an ASTM specification calls out for. Examples of common tubing tolerances include OD, ID, wall thickness, chemical and length tolerances.</p>
+<strong>
+<a name="tubingpipe"></a>Tubing</strong>
+<p>Tubing is a non-standardized hollow shaped product manufactured to specific dimensional, chemical and mechanical properties. It is important to distinguish between the terms
+<a href="/products-and-solutions/welded-steel-tubing/tubing-solutions/od-vs-nominal-pipe-size">tubing and pipe</a>. A tube is identifed by the OD size and wall thickness while a pipe is produced to nominal specifications. A 2" NPS schedule 40 "pipe" size would be described as 2.375" OD x .156" wall in a "tube" size. For a complete listing of tubing sizes produced by Valmont, please visit our <a href="/valmont-tubing/product-catalogs/steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<br>
+<a style="margin-bottom: 40px; float: left;" href="#R-V">[Top of Section]</a></div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+<div class="inner-nav-location-content">
+<a id="W-Z"></a>
+<a name="W-Z"></a>
+<h5>W-Z</h5>
+<div class="inner-nav-location-content-block" style="display: none;">
+<div class="inner-nav-location-content-block-sec2">
+<!--START Repeat nav-region-logo divs here-->
+<div class="nav-region-logo">
+<strong>Weathering Steel</strong>
+<p>Weathering steel is a steel finish that utilizes elements such as copper, chromium, nickel and silicon to enhance the protection and resistance to atmospheric corrosion. ASTM A606 specification is a commonly used steel specification while ASTM A847 is the standard specification that covers the welded tubing that Valmont produces. For a complete listing of
+tubing sizes produced by Valmont, please refer to our <a href="/product-catalogs/welded-steel-tubing">Steel Tubing Product Catalog</a>.</p>
+<strong>Weld Bead</strong>
+<p>The built up portion of a weld, formed either from the parent material of the tube with electric resistance welded (ERW) tubing or from a filler metal in the case of submerged arc welded (SAW) tubing. The OD welded bead is standardly removed in the ERW tube making process while the ID weld bead may be left in (flash in) or controlled to different tolerances (flash controlled) as required by the customer requirement or end use application. The OD weld bead for submerged arc welded tubing produced by Valmont typically is 1/4 of inch high.</p>
+<strong>Yield Strength</strong>
+<p>Yield strength is the stress at which steel begins to exhibit a specified deviation from inelastic strain.</p>
+<a style="margin-bottom: 40px; float: left;" href="#W-Z">[Top of Section]</a></div>
+<!--END Repeat nav-region-logo divs here-->
+</div>
+</div>
+</div>
+<!-- END This Div contains a country, a left sec1 div and a right sec2 div -->
+
+</div>
+				<div class="nav-location-container" id="navlocationcontainer">
+				      <div id="nav-location-content-1" class="nav-location-content">	
+                          
+			  			  
+				      </div>
+				      <div id="nav-location-content-2" class="nav-location-content">
+                        
+			  
+				      </div>
+				      <div id="nav-location-content-3" class="nav-location-content">
+                        
+			  
+				      </div>
+				      <div id="nav-location-content-4" class="nav-location-content">
+                          
+			  
+				      </div>
+				      <div id="nav-location-content-5" class="nav-location-content">
+                          
+			  
+				      </div>
+				      <div id="nav-location-content-6" class="nav-location-content">
+                          
+			  
+				      </div>
+				</div>
+			</div>
+		</div>
+        <div id="careers-apply" class="careers-apply">	
+			<div class="utilityblock-content" id="careersapplycontentarea">			
+				<div class="utilityblock-inner-content" id="careersapplycontentwrapper">
+					<div class="utilityblock-inner-text" id="careersapplycontentinnertext">
+                        
+					
+                    </div>
+				</div>			
+				
+			</div>
+		</div>
+        <div class="utilityblock contact careers-footer" id="careersfooterwrapper">
+			<div class="utilityblock-content" id="careersfootercontent">
+					<div class="utilityblock-inner-text" id="careersfootercontentinnertext">
+                        
+<div class='sfContentBlock'><style>.trustarc-banner-close img {
+        width: 14px !important;
+    }
+    .trustarc-client-logo img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+</style>
+<div id="consent-banner"></div><div id="teconsent"><script type="text/javascript" async="async" src="https://consent.trustarc.com/v2/notice/r8qrjn"></script></div>
+
+</div>
+					</div>
+					<div class="utilityblock-inner-button" id="careersfooterbutton">
+                        
+
+					</div>	
+			</div>
+		</div>
+			
+	</div>	
+	<script>
+(function () {             
+  var ll = new LazyLoad({
+        elements_selector: ".lazy"
+   });
+})();
+    </script>
+	<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+   
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7175432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+    
+<!-- Google tag (gtag.js) -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVMQZRVB7F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVMQZRVB7F');
+    _trxid = "valmont";
+webTraxs();</script><script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//www.webtraxs.com/trxscript.php' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+_trxid = "valmont";
+webTraxs();</script>
+
+<!--#include virtual="/shared/footer.html" -->

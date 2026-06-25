@@ -1,0 +1,107 @@
+body{
+	background: #FFF;
+}
+footer{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-orange.gif) repeat-x;
+}
+#logo{
+	position: absolute;
+	top: 25px;
+}
+
+
+
+
+#main-nav a{
+	padding: 11px 15px 0 15px;
+}
+#main-nav a:hover{
+	padding: 11px 16px 0 15px;
+}
+#header-center-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-middle-black-orange-stripe.gif) center top no-repeat;
+}
+#center-top-with-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/top-black-orange-stripe.gif) repeat-x;
+}
+#search{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/search-black.gif) no-repeat;
+	color: #FFF;
+}
+#logo{
+	top: 37px;
+}
+#main-container{
+	background: #FFF;
+}
+#news-bar{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/news-repeat-orange.gif) repeat-x;
+}
+#middle-bar{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/middle-checkerboard-orange.gif) repeat-x;
+}
+#news-bar-background{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/news-fade-orange.gif) no-repeat;
+}
+#news-bar strong, #news-bar a{
+	color: #287aa1;
+}
+#news-bar h3{
+	color: #504143;
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/arrow-dark-brown-on-orange.gif) no-repeat right 12px
+}
+#footer-center{
+	background: url(http://az276019.vo.msecnd.net/valmontstaging/backgrounds/footer-center-orange.gif) no-repeat center top;
+}
+#footer-center-outside-background{
+	background: none;
+}
+#middle-bar{
+	padding: 0;
+	height: 48px;
+}
+#main-content{
+	padding: 0 0 306px;
+	font-size: 13px;
+	float: none;
+	width: auto;
+}
+#main-nav a.last{
+	border-right: 1px dotted #6B6B6B;
+}
+#internal #main-content{
+	width: 729px;
+	float: left;
+	padding: 17px 0 358px;
+}
+#main-content .top-right img.green{
+	border: 8px solid #d9b16d;
+}
+#internal h1.orange{
+	color: #d9b16d;
+}
+
+
+
+
+
+.footer-links h4{
+	color: #d9b16d;
+}
+.footer-links sup{
+	font-size: 8px;
+}
+.phone{
+	color: #FFF;
+	font-size: 23px;
+}
+.shade-box{
+	width: auto;
+	padding: 20px 0 20px 98px;
+}
+.wide-rectangle-badge{
+	margin: 0 8px 10px; 
+}
+.wide-rectangle-badge a{
+	color: #B00000;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.badges { width: 80%; margin: 50px auto; }
+.nav-container {float: left; width: 100%; text-align: center; padding: 100px 0; background-color: #404040; color: #fff; text-transform: uppercase; font-size: 26px; font-family: arial;}
+.nav-content {display: none;}
+ul.nav { float: left; width: 100%; padding: 0; margin: 0; list-style: none; }
+ul.nav li{ float: left; border-left: 1px solid #ccc; background-color: #eeeeee;text-align: center;padding: 8px 0;margin: 0 0 10px 0; font-family: arial; font-size: 14px; color: #606060;}
+ul.nav > li:first-child { border: 0; }
+.nav-list.active { background-color: #b0b0b0; color: #fff; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    var a = $(".badges ul li").length;	
+	//alert(a);	
+	var b = 100/a;	
+	//alert(b);
+	var c = b-0.1;
+	$(".badges ul li").css("width", c+"%");
+	
+	$(".nav-container > .nav-content:first-child").show();
+	
+	$("ul.nav > li:first-child").addClass("active");
+	
+    $(".badges ul > li").click(function(){
+        var x = $(this).attr("id");
+        //alert(x);
+        var y = x.split("-").pop(-1);
+        //alert(y);
+        var z = "nav-content-" + y;
+        //alert(z);
+		$(".nav-content").hide();
+		$("#"+z).toggle();
+		
+		$("ul.nav li").removeClass("active");
+		
+		$(this).addClass("active");
+    });
+});
+</script>
+</head>
+<body>
+
+<div class="badges">
+
+	<ul class="nav">
+	  <li id="nav-1" class="nav-list">One</li>
+	  <li id="nav-2" class="nav-list">Two</li>
+	  <li id="nav-3" class="nav-list">Three</li>
+	  <li id="nav-4" class="nav-list">Four</li>
+	  <li id="nav-5" class="nav-list">Five</li>
+	</ul>
+
+	<div class="nav-container">
+	  <div id="nav-content-1" class="nav-content">One</div>
+	  <div id="nav-content-2" class="nav-content">Two</div>
+	  <div id="nav-content-3" class="nav-content">Three</div>
+	  <div id="nav-content-4" class="nav-content">Four</div>
+	  <div id="nav-content-5" class="nav-content">Five</div>
+	</div>
+
+</div>
+
+</body>
+</html>

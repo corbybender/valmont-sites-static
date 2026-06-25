@@ -1,0 +1,206 @@
+<ul class="rtUL rtLines">
+			<li class="rtLI rtFirst"><div class="rtTop">
+				<span class="rtSp"></span><a title="Valmont Tubing, a steel tubing manufacturer, offers wide size ranges of welded mechanical steel tubing, with the type, shape, &amp; size of product made to your specifications." class="rtIn" href="home">Home</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing manufactures round welded mechanical steel tubing up to 16 inch OD along with squares, rectangles and special shapes.  Produced in hot rolled, cold rolled, galvanized, hot-dip galvanized, aluminized, weathering steel, and stainless 409 finishes, our tubing is used in hundreds of end uses across many industries.  Known for our quality and focus on our customers, we strive to make sure that tubing that we make fits your products, processes and your timeframe." class="rtIn" href="products-and-solutions">Product and Solutions</a>
+			</div><ul class="rtUL">
+				<li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing offers one of the widest size ranges of welded mechanical steel tubing in the industry, with the type, shape, and size of product made to your precise specifications.  " class="rtIn" href="products-and-solutions/welded-steel-tubing">Welded Steel Tubing</a>
+				</div><ul class="rtUL">
+					<li class="rtLI"><div class="rtTop">
+						<span class="rtSp"></span><span class="rtMinus"></span><a title="Form. Function. Fit. Those three words capture the essence of what Valmont Tubing strives for in being your steel tubing supplier." class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions">Tubing Solutions</a>
+					</div><ul class="rtUL">
+						<li class="rtLI"><div class="rtTop">
+							<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing has one of the broadest size range of welded carbon steel tubing in North America.  Our small OD range consisting of round sizes from 1.050 inch to 2.50 inch provides our customers a reliable manufacturer of ERW (electric resistance welded) steel tubing produced to tight tolerance capabilities along with lower mill minimums and frequent rolling cycles. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch">Round Tubing - 1.05 to 2.50 Inch~</a>
+						</div><ul class="rtUL">
+							<li class="rtLI"><div class="rtTop">
+								<span class="rtSp"></span><a title="Valmont's 1.05 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-05-inch-round-erw-steel-tubing">1.05 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.063 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-063-inch-round-erw-steel-tubing">1.063 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid rtHover">
+								<span class="rtSp"></span><a title="Valmont's 1.125 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-125-inch-round-erw-steel-tubing">1.125 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.25 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-25-inch-round-erw-steel-tubing">1.25 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.312 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-312-inch-round-erw-steel-tubing">1.312 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.324 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-324-inch-round-erw-steel-tubing">1.324 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.50 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-50-inch-round-erw-steel-tubing">1.50 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.66 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-66-inch-round-erw-steel-tubing">1.66 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.75 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-75-inch-round-erw-steel-tubing">1.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.875 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-875-inch-round-erw-steel-tubing">1.875 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.90 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/1-90-inch-round-erw-steel-tubing">1.90 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/2-inch-round-erw-steel-tubing">2 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.125 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/2-125-inch-round-erw-steel-tubing">2.125 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.25 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/2-25-inch-round-erw-steel-tubing">2.25 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.375 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/2-375-inch-round-erw-steel-tubing">2.375 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI rtLast"><div class="rtBot">
+								<span class="rtSp"></span><a title="Valmont's 2.50 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---1-05-to-2-50-inch/2-50-inch-round-erw-steel-tubing">2.50 Inch Round ERW Steel Tubing</a>
+							</div></li>
+						</ul></li><li class="rtLI"><div class="rtMid">
+							<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing has one of the broadest size range of welded carbon steel tubing in North America.  Our mid size OD range consisting of sizes from 2.75 inch to 6 inch provides our customers a reliable manufacturer of ERW (electric resistance welded) steel tubing produced to tight tolerance capabilities along with lower mill minimums and frequent rolling cycles. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch">Round Tubing - 2.75 to 6 Inch</a>
+						</div><ul class="rtUL">
+							<li class="rtLI"><div class="rtTop">
+								<span class="rtSp"></span><a title="Valmont's 2.75 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/2-75-inch-round-erw-steel-tubing">2.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.875 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/2-875-inch-round-erw-steel-tubing">2.875 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/3-inch-round-erw-steel-tubing">3 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.25 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/3-25-inch-round-erw-steel-tubing">3.25 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.50 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/3-50-inch-round-erw-steel-tubing">3.50 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.75 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/3-75-inch-round-erw-steel-tubing">3.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.875 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/3-875-inch-round-erw-steel-tubing">3.875 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 4.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/4-inch-round-erw-steel-tubing">4 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 4.50 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/4-50-inch-round-erw-steel-tubing">4.50 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 4.75 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/4-75-inch-round-erw-steel-tubing">4.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 5.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/5-inch-round-erw-steel-tubing">5 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 5.50 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/5-50-inch-round-erw-steel-tubing">5.50 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 5.563 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/5-563-inch-round-erw-steel-tubing">5.563 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI rtLast"><div class="rtBot">
+								<span class="rtSp"></span><a title="Valmont's 6.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, and A53.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---2-75-to-6-inch/6-inch-round-erw-steel-tubing">6 Inch Round ERW Steel Tubing</a>
+							</div></li>
+						</ul></li><li class="rtLI"><div class="rtMid">
+							<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing has one of the broadest size range of welded carbon steel tubing in North America.  Our large OD size range consisting of sizes from 6.25 inch to 16 inch provides our customers a reliable manufacturer of large OD light wall tubing produced to tight tolerance capabilities. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch">Round Tubing - 6.25 to 16 Inch</a>
+						</div><ul class="rtUL">
+							<li class="rtLI"><div class="rtTop">
+								<span class="rtSp"></span><a title="Valmont's 6.25 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/6-25-inch-round-erw-steel-tubing">6.25 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 6.375 inch OD ERW (electric resistance welded) round steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/6-375-inch-round-erw-steel-tubing">6.375 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 6.625 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/6-625-inch-round-erw-steel-tubing">6.625 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 6.639 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/6-639-inch-round-erw-steel-tubing">6.639 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 7.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/7-inch-round-erw-steel-tubing">7 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 8.00 OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  Our frequent roll cycles and lower mill minimums in this size, give you flexibility to better run your business.    " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/8-inch-round-erw-steel-tubing">8 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 8.625 OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/8-625-inch-round-erw-steel-tubing">8.625 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 10.00 OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  Our frequent roll cycles and lower mill minimums in this size, give you flexibility to better run your business.  Produced in hot rolled (HR), pickled and oiled (P&amp;O), cold rolled (CR), aluminized (AL), pre-galvanized (GAL), hot dip galvanized (HDG) and stainless 409 (SS), Valmont also offers select value added capabilities such as cutting, hole drilling and special fabrication if requested.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/10-inch-round-erw-steel-tubing">10 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 10.75 OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268." class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/10-75-inch-round-erw-steel-tubing">10.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 12.00 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/12-inch-round-erw-steel-tubing">12 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 12.375 OD SAW (submerged arc welded) round steel tubing is produced to ASTM A252 and A787 and is produced in hot rolled (HR)  and hot dip galvanized (HDG) finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/12-375-inch-round-saw-steel-tubing">12.375 Inch Round SAW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 12.75 inch OD ERW (electric resistance welded) steel tubing is produced to a variety of ASTM specifications including A513, A787, A135, A500, A847, A53 and A268.  Our frequent roll cycles and lower mill minimums in this size, give you flexibility to better run your business.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/12-75-inch-round-erw-steel-tubing">12.75 Inch Round ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 14.00 inch OD SAW (submerged arc welded) round steel tubing is produced to ASTM A252 and A787 and is produced in hot rolled (HR)  and hot dip galvanized (HDG) finishes.  
+" class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/14-inch-round-saw-steel-tubing">14 Inch Round SAW Steel Tubing</a>
+							</div></li><li class="rtLI rtLast"><div class="rtBot">
+								<span class="rtSp"></span><a title="Valmont's 16.00 in OD SAW (submerged arc welded) steel tubing is produced to ASTM A252 and A787 and is produced in hot rolled (HR) and hot dip galvanized (HDG) finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/round-tubing---6-25-to-16-inch/16-inch-round-saw-steel-tubing">16 Inch Round SAW Steel Tubing</a>
+							</div></li>
+						</ul></li><li class="rtLI"><div class="rtMid">
+							<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing has one of the broadest size range of welded carbon steel tubing in North America.  Our square and rectangle size range consisting of sizes from 1x1 square up to 6x6 square. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch">Square &amp; Rectangle Tubing - Up To 6 Inch</a>
+						</div><ul class="rtUL">
+							<li class="rtLI"><div class="rtTop">
+								<span class="rtSp"></span><a title="Valmont's 1.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/1-inch-square-erw-steel-tubing">1 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.25 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/1-25-inch-square-erw-steel-tubing">1.25 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 1.50 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/1-50-inch-square-erw-steel-tubing">1.50 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/2-inch-square-erw-steel-tubing">2 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.00 x 3.00 inch rectangle ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/2-x-3-inch-rectangle-erw-steel-tubing">2 x 3 Inch Rectangle ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 2.50 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/2-50-inch-square-erw-steel-tubing">2.50 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 3.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/3-inch-square-erw-steel-tubing">3 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 4.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/4-inch-square-erw-steel-tubing">4 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI"><div class="rtMid">
+								<span class="rtSp"></span><a title="Valmont's 5.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/5-inch-square-erw-steel-tubing">5 Inch Square ERW Steel Tubing</a>
+							</div></li><li class="rtLI rtLast"><div class="rtBot">
+								<span class="rtSp"></span><a title="Valmont's 6.00 inch square ERW (electric resistance welded) steel tubing is produced to ASTM specifications A500 and A847 and is produced in a variety of different chemistries and finishes.  " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/square-rectangle-tubing---up-to-6-inch/6-inch-square-erw-steel-tubing">6 Inch Square ERW Steel Tubing</a>
+							</div></li>
+						</ul></li><li class="rtLI"><div class="rtMid">
+							<span class="rtSp"></span><a title="Valmont Tubing has one of the broadest size range of welded carbon steel tubing in North America.  Our square and rectangle size range consisting of sizes from 1x1 square up to 6x6 square provides our customers a reliable manufacturer of ERW (electric resistance welded) structural steel tubing produced to tight tolerance capabilities along with lower mill minimums and frequent rolling cycles. " class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/oval-special-shaped-tubing">Oval &amp; Special Shaped Tubing</a>
+						</div></li><li class="rtLI rtLast"><div class="rtBot">
+							<span class="rtSp"></span><a title="The terms tubing and pipe can often mistakenly be combined with each other causing confusion during the quoting and ordering processes.  Please see the following conversion chart showing the electric resistance welded steel tubing OD sizes and wall thicknesses that Valmont Tubing produces that match the corresponding nominal pipe sizes (NPS) in schedule 5, 10, 40 and 80 wall thicknesses." class="rtIn" href="products-and-solutions/welded-steel-tubing/tubing-solutions/od-vs-nominal-pipe-size">OD Vs Nominal Pipe Size</a>
+						</div></li>
+					</ul></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="From Valmont Tubing's origins back in the late 1950's and early 1960's to produce steel tubing to support Valley Irrigation, the end uses for which our tubing is used for has expanded one hundred fold. Today, Valmont Tubing serves markets directly and through distribution encompassing end uses from A to Z and from coast to coast and around the world! " class="rtIn" href="products-and-solutions/welded-steel-tubing/end-use-applications">End Use Applications</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces one of the broadest ranges of steel mechanical tubing in the industry.  Add our superior customer service before and after the sale, and it's easy to see why Valmont Tubing is the first choice for tubing products for so many manufacturers and other businesses." class="rtIn" href="products-and-solutions/welded-steel-tubing/value-add-services">Value Add Services</a>
+					</div></li><li class="rtLI rtLast"><div class="rtBot">
+						<span class="rtSp"></span><a title="A Valmont Tubing customer speaks to our quality and service." class="rtIn" href="products-and-solutions/welded-steel-tubing/customer-stories">Customer Stories</a>
+					</div></li>
+				</ul></li>
+			</ul></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing manufactures one of the widest size ranges of welded mechanical steel tubing in the industry with the type, shape, and size of product made to your precise specifications." class="rtIn" href="product-catalogs">Product Catalogs</a>
+			</div><ul class="rtUL">
+				<li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><a title="Valmont Tubing manufactures one of the widest size ranges of welded mechanical steel tubing in the industry with the type, shape, and size of product made to your precise specifications. Valmont Tubing's frequent roll cycles, lower mill minimums and focus on customer needs, means that your tubing order is delivered on time and as ordered." class="rtIn" href="product-catalogs/welded-steel-tubing">Welded Steel Tubing</a>
+				</div></li>
+			</ul></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing offers wide size ranges of welded mechanical steel tubing. This section is dedicated to resources and specification information." class="rtIn" href="resources-and-specs">Resources and Specs</a>
+			</div><ul class="rtUL">
+				<li class="rtLI"><div class="rtTop">
+					<span class="rtSp"></span><span class="rtMinus"></span><a title="Valmont Tubing produces electric resistance welded (ERW) tubing and submerged arc welded (SAW) tubing to at least 8 different ASTM specifications. Combined with our large array of testing options, you can be assured that our tubing will meet or exceed your specific requirements." class="rtIn" href="resources-and-specs/astm-specifications">ASTM Specifications</a>
+				</div><ul class="rtUL">
+					<li class="rtLI"><div class="rtTop">
+						<span class="rtSp"></span><a title="Valmont Tubing produces round electric resistance welded (ERW) steel tubing to meet ASTM specifications A53 Type E Grade A and Grade B that is often used for pressure applications and use in the conveying of gas, vapor, water or other liquids." class="rtIn" href="resources-and-specs/astm-specifications/a53">A53</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces round electric resistance welded (ERW) tubing to ASTM specifications A135 Grade A and Grade B.  Produced in OD sizes up to 12.75&quot; and in wall thicknesses up to 0.312&quot; nominal, Valmont's ASTM A135 Grade A and Grade B tubing is often used in applications involving the conveying of gas, vapor, water or other liquids." class="rtIn" href="resources-and-specs/astm-specifications/a135">A135</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces round submerged arc welded steel tubing to meet ASTM specifications A252 Grade 1, Grade 2 and Grade 3.  The purpose and strength levels required will determine which grade is required." class="rtIn" href="resources-and-specs/astm-specifications/a252">A252</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces square, rectangle, round and special shaped electric resistance welded (ERW) carbon steel tubing to meet ASTM specifications A500 Grade B and Grade C that is often used in structural applications." class="rtIn" href="resources-and-specs/astm-specifications/a500">A500</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces round carbon and alloy electric resistance welded (ERW) mechanical tubing to ASTM specifications A513 Type1A (hot rolled), Type 1B (pickled &amp; oiled) and Type 2 (cold rolled)." class="rtIn" href="resources-and-specs/astm-specifications/a513">A513</a>
+					</div></li><li class="rtLI"><div class="rtMid">
+						<span class="rtSp"></span><a title="Valmont Tubing produces round electric resistance welded (ERW) metallic-coated carbon steel mechanical tubing to ASTM specifications A787 Type1 (aluminized), Type 2 (galvanized), Type 3 (hot-dip galvanized), Type 4 (galvannealed) and Type 6 (zinc-aluminum-magnesium alloy coated).  " class="rtIn" href="resources-and-specs/astm-specifications/a787">A787</a>
+					</div></li><li class="rtLI rtLast"><div class="rtBot">
+						<span class="rtSp"></span><a title="Valmont Tubing produces square, rectangle, round and special shaped electric resistance welded (ERW) high strength, low alloy (HSLA) atmospheric corrosion resistant structural tubing to meet ASTM specification A847." class="rtIn" href="resources-and-specs/astm-specifications/a847">A847</a>
+					</div></li>
+				</ul></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a title="Valmont Tubing and our experienced employees are focused on producing welded steel tubing that fits your specific needs. This page provides downloadable information on our products." class="rtIn" href="resources-and-specs/product-literature">Product Literature</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><span class="rtMinus"></span><a title="Terms and definitions for common words used when discussing Valmont Tubing." class="rtIn" href="resources-and-specs/glossary">Glossary</a>
+				</div><ul class="rtUL">
+					<li class="rtLI rtLast"><div class="rtBot">
+						<span class="rtSp"></span><a title="Terms and definitions for common words used when discussing Valmont Tubing." class="rtIn" href="resources-and-specs/glossary/welded-steel-tubing">Welded Steel Tubing</a>
+					</div></li>
+				</ul></li><li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><span class="rtMinus"></span><a title="Here you will find some frequently asked questions related to Valmont Tubing, and Shipping." class="rtIn" href="resources-and-specs/faq">FAQ</a>
+				</div><ul class="rtUL">
+					<li class="rtLI"><div class="rtTop">
+						<span class="rtSp"></span><a title="Valmont Tubing's location in the center of the United States allows us to strategically service our customer base from coast to coast, border to border and beyond utilizing flatbeds, curtain trailers, LTL closed vans, parcel and open top containers." class="rtIn" href="resources-and-specs/faq/shipping-information">Shipping Information</a>
+					</div></li><li class="rtLI rtLast"><div class="rtBot">
+						<span class="rtSp"></span><a title="Here you will find some frequently asked questions related to Valmont Tubing." class="rtIn" href="resources-and-specs/faq/welded-steel-tubing">Welded Steel Tubing</a>
+					</div></li>
+				</ul></li>
+			</ul></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a title="Valmont Tubing offers wide size ranges of welded mechanical steel tubing. Use the form on this page to submit a quote, and our team will contact you shortly." class="rtIn" href="request-a-quote">Request a Quote</a>
+			</div></li><li class="rtLI rtLast"><div class="rtBot">
+				<span class="rtSp"></span><span class="rtMinus"></span><a title="At Valmont Tubing, we recognize that to succeed in business, a company cannot be merely average. Valmont Tubing has an ISO 9001:2015-certified quality management system.  Both product and service must be superior and we constantly strive to improve both.  If you're looking for a partner on the road to success…a company that recognizes and practices the philosophy of mutually beneficial business relationships…think Valmont Tubing." class="rtIn" href="about-us">About Us</a>
+			</div><ul class="rtUL">
+				<li class="rtLI"><div class="rtTop">
+					<span class="rtSp"></span><a title="Valmont Tubing Terms &amp; Conditions for Welded Steel Tubing" class="rtIn" href="about-us/steel-tubing-terms-conditions">Steel Tubing Terms &amp; Conditions</a>
+				</div></li><li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><a title="Valmont Tubing offers wide size ranges of welded mechanical steel tubing. Contact Valmont Tubing for more information." class="rtIn" href="contact-us">Contact Us</a>
+				</div></li>
+			</ul></li>
+		</ul>
