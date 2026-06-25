@@ -5,7 +5,7 @@ const { getSitePaths } = require('./site-paths');
 const SITE = getSitePaths();
 const BASE = SITE.publicDir;
 const WEBASSETS_BASE = 'https://webassets.valmont.com/';
-const PRESERVE_LEGACY_SHELL = !!SITE.preserveLegacyShell;
+const ABSOLUTE_HREF_RE = /^(?:[a-z][a-z0-9+.-]*:|\/\/|#|\/)/i;
 
 function fixAssetPaths(html) {
   return html.replace(
@@ -14,13 +14,84 @@ function fixAssetPaths(html) {
   );
 }
 
-function cleanCmsFluff(html) {
+function stripSitefinityScripts(html) {
   let result = html;
 
-  if (PRESERVE_LEGACY_SHELL) {
-    result = result.replace(/\$\.noConflict\s*\(\s*\)\s*;?/g, '');
-    return result.replace(/\n{3,}/g, '\n\n');
+  result = result.replace(
+    /<script\b[^>]*\bsrc=["'][^"']*(?:\/ScriptResource\.axd|\/WebResource\.axd|MicrosoftAjax(?:WebForms)?\.js|WebForms\.js)[^"']*["'][^>]*>\s*<\/script>/gi,
+    ''
+  );
+
+  result = result.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (match) => {
+    if (/(?:Sys\.Application|Sys\.WebForms|PageRequestManager|WebForm_PostBackOptions|\$create\s*\(\s*Telerik|Telerik\.|Sitefinity|RSSM_init|\$get\s*\(\s*['"]ctl|__doPostBack|var\s+theForm|document\.write\('<script)/i.test(match)) {
+      return '';
+    }
+    return match;
+  });
+
+  return result;
+}
+
+function rewriteRadMenuHrefs(html) {
+  const openRe = /<div\b[^>]*class=["'][^"']*\bRadMenu\b[^"']*["'][^>]*>/ig;
+  let result = '';
+  let cursor = 0;
+  let match;
+
+  while ((match = openRe.exec(html)) !== null) {
+    const openIndex = match.index;
+    const openTag = match[0];
+    const closeIndex = findMatchingDivEnd(html, openIndex, openTag.length);
+
+    if (closeIndex === -1) {
+      break;
+    }
+
+    const block = html.slice(openIndex, closeIndex);
+    result += html.slice(cursor, openIndex) + block.replace(
+      /(<a\b[^>]*\bhref\s*=\s*["'])([^"']+)(["'][^>]*>)/gi,
+      (anchor, prefix, href, suffix) => {
+        if (ABSOLUTE_HREF_RE.test(href)) return anchor;
+        return `${prefix}/${href.replace(/^\/+/, '')}${suffix}`;
+      }
+    );
+
+    cursor = closeIndex;
+    openRe.lastIndex = closeIndex;
   }
+
+  return cursor ? result + html.slice(cursor) : html;
+}
+
+function findMatchingDivEnd(html, openIndex, openTagLength) {
+  let depth = 1;
+  let pos = openIndex + openTagLength;
+  const openRe = /<div\b[^>]*>/gi;
+  const closeRe = /<\/div>/gi;
+
+  while (depth > 0) {
+    openRe.lastIndex = pos;
+    closeRe.lastIndex = pos;
+
+    const nextOpen = openRe.exec(html);
+    const nextClose = closeRe.exec(html);
+
+    if (!nextClose) return -1;
+
+    if (nextOpen && nextOpen.index < nextClose.index) {
+      depth++;
+      pos = nextOpen.index + nextOpen[0].length;
+    } else {
+      depth--;
+      pos = nextClose.index + 6;
+    }
+  }
+
+  return pos;
+}
+
+function cleanCmsFluff(html) {
+  let result = html;
 
   result = result.replace(
     /<link\b[^>]*\bhref=["'][^"']*(?:\.axd|Telerik\.Web\.UI|\/Sitefinity\/)[^"']*["'][^>]*>/gi,
@@ -32,12 +103,7 @@ function cleanCmsFluff(html) {
     ''
   );
 
-  result = result.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (match) => {
-    if (/(?:Telerik\.|Sitefinity|Sys\.Application|ScriptResource\.axd|\$create\s*\(\s*Telerik|RSSM_init|\$get\s*\(\s*['"]ctl)/i.test(match)) {
-      return '';
-    }
-    return match;
-  });
+  result = stripSitefinityScripts(result);
 
   result = result.replace(
     /<meta\b[^>]*\bname=["']Generator["'][^>]*\bcontent=["']Sitefinity[^"']*["'][^>]*>/gi,
@@ -76,6 +142,7 @@ function cleanCmsFluff(html) {
     ''
   );
 
+  result = rewriteRadMenuHrefs(result);
   result = result.replace(/\n{3,}/g, '\n\n');
 
   return result;
