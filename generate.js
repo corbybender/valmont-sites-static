@@ -142,6 +142,8 @@ function cleanCmsFluff(html) {
     ''
   );
 
+  result = result.replace(/(?:jQuery|\$)\.noConflict\s*\(\s*\)\s*;?/g, '');
+
   result = rewriteRadMenuHrefs(result);
   result = result.replace(/\n{3,}/g, '\n\n');
 
