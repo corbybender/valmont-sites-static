@@ -13,5 +13,15 @@
   "preserveLegacyShell": true,
   "shellMode": "semantic-header-footer",
   "publicDir": "public",
+  "search": {
+    "index": "cmt",
+    "resultsPath": "/search/search-results",
+    "queryParam": "searchQuery",
+    "pageSize": 10,
+    "titleFields": ["Title"],
+    "urlFields": ["Link"],
+    "contentFields": ["Summary"],
+    "guidFields": ["OriginalItemId", "Id", "IdentityField", "Link"]
+  },
   "formsConfig": "forms.config.json"
 }

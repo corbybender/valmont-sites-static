@@ -17,6 +17,7 @@ const HEADER_DIV_TAG = '<div class="header" id="header">';
 const resourceConverter = new ResourceConverter(SITE);
 const urls = fs.readFileSync(path.join(SITE.dataDir, 'cleanedurls.txt'), 'utf8')
   .split('\n').map(l => l.trim()).filter(l => l);
+const SEARCH_CLIENT_SCRIPT = '<script src="/api/search/client.js"></script>';
 
 function fetch(url) {
   return new Promise((resolve, reject) => {
@@ -243,6 +244,16 @@ function normalizeCmtHeader(html) {
   return result;
 }
 
+function injectSearchClient(html) {
+  if (!SITE.search || html.includes(SEARCH_CLIENT_SCRIPT)) return html;
+
+  if (/<\/body>/i.test(html)) {
+    return html.replace(/<\/body>/i, `${SEARCH_CLIENT_SCRIPT}\n</body>`);
+  }
+
+  return `${html}\n${SEARCH_CLIENT_SCRIPT}\n`;
+}
+
 function extractParts(rawHtml, shellHeadInner = null, shellHeaderInner = null) {
   const { masked, blocks } = maskScriptsAndStyles(rawHtml);
 
@@ -389,7 +400,7 @@ async function processPage(urlPath, shellCache) {
   const fileName = fileParts.pop() + '.html';
   const dirPath = path.join(BASE, ...fileParts);
   const filePath = path.join(dirPath, fileName);
-  const output = convertedHtml;
+  const output = injectSearchClient(convertedHtml);
 
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(filePath, output);
