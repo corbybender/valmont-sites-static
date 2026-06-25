@@ -1,4 +1,581 @@
 <!--#include virtual="/shared/header.html" -->
+<link rel="stylesheet" href="/css/lte-ie8.css" media="screen, projection" />
+<script type="text/javascript"> (function() {
+    var cx = '007096138265699994367:okto-m-9gqm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();</script>
+<link href="/Telerik.Web.UI.WebResource.axd?d=PMrIT5dOWaVYIcpFWUE4nKsozFFiBE32ZizntWtTLF9qwGh6whLLEVoKdwKGBSAU8TSqCd_mTg17_OLuc_EzjnnHKa0kZzEB8uj9ZijpPGLX0AdiA9xP9uz_kaXxZQ8L0&amp;t=638840874637275692&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d14.4.8135.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3aaed87611-718c-43af-bad7-20fefea09a79%3a7a90d6a%3ad271177c%3adff30785" type="text/css" rel="stylesheet" />
+<link href="/Sitefinity/Public/ResponsiveDesign/layout_transformations.css?pageDataId=52149977-98cf-6a15-a1a9-ff3800d30354&amp;pageSiteNode=51149977-98CF-6A15-A1A9-FF3800D30354/f3109977-98cf-6a15-a1a9-ff3800d30354/SitefinitySiteMap" type="text/css" rel="stylesheet" />
+<style type="text/css" media="all">div.RadMenu_Sitefinity .rmHorizontal .rmItem a.rmLink{
+ padding: 0 12px !important; 
+}
+.sfsearchBox .sfsearchTxt {
+    width: 120px !important;
+}
+
+#main-content img {
+    box-shadow: none !important;
+}
+.prodOverPic a {
+    float: none !important;
+}</style>
+<style type="text/css" media="all">.alt{
+ display:none; 
+}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.css" type="text/css" rel="stylesheet" media="all" />
+<style type="text/css" media="all">body{line-height: 1.8;}
+#header-center-background {
+  background: url(https://webassets.valmont.com/valmontstaging/default-album/cmt-white-top-nav-bar.gif?sfvrsn=2) repeat-x;
+  
+}
+ 
+h1{
+ color: #ff6600; 
+}
+
+#footer-center-outside-background {
+background: url(https://webassets.valmont.com/valmontstaging/default-album/cmt-no-orange-footer-nav-bar.gif?sfvrsn=2) repeat-x;
+height: 331px;
+}
+#footer-center {
+background: transparent;
+}
+footer {
+  background: #6e72b1 !important;
+}
+
+
+#center-stage .green h1 {
+margin-top: 20px;
+}
+
+
+#center-stage p {
+left: 0px;
+width: 250px;
+top: 190px;
+}
+#center-stage h1{
+ left:0px; 
+}
+
+
+
+.center-stage-border {
+/*left: 260px;*/
+  display:none;
+}
+
+
+
+div.RadMenu_Sitefinity {
+margin-top: 12px;
+background: transparent;
+  align: center;
+}
+
+
+div.RadMenu_Sitefinity .rmHorizontal .rmItem a.rmLink {
+height: 36px;
+line-height: 36px;
+float: left;
+display: block;
+padding: 0 20px;
+color: #000;
+cursor: pointer;
+}
+
+
+.rmItem ul li a {font-size: 14px; 
+/*text-transform: uppercase; */
+line-height: 40px; 
+/*font-family: "pragmatica-web-n7","pragmatica-web",sans-serif; */
+color: #0088ce;
+ background: #fff;
+text-decoration: none; 
+ background-color: #c3c3c3;
+padding: 0 42px; 
+display: block;}
+
+
+
+.RadMenu_Sitefinity ul li a:hover, .RadMenu_Sitefinity .rmGroup .rmItem a.rmLink:hover {
+color: #333;
+background-color: #6e72b1;
+}
+
+.RadMenu_Sitefinity ul li a.rmSelected {
+background-color: #c3c3c3;
+}
+
+
+#center-stage .green h1 {
+color: #ff6600;
+}
+
+#center-stage .green h2 {
+color: #ff6600;
+}
+
+#center-stage .yellow h1 {
+color: #ff6600;
+}
+
+#center-stage .yellow h2 {
+color: #ff6600;
+}
+
+#center-stage .charcoalgrey h1 {
+color: #464646;
+}
+
+#center-stage .charcoalgrey h2 {
+color: #ff6600;
+}
+
+#center-stage .yellow h1 {
+margin-top: 20px;
+}
+
+#center-stage .charcoalgrey h1 {
+margin-top: 20px;
+}
+
+#center-stage .green img {
+border: 1px solid #ff6600;
+}
+
+#center-stage .yellow img {
+border: 1px solid #ff6600;
+}
+
+#center-stage .charcoalgrey img {
+border: 1px solid #ff6600;
+}
+
+a.green {
+background: #ff6600;
+}
+a.yellow {
+background: #ff6600;
+}
+
+a.charcoalgrey {
+background: #ff6600;
+}
+
+#internal #center-stage-right, #internal #center-stage-left {
+height: 0px;
+width:0px;
+display:none;
+}
+
+#internal #rotator-indicators {
+width:280px;
+}
+
+#rotator-indicators li {
+background: url(https://webassets.valmont.com/valmontstaging/default-album/circle-purple.gif?sfvrsn=2) no-repeat;
+}
+
+#rotator-indicators a.green {
+background: url(background: url(https://webassets.valmont.com/valmontstaging/structures-css-images/circle-dark-green.gif?sfvrsn=2) no-repeat;) no-repeat;
+}
+
+#rotator-indicators a.yellow {
+background: url(background: url(https://webassets.valmont.com/valmontstaging/structures-css-images/circle-dark-green.gif?sfvrsn=2) no-repeat;) no-repeat;
+}
+
+#rotator-indicators a.charcoalgrey {
+background: url(background: url(https://webassets.valmont.com/valmontstaging/structures-css-images/circle-dark-charcoalgrey.gif?sfvrsn=2) no-repeat;) no-repeat;
+}
+
+#main-content a {
+color: #0092ce;
+}
+
+#news-bar {
+background: none;
+border: none;
+margin: 0px 0 0;
+}
+
+#news-bar h3 {
+font-size: 20px;
+margin: 3px 17px 0 10px;
+padding: 0px 38px 0PX 0px;
+}
+
+#middle-bar {
+padding: 0 0 5px;
+}
+
+body#internal {
+background: none;
+}
+tr:hover, .hover{
+	background-color: transparent;
+	
+}
+.rotator-bottom-content p{
+ padding: 10px 10px 10px 0px
+}
+.rotator-bottom-content{  
+ float: left;
+}
+.rotator-bottom-content .left-img{
+  float: left;
+  width: 28%;
+  padding: 20px 20px 20px 0px;
+}
+.rotator-bottom-content .right-img{
+  float: right;
+  width: 28%;
+  padding: 20px 20px 20px 0px;
+  text-align: right;
+}
+#news-bar p{
+ margin-left: 20px; 
+}
+#middle-bar{
+ margin: 0 0 20px;
+ padding: 0 0 18px;
+}
+#right-center-stage .wide-rectangle-badge{
+ margin-bottom: 20px; 
+}
+
+.footer-links {
+padding: 0 20px 0 20px;
+color: #fff;
+}
+.header-caption{
+ color: #fff;
+ font-size: 11px;
+ font-style: italic;
+}
+#top-right-utilities{
+ top:26px; 
+}
+.canada-flag{
+ position: absolute;
+ top: 23px;
+ left: -63px;
+}
+
+#footer-quick-links.show, #footer-businesses.show, #footer-brands.show {
+display: block;
+padding-top: 20px;
+}
+#copyright {
+  bottom:0px;
+}
+#rotator-indicators{
+ left:0px; 
+}
+
+div.RadMenu_Sitefinity .rmHorizontal .rmItem a.rmLink{
+ color: #fff; 
+}
+
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
+ background-color: #000; 
+}
+#logo{top: 6px;}
+#internal footer {
+background: #FFFFFF;
+margin-top: 0px;
+clear: both;
+float: none;
+height: 50px;
+}
+#internal #footer-center-outside-background {
+background: white;
+height: 60px;
+}
+#internal #footer-center {
+height: 21px;
+background: #cccccc;
+padding: 10px 2px;
+}
+
+#internal  #center-stage-background{
+  padding: 0 0 65px;
+}
+#internal #main-content{padding: 0px; margin-bottom: 70px;}
+body {
+background: none;
+}
+#main-content a, #main-content a:link, #main-content a:visited, #main-content a:hover, #main-content a:active {
+color: #0092ce !important;
+text-decoration: none;
+}
+footer a, footer a:link, footer a:visited, footer a:hover, footer a:active {
+color: #0092ce !important;
+text-decoration: none;
+}
+#internal h1{color: #2d2f78; line-height: 48px; font-weight: bold; width: auto;}
+#sidebar{display: none;}
+#internal #main-content{border-right: none;}
+
+#main-content .top-right img{
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+}
+#main-content img{
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+}
+
+#center-stage .charcoalgrey h1{font-size: 43px !important; font-weight: bold; width: auto;}
+#main-content-container{margin-top: 6px;}
+
+
+#sidebar{
+ display:block; 
+}
+#internal h1{
+line-height: 38px;
+font-size: 30px !important;
+text-transform: uppercase;
+}
+
+#main-content h2{
+color: #6E72B1;
+margin-top: 0px !important;
+font-style: italic;
+}
+hr{
+margin-top: 0px !important;
+border-bottom: dotted 1px #F7430E;
+}
+//#top-right-utilities{top: 120px}
+
+#top-right-utilities form {
+padding-top: 95px;
+}</style>
+<style type="text/css" media="all">.sfNavWrp .sfNavHorizontalWrp  {
+display:none; 
+}
+.sfNavHorizontal{
+display:none; 
+}
+.sfNavWrp .sfNavToggle {
+  display: none;
+}
+
+@media only screen and (max-width : 240px) {
+                        
+#title-bar {
+margin-top:100px;
+}
+}
+
+@media only screen and (max-width : 320px) {
+            
+#title-bar {
+margin-top:100px;
+}
+}
+
+@media only screen and (max-width : 480px) {
+            #title-bar {
+margin-top:100px;
+}
+
+}
+@media only screen and (max-width : 640px) {
+#title-bar {
+margin-top:100px;
+}
+            
+}
+
+@media only screen and (max-width : 768px) {
+
+  
+}
+
+@media only screen and (max-width : 1024px) {
+
+div.RadMenu_Sitefinity {
+   display:block; 
+  }
+#center-top-with-background{
+/*display:none; */
+}
+div.RadMenu_Sitefinity ul.rmHorizontal {
+/*top navigation
+   display:none; 
+   */
+     background: rgb(66, 60, 60);
+  }
+#sidebar{
+   /*hide sidebar */
+   /*display:none;*/
+   /*show sidebar but on bottom under content*/
+  position: relative;
+  float: left;
+  bottom: 0;
+    width: 174px;
+            z-index: 2;
+            padding-bottom: 5px;
+}
+
+    
+#top-right-utilities{ display:none;}
+  
+#title-bar-center {
+background: none;
+}
+
+footer {
+display:none !important; 
+}
+  
+.center {
+width: 100%;
+}
+  
+#main-content-full-width {
+padding: 0 20px 10px 20px;
+}
+  
+#main-content {
+float: left;
+width: 100%;
+padding: 17px 0 0px;
+border-right:none;
+  padding-bottom:5px;
+}
+  
+#internal h1 {
+width:100%;
+}
+  
+.RadSocialShare_Default {
+  display: none;
+  }
+  
+hr
+{
+display: none;
+}
+#footer-center-outside-background {
+  display: none;
+  }
+  
+  #center-top-with-background {
+  width: 100%;
+  height: 166px;
+  background: url(https://webassets.valmont.com/valmontstaging/backgrounds/top-gray-2-new.gif?sfvrsn=2) repeat-x;
+  }
+   #internal #main-container {
+width: 100%;
+}
+
+#internal #main-content {
+  width: 100%;
+  border-right:none;
+  padding-bottom:5px;
+  }
+  
+    #internal h2{
+    font-size: small;
+  font-weight: 700;
+  }
+
+  
+  #appGalleryNav {
+bottom: 720px;
+  right: 10%;
+}
+
+
+body {
+min-width:100%;
+}
+
+  
+}
+
+@media only screen  and (max-width : 1224px) {
+
+}
+
+
+
+
+/*HOME PAGE SPECIFIC CSS UPDATES*/
+
+@media only screen and (max-width : 1024px) {
+#right-center-stage {
+float:none;
+}
+div.RadMenu_Sitefinity {
+   display:block; 
+  }
+#center-top-with-background{
+/*display:none; */
+}
+div.RadMenu_Sitefinity ul.rmHorizontal {
+/*top navigation
+   display:none; 
+   */
+     background: rgb(66, 60, 60);
+  }
+  .center {
+  width: 100%;
+  }
+  #center-stage {
+  height: 485px;
+  width: 100%;
+
+  float: left;
+  padding-left: 10px;
+  margin: 0;
+}
+
+#right-center-stage{
+  margin-top: 50px;
+  }
+  
+  
+  #center-stage h2{
+  padding-left:10px;
+  
+  }
+  #center-stage p {
+  left: 10px;
+  }
+  #center-stage-background {
+  padding: 0 0 10px;
+}
+  #internal #rotator-indicators {
+    padding-left: 30px;
+  }
+  
+  footer {
+  display:none;
+  }
+  
+  body {
+min-width:100%;
+}
+
+}
+
+
+#top-right-utilities{
+top:125px;
+}
+.sfsearchBox .k-autocomplete.sfsearchTxt{
+width:120px;
+}</style>
 <div id="main-content-container" class="center">
 				<aside id="sidebar">
 					
@@ -102,3 +679,66 @@ Don't see what you need? We can build it!<br>
 				<div class="clear"></div>
 			</div>
 <!--#include virtual="/shared/footer.html" -->
+</div>
+   
+<script type="text/javascript">$("#cookiegate").text(function () {
+	console.log("Updating copyright.");
+    return $(this).text().replace("2020",(new Date).getFullYear());
+});</script><script type="text/javascript">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46739384-12', 'auto');
+  ga('send', 'pageview');
+
+
+piAId = '26912';
+piCId = '18328';
+
+(function() {
+                function async_load(){
+                                var s = document.createElement('script'); s.type = 'text/javascript';
+                                s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+                                var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+                }
+                if(window.attachEvent) { window.attachEvent('onload', async_load); }
+                else { window.addEventListener('load', async_load, false); }
+})();</script>
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl12_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=14.4.8135.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:aed87611-718c-43af-bad7-20fefea09a79:7a90d6a:d271177c:dff30785';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_selectedItemIndex":"2:1","_selectedValue":"Square","_skin":"RadMenu RadMenu_Sitefinity","clientStateFieldID":"ctl00_cphLogo_T2480979A003_ctl00_ctl00_siteMapControl_horizontaldropdownmenu_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"attributes":{"Sitefinity.PageGUID":"4F119977-98CF-6A15-A1A9-FF3800D30354"},"value":"Home","navigateUrl":"~/home"},{"attributes":{"Sitefinity.PageGUID":"86149977-98CF-6A15-A1A9-FF3800D30354"},"items":[{"attributes":{"Sitefinity.PageGUID":"22680778-98CF-6A15-A1A9-FF3800D30354"},"value":"CMT Light Pole Brochure","navigateUrl":"~/the-cmt-difference/cmt-light-pole-brochure"}],"value":"The CMT Difference","navigateUrl":"~/the-cmt-difference"},{"attributes":{"Sitefinity.PageGUID":"12149977-98CF-6A15-A1A9-FF3800D30354"},"items":[{"attributes":{"Sitefinity.PageGUID":"4A149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Round Tapered","navigateUrl":"~/marathon/round-tapered"},{"attributes":{"Sitefinity.PageGUID":"51149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Square","selected":true,"navigateUrl":"~/marathon/square","cssClass":"rmSelected"},{"attributes":{"Sitefinity.PageGUID":"58149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Breakaway","navigateUrl":"~/marathon/breakaway"},{"attributes":{"Sitefinity.PageGUID":"5F149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Hinged","navigateUrl":"~/marathon/hinged"},{"attributes":{"Sitefinity.PageGUID":"14970C78-98CF-6A15-A1A9-FF3800D30354"},"value":"Sports Poles","navigateUrl":"~/marathon/sports-poles"},{"attributes":{"Sitefinity.PageGUID":"66149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Accessories","navigateUrl":"~/marathon/accessories"},{"attributes":{"Sitefinity.PageGUID":"6BC4A077-98CF-6A15-A1A9-FF3800D30354"},"value":"Product Testing","navigateUrl":"~/marathon/product-testing"},{"attributes":{"Sitefinity.PageGUID":"6D149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Project Spotlight - NASA Shuttle","navigateUrl":"~/marathon/project-spotlight"}],"value":"Marathon Lighting","navigateUrl":"~/marathon","cssClass":"rmSelected"},{"attributes":{"Sitefinity.PageGUID":"43149977-98CF-6A15-A1A9-FF3800D30354"},"items":[{"attributes":{"Sitefinity.PageGUID":"3400A777-98CF-6A15-A1A9-FF3800D30354"},"value":"Ornamental Light Poles","navigateUrl":"~/legacy/ornamental-light-poles"},{"attributes":{"Sitefinity.PageGUID":"60A8A777-98CF-6A15-A1A9-FF3800D30354"},"value":"Decorative Shrouds","navigateUrl":"~/legacy/decorative-shrouds"},{"attributes":{"Sitefinity.PageGUID":"6365C278-98CF-6A15-A1A9-FF5300D30354"},"value":"Decorative Product Selector","navigateUrl":"~/legacy/decorative-product-selector"},{"attributes":{"Sitefinity.PageGUID":"C392A077-98CF-6A15-A1A9-FF3800D30354"},"value":"Accessories","navigateUrl":"~/legacy/accessories"},{"attributes":{"Sitefinity.PageGUID":"5C589F77-98CF-6A15-A1A9-FF3800D30354"},"value":"Project Spotlight - Dilworth Park","navigateUrl":"~/legacy/project-spotlight---dilworth-park"}],"value":"Legacy Lighting","navigateUrl":"~/legacy"},{"attributes":{"Sitefinity.PageGUID":"1C67E278-98CF-6A15-A1A9-FF5300D30354"},"value":"Resources ","navigateUrl":"~/resources"},{"attributes":{"Sitefinity.PageGUID":"8D149977-98CF-6A15-A1A9-FF3800D30354"},"items":[{"attributes":{"Sitefinity.PageGUID":"94149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Contact CMT","navigateUrl":"~/contact/contact-cmt"},{"attributes":{"Sitefinity.PageGUID":"A2149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Request Information","navigateUrl":"~/contact/request-information"},{"attributes":{"Sitefinity.PageGUID":"B0149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Privacy Policy","navigateUrl":"~/contact/privacy-policy"},{"attributes":{"Sitefinity.PageGUID":"B7149977-98CF-6A15-A1A9-FF3800D30354"},"value":"Careers","navigateUrl":"~/contact/careers"}],"value":"Contact","navigateUrl":"~/contact"}]}, null, null, $get("ctl00_cphLogo_T2480979A003_ctl00_ctl00_siteMapControl_horizontaldropdownmenu"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Sitefinity.Services.Search.Web.UI.Public.SearchBox, {"disableSuggestions":false,"indexCatalogue":"cmt","language":null,"minSuggestLength":3,"resultsUrl":"/search/search-results","searchButton":$get("cphSearch_T2480979A022_ctl00_ctl00_searchButton"),"searchTextBox":$get("cphSearch_T2480979A022_ctl00_ctl00_searchTextBox"),"siteId":"f3109977-98cf-6a15-a1a9-ff3800d30354","suggestionFields":"Title,Content","suggestionsRoute":"/restapi/search/suggestions"}, null, null, $get("cphSearch_T2480979A022"));
+});
+//]]>
+</script>
+</form>
+<style>
+.RadMenu .rmGroup .rmText{
+padding: 0;
+}
+.RadMenu .rmHorizontal .rmText {
+padding: 0px;
+}
+</style>
+    <script>
+        $(document).ready(function () {
+            $("div.RadMenu").attr('class', 'RadMenu RadMenu_Sitefinity'); //top nav
+            $("div.RadTreeView").attr('class', 'RadTreeView RadTreeView_Sitefinity'); //right nav, discussed at the bottom
+            $("div.RadTabStripVertical").attr('class', 'RadTabStripVertical RadTabStrip_Sitefinity RadTabStripLeft_Sitefinity RadTabStripLeft');//for Tehomet and Careers
+        });
+</script>
+<script src="https://webassets.valmont.com/valmontstaging/storagefix.js"></script>
+  </body>
+</html>

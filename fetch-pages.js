@@ -200,16 +200,23 @@ function extractSemanticShell(rawHtml) {
   const header = rawHtml.slice(docStart, headerBounds.endIndex).trimStart();
   const body = rawHtml.slice(headerBounds.endIndex, footerBounds.openIndex).trim();
   const footer = rawHtml.slice(footerBounds.openIndex).trim();
+  const pageTail = rawHtml.slice(footerBounds.endIndex).trim();
 
-  return { header, body, footer };
+  return { header, body, footer, pageTail };
 }
 
 function buildSemanticPageOutput(parts) {
   const sections = ['<!--#include virtual="/shared/header.html" -->'];
+  if (parts.pageHeadExtras?.trim()) {
+    sections.push(parts.pageHeadExtras.trim());
+  }
   if (parts.body.trim()) {
     sections.push(stripDuplicateFooterSec2(parts.body, { requireFooterInclude: false }).html);
   }
   sections.push('<!--#include virtual="/shared/footer.html" -->');
+  if (parts.pageTail?.trim()) {
+    sections.push(parts.pageTail.trim());
+  }
   return processHtml(sections.join('\n') + '\n');
 }
 
@@ -331,11 +338,12 @@ async function writeShell() {
     fs.mkdirSync(SHARED_DIR, { recursive: true });
     fs.writeFileSync(path.join(SHARED_DIR, 'header.html'), processHtml(normalizeCmtHeader(shell.header)) + '\n');
     fs.writeFileSync(path.join(SHARED_DIR, 'footer.html'), processHtml(shell.footer) + '\n');
+    fs.writeFileSync(SHELL_HEAD_CACHE, extractHeadInner(html));
 
     console.log(`  shared/header.html (${shell.header.length} chars)`);
     console.log(`  shared/footer.html (${shell.footer.length} chars)`);
 
-    return { semantic: true };
+    return { semantic: true, headInner: extractHeadInner(html) };
   }
 
   console.log(`Fetching shell from ${BASE_URL}/${SHELL_URL_PATH} ...`);
@@ -380,12 +388,18 @@ async function processPage(urlPath, shellCache) {
 
   if (SHELL_MODE === 'semantic-header-footer') {
     const parts = extractSemanticShell(html);
-    const output = parts ? buildSemanticPageOutput(parts) : processHtml(html);
+    const pageHeadInner = extractHeadInner(html);
+    const pageHeadExtras = diffHeadExtras(pageHeadInner, shellCache?.headInner || '');
+    const output = parts
+      ? buildSemanticPageOutput({ ...parts, pageHeadExtras })
+      : processHtml(html);
     fs.mkdirSync(dirPath, { recursive: true });
     fs.writeFileSync(filePath, output);
 
     if (parts) {
-      console.log(`  Written: ${filePath} (semantic shell, body ${parts.body.length} chars)`);
+      const extras = pageHeadExtras.trim().length;
+      const tail = parts.pageTail.trim().length;
+      console.log(`  Written: ${filePath} (semantic shell, body ${parts.body.length}, head+${extras}, tail+${tail} chars)`);
     } else {
       console.log(`  Written: ${filePath} (full page copy)`);
     }
