@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
+const { BlobServiceClient } = require('@azure/storage-blob');
 const { getSiteBySlug, listSites } = require('../site-paths');
 
 const ROOT = path.join(__dirname, '..');
@@ -546,6 +547,16 @@ function parseMultipartBuffer(buffer, contentType) {
 }
 
 function getBlobConfig(env) {
+  if (env.AZURE_STORAGE_CONNECTION_STRING && env.AZURE_STORAGE_CONTAINER_NAME) {
+    return {
+      kind: 'connectionString',
+      connectionString: env.AZURE_STORAGE_CONNECTION_STRING,
+      containerName: env.AZURE_STORAGE_CONTAINER_NAME,
+      prefix: String(env.AZURE_STORAGE_PREFIX || '').replace(/^\/+|\/+$/g, ''),
+      publicBaseUrl: String(env.AZURE_STORAGE_BASE_URL || '').replace(/\/+$/g, ''),
+    };
+  }
+
   const containerSasUrl = env.AZURE_BLOB_CONTAINER_SAS_URL || env.AZURE_STORAGE_CONTAINER_SAS_URL;
   if (containerSasUrl) {
     const url = new URL(containerSasUrl);
@@ -577,7 +588,23 @@ async function uploadToBlob(site, file, env) {
   const now = new Date();
   const yyyy = String(now.getUTCFullYear());
   const mm = String(now.getUTCMonth() + 1).padStart(2, '0');
-  const blobName = `admin-uploads/${site.slug}/${yyyy}/${mm}/${Date.now()}-${safeFilename(file.filename)}`;
+  const relativeBlobName = `admin-uploads/${site.slug}/${yyyy}/${mm}/${Date.now()}-${safeFilename(file.filename)}`;
+  const blobName = [config.prefix, relativeBlobName].filter(Boolean).join('/');
+
+  if (config.kind === 'connectionString') {
+    const serviceClient = BlobServiceClient.fromConnectionString(config.connectionString);
+    const containerClient = serviceClient.getContainerClient(config.containerName);
+    const blobClient = containerClient.getBlockBlobClient(blobName);
+    await blobClient.uploadData(file.buffer, {
+      blobHTTPHeaders: { blobContentType: file.contentType },
+    });
+
+    if (config.publicBaseUrl) {
+      return `${config.publicBaseUrl}/${blobName}`;
+    }
+    return blobClient.url;
+  }
+
   const uploadUrl = `${config.containerUrl}/${blobName}${config.sas ? `?${config.sas}` : ''}`;
   const response = await fetch(uploadUrl, {
     method: 'PUT',

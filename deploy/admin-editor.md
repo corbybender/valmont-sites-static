@@ -28,10 +28,19 @@ For image uploads, use one of these Blob configurations.
 Preferred:
 
 ```text
+AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=<account>;AccountKey=<key>;EndpointSuffix=core.windows.net
+AZURE_STORAGE_CONTAINER_NAME=<container>
+AZURE_STORAGE_BASE_URL=https://<public-host-or-account>.blob.core.windows.net/<container>
+AZURE_STORAGE_PREFIX=<optional-folder-prefix>
+```
+
+Also supported:
+
+```text
 AZURE_BLOB_CONTAINER_SAS_URL=https://<account>.blob.core.windows.net/<container>?<sas-token>
 ```
 
-Alternative:
+Alternative SAS parts:
 
 ```text
 AZURE_STORAGE_ACCOUNT=<account>
