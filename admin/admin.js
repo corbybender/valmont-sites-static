@@ -118,6 +118,10 @@ async function saveChanges() {
   });
   editor.clearChanges();
   els.count.textContent = '0 unsaved changes';
+  if (!data.saved.length) {
+    setStatus('No files changed; the page was not updated.');
+    return;
+  }
   setStatus(`Saved ${data.saved.reduce((sum, file) => sum + file.changes, 0)} changes across ${data.saved.length} file(s).`);
 }
 

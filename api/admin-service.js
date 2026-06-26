@@ -296,39 +296,40 @@ function addAttribute(openTag, name, value) {
   return openTag.replace(/>$/, ` ${name}="${safeValue}">`);
 }
 
-function injectEditIdsIntoSegment(html, fileKey, counters) {
-  const occurrences = getEditableOccurrences(html);
-  let result = html;
-  for (const occurrence of [...occurrences].reverse()) {
-    const id = counters[fileKey] || 0;
-    counters[fileKey] = id + 1;
-    const openTag = result.slice(occurrence.start, occurrence.openEnd + 1);
+function injectEditIdsIntoRange(html, fileKey, occurrences, start, end) {
+  let result = html.slice(start, end);
+  const rangeOccurrences = occurrences.filter((occurrence) => occurrence.start >= start && occurrence.openEnd < end);
+  for (const occurrence of [...rangeOccurrences].reverse()) {
+    const localStart = occurrence.start - start;
+    const localOpenEnd = occurrence.openEnd - start;
+    const openTag = result.slice(localStart, localOpenEnd + 1);
     const kind = occurrence.tag === 'img' ? 'image' : occurrence.tag === 'a' ? 'link' : 'text';
-    const updated = addAttribute(addAttribute(addAttribute(openTag, 'data-admin-edit-id', `${fileKey}::${id}`), 'data-admin-edit-kind', kind), 'data-admin-source-file', fileKey);
-    result = result.slice(0, occurrence.start) + updated + result.slice(occurrence.openEnd + 1);
+    const updated = addAttribute(addAttribute(addAttribute(openTag, 'data-admin-edit-id', `${fileKey}::${occurrence.id}`), 'data-admin-edit-kind', kind), 'data-admin-source-file', fileKey);
+    result = result.slice(0, localStart) + updated + result.slice(localOpenEnd + 1);
   }
   return result;
 }
 
-function renderSourceForEdit(site, fileKey, counters, seen = new Set()) {
+function renderSourceForEdit(site, fileKey, seen = new Set()) {
   if (seen.has(fileKey)) return '';
   seen.add(fileKey);
   const fullPath = fileKeyToPath(site, fileKey);
   const html = fs.readFileSync(fullPath, 'utf8');
+  const occurrences = getEditableOccurrences(html);
   const includeRe = /<!--\s*#include\s+virtual=["']([^"']+)["']\s*-->/ig;
   let output = '';
   let lastIndex = 0;
   let match;
   while ((match = includeRe.exec(html)) !== null) {
-    output += injectEditIdsIntoSegment(html.slice(lastIndex, match.index), fileKey, counters);
+    output += injectEditIdsIntoRange(html, fileKey, occurrences, lastIndex, match.index);
     try {
-      output += renderSourceForEdit(site, match[1], counters, seen);
+      output += renderSourceForEdit(site, match[1], seen);
     } catch (_) {
       output += match[0];
     }
     lastIndex = match.index + match[0].length;
   }
-  output += injectEditIdsIntoSegment(html.slice(lastIndex), fileKey, counters);
+  output += injectEditIdsIntoRange(html, fileKey, occurrences, lastIndex, html.length);
   seen.delete(fileKey);
   return output;
 }
@@ -710,7 +711,7 @@ async function handleAdminRequest(req, res, env) {
       const site = getSiteBySlug(url.searchParams.get('site'));
       const page = url.searchParams.get('page') || '/';
       const { key } = resolvePagePath(site, page);
-      const html = rewritePreviewAssetUrls(renderSourceForEdit(site, key, {}), site.slug);
+      const html = rewritePreviewAssetUrls(renderSourceForEdit(site, key), site.slug);
       send(res, 200, injectPreviewAssets(html, site.slug, key), {
         'Content-Type': 'text/html; charset=utf-8',
         'Cache-Control': 'no-store',
