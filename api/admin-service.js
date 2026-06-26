@@ -187,6 +187,34 @@ function blockedRanges(html) {
   return ranges;
 }
 
+function getAttributeValue(openTag, name) {
+  return openTag.match(new RegExp(`\\s${name}\\s*=\\s*(["'])([\\s\\S]*?)\\1`, 'i'))?.[2] || '';
+}
+
+function stripNestedEditableMarkup(innerHtml) {
+  return innerHtml
+    .replace(/<\s*(script|style|svg)\b[\s\S]*?<\s*\/\s*\1\s*>/ig, '')
+    .replace(/<[^>]+>/g, ' ');
+}
+
+function hasMeaningfulEditableText(innerHtml) {
+  return stripNestedEditableMarkup(innerHtml)
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim().length > 0;
+}
+
+function isSitefinityContentBlock(openTag) {
+  return /\bsfContentBlock\b/i.test(getAttributeValue(openTag, 'class'));
+}
+
+function isEditableCandidate(tag, openTag, innerHtml) {
+  if (EDITABLE_TAGS.has(tag)) return true;
+  return tag === 'div'
+    && isSitefinityContentBlock(openTag)
+    && hasMeaningfulEditableText(innerHtml);
+}
+
 function findTagEnd(html, start) {
   let quote = null;
   for (let i = start; i < html.length; i++) {
@@ -222,10 +250,12 @@ function getEditableOccurrences(html) {
   const ranges = blockedRanges(html);
   const re = /<([a-z0-9]+)\b[^>]*>/ig;
   const occurrences = [];
+  const blockedEditableRanges = [];
   let match;
   while ((match = re.exec(html)) !== null) {
     const tag = match[1].toLowerCase();
-    if (!EDITABLE_TAGS.has(tag) || isInsideBlockedRange(match.index, ranges)) continue;
+    if (isInsideBlockedRange(match.index, ranges)) continue;
+    if (isInsideBlockedRange(match.index, blockedEditableRanges) && tag !== 'a' && tag !== 'img') continue;
     if (match[0].startsWith('</')) continue;
 
     const openEnd = findTagEnd(html, match.index);
@@ -238,6 +268,10 @@ function getEditableOccurrences(html) {
 
     const close = findCloseTag(html, tag, openEnd + 1);
     if (!close) continue;
+    const innerHtml = html.slice(openEnd + 1, close.start);
+    const openTag = html.slice(match.index, openEnd + 1);
+    if (!isEditableCandidate(tag, openTag, innerHtml)) continue;
+
     occurrences.push({
       id: occurrences.length,
       tag,
@@ -247,6 +281,9 @@ function getEditableOccurrences(html) {
       closeEnd: close.end,
       end: close.end,
     });
+    if (tag === 'div' && isSitefinityContentBlock(openTag)) {
+      blockedEditableRanges.push({ start: openEnd + 1, end: close.start });
+    }
   }
   return occurrences;
 }
