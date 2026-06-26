@@ -34,6 +34,44 @@
       .replace(/"/g, '&quot;');
   }
 
+  function formatHtmlSource(html) {
+    const source = String(html || '').trim();
+    if (!/[<>]/.test(source)) return source;
+
+    const blockTags = new Set([
+      'address', 'article', 'aside', 'blockquote', 'br', 'caption', 'div', 'dl', 'dt', 'dd',
+      'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+      'header', 'hr', 'li', 'main', 'nav', 'ol', 'p', 'section', 'table', 'tbody', 'td', 'tfoot',
+      'th', 'thead', 'tr', 'ul',
+    ]);
+    const inlineTags = new Set(['a', 'b', 'em', 'i', 'span', 'strong', 'sub', 'sup', 'u']);
+    const tokens = source
+      .replace(/>\s+</g, '><')
+      .replace(/(<[^>]+>)/g, '\n$1\n')
+      .split('\n')
+      .map((part) => part.trim())
+      .filter(Boolean);
+
+    const lines = [];
+    let indent = 0;
+    for (const token of tokens) {
+      const tag = token.match(/^<\/?\s*([a-z0-9-]+)/i)?.[1]?.toLowerCase() || '';
+      const isClosing = /^<\//.test(token);
+      const isVoid = /\/>$/.test(token) || ['br', 'hr', 'img', 'input', 'meta', 'link'].includes(tag);
+      const isInline = inlineTags.has(tag);
+
+      if (isClosing && !isInline) indent = Math.max(0, indent - 1);
+      if (token !== '<br>' && token !== '<br/>') {
+        lines.push(`${'  '.repeat(indent)}${token}`);
+      } else {
+        lines.push(`${'  '.repeat(indent)}${token}`);
+      }
+      if (!isClosing && !isVoid && blockTags.has(tag) && !isInline) indent += 1;
+    }
+
+    return lines.join('\n');
+  }
+
   function remember(el) {
     const kind = el.dataset.adminEditKind;
     const id = el.dataset.adminEditId;
@@ -106,7 +144,12 @@
     const href = kind === 'link'
       ? `<label>Link URL<input id="admin-html-href" value="${escapeHtml(el.getAttribute('href') || '')}"></label>`
       : '';
-    return `${href}<label>HTML<textarea id="admin-html-source" spellcheck="false">${escapeHtml(el.innerHTML)}</textarea></label>`;
+    return `${href}<label class="admin-html-code-label">HTML</label>
+      <div class="admin-code-editor">
+        <pre id="admin-html-lines" aria-hidden="true">1</pre>
+        <textarea id="admin-html-source" spellcheck="false" aria-label="Editable HTML">${escapeHtml(formatHtmlSource(el.innerHTML))}</textarea>
+      </div>
+      <p class="admin-html-hint">Click <strong>Apply HTML</strong> to push these changes back into the page preview, then use the main <strong>Save changes</strong> button to write the file.</p>`;
   }
 
   function ensureModal() {
@@ -117,11 +160,14 @@
     modal.innerHTML = `<div class="admin-html-modal" role="dialog" aria-modal="true" aria-labelledby="admin-html-title">
       <header>
         <h2 id="admin-html-title">Edit HTML</h2>
-        <button type="button" class="admin-html-close" aria-label="Close">x</button>
+        <div class="admin-html-actions">
+          <button type="button" class="admin-html-close" aria-label="Close without applying">Close</button>
+          <button type="button" class="admin-html-apply">Apply HTML</button>
+        </div>
       </header>
       <div class="admin-html-fields"></div>
       <footer>
-        <button type="button" class="admin-html-cancel">Cancel</button>
+        <button type="button" class="admin-html-cancel">Close without applying</button>
         <button type="button" class="admin-html-apply">Apply HTML</button>
       </footer>
     </div>`;
@@ -137,6 +183,31 @@
     return modal;
   }
 
+  function attachCodeEditor() {
+    const textarea = modal?.querySelector('#admin-html-source');
+    const lines = modal?.querySelector('#admin-html-lines');
+    if (!textarea || !lines) return;
+
+    const updateLines = () => {
+      const count = Math.max(1, textarea.value.split('\n').length);
+      lines.textContent = Array.from({ length: count }, (_value, index) => String(index + 1)).join('\n');
+    };
+    textarea.addEventListener('input', updateLines);
+    textarea.addEventListener('scroll', () => {
+      lines.scrollTop = textarea.scrollTop;
+    });
+    textarea.addEventListener('keydown', (event) => {
+      if (event.key !== 'Tab') return;
+      event.preventDefault();
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      textarea.value = `${textarea.value.slice(0, start)}  ${textarea.value.slice(end)}`;
+      textarea.selectionStart = textarea.selectionEnd = start + 2;
+      updateLines();
+    });
+    updateLines();
+  }
+
   function openHtmlModal() {
     if (!selected) return;
     const dialog = ensureModal();
@@ -144,6 +215,7 @@
     const kind = selected.dataset.adminEditKind;
     fields.innerHTML = kind === 'image' ? imageEditorHtml(selected) : htmlEditorHtml(selected);
     dialog.hidden = false;
+    attachCodeEditor();
     const firstField = fields.querySelector('textarea, input');
     firstField?.focus();
     if (firstField?.tagName === 'TEXTAREA') firstField.setSelectionRange(0, 0);

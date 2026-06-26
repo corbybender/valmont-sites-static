@@ -16,112 +16,171 @@
 }
 
 .admin-html-button {
-  position: absolute;
-  z-index: 2147483646;
-  min-width: 3.25rem;
-  min-height: 1.8rem;
-  border: 1px solid #7f2d14;
-  border-radius: 999px;
-  background: #b4471f;
-  color: #fffdf7;
-  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.22);
-  cursor: pointer;
-  font: 700 11px/1 "Trebuchet MS", Verdana, sans-serif;
-  letter-spacing: 0.08em;
+  position: absolute !important;
+  z-index: 2147483646 !important;
+  min-width: 3.25rem !important;
+  min-height: 1.8rem !important;
+  border: 1px solid #7f2d14 !important;
+  border-radius: 999px !important;
+  background: #b4471f !important;
+  color: #fffdf7 !important;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.22) !important;
+  cursor: pointer !important;
+  font: 700 11px/1 "Trebuchet MS", Verdana, sans-serif !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
 }
 
 .admin-html-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 2147483647;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  background: rgba(16, 20, 18, 0.58);
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  background: rgba(16, 20, 18, 0.58) !important;
 }
 
 .admin-html-modal-backdrop[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .admin-html-modal {
-  width: min(58rem, calc(100vw - 2rem));
-  max-height: min(44rem, calc(100vh - 2rem));
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background: #fffdf7;
-  color: #14201c;
-  border: 1px solid #d7ccba;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.42);
-  font-family: Georgia, "Times New Roman", serif;
+  width: min(68rem, calc(100vw - 2rem)) !important;
+  max-height: min(50rem, calc(100vh - 2rem)) !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+  background: #fffdf7 !important;
+  color: #14201c !important;
+  border: 1px solid #d7ccba !important;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.42) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  overflow: hidden !important;
 }
 
 .admin-html-modal header,
 .admin-html-modal footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  align-items: center;
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid #d7ccba;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  align-items: center !important;
+  padding: 0.85rem 1rem !important;
+  border-bottom: 1px solid #d7ccba !important;
+  background: #fffdf7 !important;
+  min-height: auto !important;
 }
 
 .admin-html-modal footer {
-  justify-content: flex-end;
-  border-top: 1px solid #d7ccba;
-  border-bottom: 0;
+  position: sticky !important;
+  bottom: 0 !important;
+  justify-content: flex-end !important;
+  border-top: 1px solid #d7ccba !important;
+  border-bottom: 0 !important;
 }
 
 .admin-html-modal h2 {
-  margin: 0;
-  color: #14201c;
-  font-size: 1.35rem;
-  line-height: 1.1;
+  margin: 0 !important;
+  color: #14201c !important;
+  font-size: 1.35rem !important;
+  line-height: 1.1 !important;
 }
 
 .admin-html-fields {
-  min-height: 0;
-  overflow: auto;
-  padding: 1rem;
+  min-height: 0 !important;
+  overflow: auto !important;
+  padding: 1rem !important;
 }
 
 .admin-html-fields label {
-  display: grid;
-  gap: 0.35rem;
-  margin-bottom: 0.85rem;
-  color: #64736d;
-  font: 700 0.75rem/1.2 "Trebuchet MS", Verdana, sans-serif;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  display: grid !important;
+  gap: 0.35rem !important;
+  margin: 0 0 0.85rem !important;
+  color: #64736d !important;
+  font: 700 0.75rem/1.2 "Trebuchet MS", Verdana, sans-serif !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
 }
 
 .admin-html-fields input,
 .admin-html-fields textarea {
-  width: 100%;
-  border: 1px solid #d7ccba;
-  background: #ffffff;
-  color: #14201c;
-  padding: 0.65rem;
-  font: 14px/1.45 Consolas, "Courier New", monospace;
+  width: 100% !important;
+  border: 1px solid #d7ccba !important;
+  background: #ffffff !important;
+  color: #14201c !important;
+  padding: 0.65rem !important;
+  font: 14px/1.45 Consolas, "Courier New", monospace !important;
+  box-sizing: border-box !important;
 }
 
 .admin-html-fields textarea {
-  min-height: 24rem;
-  resize: vertical;
-  tab-size: 2;
+  min-height: 30rem !important;
+  resize: none !important;
+  tab-size: 2 !important;
+  border-left: 0 !important;
+  white-space: pre !important;
+  overflow: auto !important;
 }
 
 .admin-html-modal button {
-  min-height: 2.35rem;
-  border: 1px solid #b4471f;
-  background: transparent;
-  color: #7f2d14;
-  padding: 0 0.9rem;
-  cursor: pointer;
-  font: 700 0.78rem/1 "Trebuchet MS", Verdana, sans-serif;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 2.35rem !important;
+  height: auto !important;
+  border: 1px solid #b4471f !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #7f2d14 !important;
+  padding: 0 0.9rem !important;
+  cursor: pointer !important;
+  font: 700 0.78rem/1 "Trebuchet MS", Verdana, sans-serif !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .admin-html-modal .admin-html-apply {
-  background: #b4471f;
-  color: #fffdf7;
+  background: #b4471f !important;
+  color: #fffdf7 !important;
+}
+
+.admin-html-actions {
+  display: flex !important;
+  gap: 0.5rem !important;
+  align-items: center !important;
+}
+
+.admin-html-code-label {
+  margin-bottom: 0.35rem !important;
+}
+
+.admin-code-editor {
+  display: grid !important;
+  grid-template-columns: 4rem minmax(0, 1fr) !important;
+  min-height: 30rem !important;
+  border: 1px solid #d7ccba !important;
+  background: #ffffff !important;
+}
+
+#admin-html-lines {
+  margin: 0 !important;
+  padding: 0.65rem 0.75rem !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-right: 1px solid #d7ccba !important;
+  background: #f4efe5 !important;
+  color: #7f877f !important;
+  user-select: none !important;
+  text-align: right !important;
+  font: 14px/1.45 Consolas, "Courier New", monospace !important;
+  white-space: pre !important;
+}
+
+.admin-html-hint {
+  margin: 0.65rem 0 0 !important;
+  color: #64736d !important;
+  font: 0.85rem/1.45 "Trebuchet MS", Verdana, sans-serif !important;
 }
