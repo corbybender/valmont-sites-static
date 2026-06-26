@@ -4,6 +4,8 @@
   "description": "Static site tooling and Proofpoint form relay",
   "scripts": {
     "forms": "node api/form-server.js",
+    "iis:configure": "powershell -ExecutionPolicy Bypass -File scripts/configure-iis-sites.ps1",
+    "iis:configure:proxy": "powershell -ExecutionPolicy Bypass -File scripts/configure-iis-sites.ps1 -EnableApiProxy",
     "site:fetch": "node fetch-pages.js",
     "site:aliases": "node detect-url-aliases.js",
     "site:shared": "node detect-shared-page-blocks.js",

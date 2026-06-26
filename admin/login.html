@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nopayload Admin Login</title>
+  <link rel="stylesheet" href="/admin/assets/admin.css">
+</head>
+<body class="login-screen">
+  <main class="login-card">
+    <p class="eyebrow">Nopayload Static Sites</p>
+    <h1>Admin Login</h1>
+    <form id="login-form">
+      <label>
+        Username
+        <input name="username" autocomplete="username" value="admin" required>
+      </label>
+      <label>
+        Password
+        <input name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button type="submit">Sign in</button>
+      <p id="login-status" class="status"></p>
+    </form>
+  </main>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const status = document.getElementById('login-status');
+      status.textContent = 'Signing in...';
+      const body = Object.fromEntries(new FormData(form).entries());
+      const response = await fetch('/admin/login', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        status.textContent = data.error || 'Login failed';
+        return;
+      }
+      window.location.href = '/admin';
+    });
+  </script>
+</body>
+</html>

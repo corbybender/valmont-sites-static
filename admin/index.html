@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nopayload Page Editor</title>
+  <link rel="stylesheet" href="/admin/assets/admin.css">
+</head>
+<body class="editor-shell">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Nopayload Static Sites</p>
+      <h1>Page Editor</h1>
+    </div>
+    <nav>
+      <button id="refresh-preview" type="button">Refresh</button>
+      <button id="save-page" type="button" class="primary">Save changes</button>
+      <a href="/admin/logout">Logout</a>
+    </nav>
+  </header>
+
+  <aside class="sidebar">
+    <label>
+      Site
+      <select id="site-select"></select>
+    </label>
+    <label>
+      Page
+      <input id="page-filter" placeholder="Filter pages">
+      <select id="page-select" size="12"></select>
+    </label>
+
+    <section class="panel">
+      <h2>Selected Element</h2>
+      <p id="selected-summary" class="muted">Click text, a link, or an image in the page.</p>
+      <label id="href-row" hidden>
+        Link URL
+        <input id="link-href" placeholder="/contact-us">
+      </label>
+      <div id="image-row" hidden>
+        <label>
+          Image URL
+          <input id="image-src" placeholder="https://...">
+        </label>
+        <label>
+          Alt Text
+          <input id="image-alt">
+        </label>
+        <label>
+          Upload Replacement Image
+          <input id="image-upload" type="file" accept="image/*">
+        </label>
+        <button id="apply-image" type="button">Apply image fields</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Status</h2>
+      <p id="change-count">0 unsaved changes</p>
+      <p id="admin-status" class="status"></p>
+    </section>
+  </aside>
+
+  <main class="preview-wrap">
+    <iframe id="preview" title="Page preview"></iframe>
+  </main>
+
+  <script src="/admin/assets/admin.js"></script>
+</body>
+</html>

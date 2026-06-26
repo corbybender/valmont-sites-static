@@ -1,6 +1,7 @@
 .env
 node_modules/
 .fastembed_cache/
+.backups/
 webapp_logs/
 *.log
 *.tmp

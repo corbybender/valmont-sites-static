@@ -4,6 +4,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 const { getSiteForHost } = require('../site-paths');
 const { getSearchConfig, queryAzureSearch } = require('./search-service');
+const { handleAdminRequest } = require('./admin-service');
 
 const ROOT = path.join(__dirname, '..');
 const ENV_PATH = path.join(ROOT, '.env');
@@ -366,6 +367,21 @@ function startServer(options = {}) {
 
   const server = http.createServer((req, res) => {
     const requestPath = req.url?.split('?')[0] || '/';
+    if (requestPath === '/admin'
+      || requestPath.startsWith('/admin/')
+      || requestPath.startsWith('/api/admin/')) {
+      handleAdminRequest(req, res, env).then((handled) => {
+        if (!handled) {
+          res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+          res.end('Not found');
+        }
+      }).catch((err) => {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      });
+      return;
+    }
+
     if (requestPath === endpoint || requestPath === `${endpoint}/`) {
       handleRequest(req, res, env);
       return;

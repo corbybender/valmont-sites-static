@@ -1,0 +1,16 @@
+[data-admin-edit-id] {
+  outline: 1px dashed rgba(180, 71, 31, 0.55);
+  outline-offset: 2px;
+  cursor: pointer !important;
+}
+
+[data-admin-edit-id]:hover,
+[data-admin-edit-id].admin-selected {
+  outline: 3px solid #b4471f !important;
+  outline-offset: 3px;
+}
+
+[data-admin-edit-kind="text"][contenteditable="true"],
+[data-admin-edit-kind="link"][contenteditable="true"] {
+  background: rgba(255, 243, 190, 0.68);
+}
