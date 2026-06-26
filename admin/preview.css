@@ -14,3 +14,114 @@
 [data-admin-edit-kind="link"][contenteditable="true"] {
   background: rgba(255, 243, 190, 0.68);
 }
+
+.admin-html-button {
+  position: absolute;
+  z-index: 2147483646;
+  min-width: 3.25rem;
+  min-height: 1.8rem;
+  border: 1px solid #7f2d14;
+  border-radius: 999px;
+  background: #b4471f;
+  color: #fffdf7;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  font: 700 11px/1 "Trebuchet MS", Verdana, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.admin-html-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(16, 20, 18, 0.58);
+}
+
+.admin-html-modal-backdrop[hidden] {
+  display: none;
+}
+
+.admin-html-modal {
+  width: min(58rem, calc(100vw - 2rem));
+  max-height: min(44rem, calc(100vh - 2rem));
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #fffdf7;
+  color: #14201c;
+  border: 1px solid #d7ccba;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.42);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.admin-html-modal header,
+.admin-html-modal footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #d7ccba;
+}
+
+.admin-html-modal footer {
+  justify-content: flex-end;
+  border-top: 1px solid #d7ccba;
+  border-bottom: 0;
+}
+
+.admin-html-modal h2 {
+  margin: 0;
+  color: #14201c;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.admin-html-fields {
+  min-height: 0;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.admin-html-fields label {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+  color: #64736d;
+  font: 700 0.75rem/1.2 "Trebuchet MS", Verdana, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.admin-html-fields input,
+.admin-html-fields textarea {
+  width: 100%;
+  border: 1px solid #d7ccba;
+  background: #ffffff;
+  color: #14201c;
+  padding: 0.65rem;
+  font: 14px/1.45 Consolas, "Courier New", monospace;
+}
+
+.admin-html-fields textarea {
+  min-height: 24rem;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.admin-html-modal button {
+  min-height: 2.35rem;
+  border: 1px solid #b4471f;
+  background: transparent;
+  color: #7f2d14;
+  padding: 0 0.9rem;
+  cursor: pointer;
+  font: 700 0.78rem/1 "Trebuchet MS", Verdana, sans-serif;
+}
+
+.admin-html-modal .admin-html-apply {
+  background: #b4471f;
+  color: #fffdf7;
+}
